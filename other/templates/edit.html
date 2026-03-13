@@ -1,0 +1,263 @@
+<!-- templates/edit.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑数据 - 纪释析义编码系统</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        .back-btn {
+            background: #7f8c8d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background: #34495e;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .instructions p {
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            min-height: 150px;
+            resize: vertical;
+        }
+        textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+        }
+        .submit-btn {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            transform: translateY(-2px);
+        }
+        .modify-btn {
+            background: linear-gradient(to right, #f39c12, #e74c3c);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        .modify-btn:hover {
+            background: linear-gradient(to right, #e74c3c, #f39c12);
+            transform: translateY(-2px);
+        }
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .examples {
+            margin-top: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .examples ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .examples li {
+            margin-bottom: 8px;
+            color: #7f8c8d;
+        }
+        .format-example {
+            background: #f1f8e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>编辑数据</h1>
+            <a href="{{ url_for('index') }}" class="back-btn">返回首页</a>
+        </div>
+        
+        <div class="instructions">
+            <p>本页面支持批量录入、修改和删除编码</p>
+        </div>
+        
+        <!-- 批量录入部分 -->
+        <div class="section">
+            <h2 class="section-title">批量录入</h2>
+            <form method="POST" action="{{ url_for('edit') }}">
+                <div class="form-group">
+                    <label for="entries">汉字与编码（每行一个条目，格式：汉字 编码）：</label>
+                    <textarea id="entries" name="entries" placeholder="例如：
+汉 hj4u
+字 zi4b
+编 bm1s
+码 ma3s" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">保存编码</button>
+            </form>
+        </div>
+        
+        <!-- 修改/删除部分 -->
+        <div class="section">
+            <h2 class="section-title">修改/删除</h2>
+            <form method="POST" action="{{ url_for('modify') }}">
+                <div class="form-group">
+                    <label for="old_code">原编码：</label>
+                    <input type="text" id="old_code" name="old_code" placeholder="输入要修改或删除的编码" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="new_code">新编码（输入x表示删除）：</label>
+                    <input type="text" id="new_code" name="new_code" placeholder="输入新编码或x（删除）" required>
+                </div>
+                
+                <button type="submit" class="modify-btn">修改/删除</button>
+            </form>
+        </div>
+        
+        {% if message %}
+        <div class="message {{ 'success' if '成功' in message or '保存' in message else 'error' }}">
+            {{ message }}
+        </div>
+        {% endif %}
+        
+        <div class="examples">
+            <h3>使用说明：</h3>
+            <ul>
+                <li>• 批量录入：每行输入一个汉字和对应的纪释析义码，用空格分隔</li>
+                <li>• 修改：输入原编码和新编码，点击"修改/删除"按钮</li>
+                <li>• 删除：输入原编码，新编码输入x，点击"修改/删除"按钮</li>
+                <li>• 相同的纪释析义码字符串会被自动更新</li>
+                <li>• 保存后数据将排序，并永久存储在系统中</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>当前数据库条目数: {{ entry_count }}</p>
+            <p>© 2025 纪释析义编码系统 | 网页版</p>
+        </div>
+    </div>
+</body>
+</html>

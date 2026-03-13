@@ -1,0 +1,185 @@
+<!-- templates/query_char.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查字功能 - 纪释析义编码系统</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+        }
+        .result-string {
+            background: #f0f8ff;
+            border: 1px solid #cce5ff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #004085;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        .back-btn {
+            background: #7f8c8d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background: #34495e;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .instructions p {
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .search-btn {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .search-btn:hover {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+        .results-section {
+            margin-top: 30px;
+        }
+        .results-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .no-results {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+        }
+        .example {
+            margin-top: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .example h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .example p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>查字功能</h1>
+            <a href="{{ url_for('index') }}" class="back-btn">返回首页</a>
+        </div>
+        
+        <div class="instructions">
+            <p>输入汉字，查询对应的纪释析义码</p>
+        </div>
+        
+        <form method="POST" class="search-form">
+            <input type="text" name="char" class="search-input" placeholder="请输入要查询的多个汉字(无空格)" value="{{ request.form.get('char', '') }}">
+            <button type="submit" class="search-btn">查询</button>
+        </form>
+        
+        <div class="results-section">
+            <h2 class="results-title">查询结果</h2>
+            {% if result_str %}
+            <div class="result-string">
+                <strong>编码结果:</strong> {{ result_str }}
+            </div>
+            {% endif %}
+    
+            {% if not result_str and request.method == 'POST' %}
+            <div class="no-results">
+                <p>未找到匹配结果</p>
+            </div>
+            {% elif not result_str %}
+            <div class="no-results">
+                <p>请输入汉字进行查询</p>
+            </div>
+            {% endif %}
+        </div>        
+        <div class="example">
+            <h3>使用示例：</h3>
+            <p>输入 "汉" 查询该汉字对应的所有纪释析义码</p>
+            <p>输入 "字" 查询该汉字对应的所有纪释析义码</p>
+            <p>输入 "汉字" 同时查询"汉"和"字"两个汉字</p>
+        </div>
+        <div class="footer">
+  	    <p>当前数据库条目数: {{ entry_count }}</p>
+	    <p>© 2025 纪释析义编码系统 | 网页版</p>
+	</div>
+    </div>
+</body>
+</html>

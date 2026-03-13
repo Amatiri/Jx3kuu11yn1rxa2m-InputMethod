@@ -1,0 +1,239 @@
+<!-- templates/query_prefix.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>输入练习 - 纪释析义编码系统</title>
+    <style>
+        /* 保持原有样式不变 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        .back-btn {
+            background: #7f8c8d;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-btn:hover {
+            background: #34495e;
+        }
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .instructions p {
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .search-btn {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .search-btn:hover {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+        .results-section {
+            margin-top: 30px;
+        }
+        .results-title {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .no-results {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+        }
+        .result-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .result-string {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            word-break: break-all;
+        }
+        .no-match {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .example {
+            margin-top: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .example h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .example p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        /* 修改样式 */
+        .multi-result {
+            display: inline-block;
+            margin-right: 0; /* 去掉右边距，使汉字之间没有空格 */
+            cursor: pointer;
+            position: relative;
+        }
+        .multi-result .char {
+            font-size: 1.4rem;
+            color: #000000; /* 改为黑色 */
+            text-decoration: none; /* 去掉下划线 */
+        }
+        .multi-result .full-results {
+            display: none;
+            position: absolute;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 800px; /* 宽度变大4倍 (原200px * 4) */
+            top: 100%;
+            left: 0;
+        }
+        .multi-result:hover .full-results {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>输入练习</h1>
+            <a href="{{ url_for('index') }}" class="back-btn">返回首页</a>
+        </div>
+        
+        <div class="instructions">
+            <p>输入纪释析义码，候选显示匹配的汉字和剩余码位</p>
+            <p>可选择性用单引号（'）分隔编码</p>
+        </div>
+        
+        <form method="POST" class="search-form">
+            <input type="text" name="prefix" class="search-input" placeholder="请输入纪释析义码" value="{{ query_prefix or '' }}">
+            <button type="submit" class="search-btn">候选</button>
+        </form>
+        
+        <div class="results-section">
+            <h2 class="results-title">候选结果</h2>
+            
+            {% if is_multiple and multiple_results %}
+                <div class="result-card">
+                    <div class="result-string">
+                        {% for result in multiple_results -%}
+                        <div class="multi-result">
+                            <span class="char">{{ result.first_char }}</span>
+                            <div class="full-results">
+                                <strong>编码 "{{ result.prefix }}" 的所有候选结果:</strong><br>
+                                {{ result.full_results }}
+                            </div>
+                        </div>
+                        {%- endfor %}
+                    </div>
+                </div>
+            {% elif not is_multiple and result_str %}
+                <div class="result-card">
+                    <div class="result-string">{{ result_str }}</div>
+                </div>
+            {% else %}
+                <div class="no-results">
+                    {% if request.method == 'POST' %}
+                    <p>暂未录入</p>
+                    {% else %}
+                    <p>请输入纪释析义码进行候选</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="example">
+            <h3>使用示例：</h3>
+            <p>输入 "rf" 查找所有以 "rf" 开头的编码</p>
+            <p>输入 "mn2" 查找所有以 "mn2" 开头的编码</p>
+            <p>输入 "rfmn2" 自动按编码规则分隔为 "rf" 和 "mn2" 两个编码</p>
+        </div>
+        <div class="footer">
+  	    <p>当前数据库条目数: {{ entry_count }}</p>
+	    <p>© 2025 纪释析义编码系统 | 网页版</p>
+	</div>
+    </div>
+</body>
+</html>
