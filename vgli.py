@@ -298,7 +298,7 @@ def process_filey(input_file, output_file):
 def main_menu():
     process_file("dictionary.txt", "dictionary.txt")
     sort_file_by_second_part("ciyu.txt", "ciyu.txt")
-    merge_files_to_ahk("dictionary.txt", "ciyu.txt", "dictionary+t.ahk")
+    #merge_files_to_ahk("dictionary.txt", "ciyu.txt", "dictionary+t.ahk")
     process_filey("dictionary.txt", "dictionary_no_number.txt")
 if __name__ == "__main__":
     main_menu()

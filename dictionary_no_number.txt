@@ -56,6 +56,7 @@
 奔 bfca
 本 bfey
 苯 bfce
+畚 bfte
 坌 bfte
 笨 bfze
 绷 bgsa
@@ -423,6 +424,8 @@
 催 cvra
 崔 cvua
 摧 cvuu
+瘁 cvbe
+萃 cvce
 粹 cvme
 脆 cvre
 悴 cvxe
@@ -480,6 +483,7 @@
 挡 dhue
 宕 dhbe
 荡 dhce
+菪 dhcb
 凼 dhcu
 当 dhhe
 档 dhme
@@ -515,6 +519,7 @@
 弟 dide
 帝 dije
 棣 dime
+娣 dine
 缔 dise
 地 dite
 第 dize
@@ -524,6 +529,7 @@
 郸 djba
 眈 djma
 耽 djoa
+聃 djor
 担 djua
 疸 djbe
 胆 djre
@@ -540,6 +546,7 @@
 刀 dkar
 叨 dkka
 氘 dkqa
+捯 dkua
 导 dkce
 倒 dkre
 岛 dkue
@@ -549,6 +556,7 @@
 蹈 dkze
 到 dkde
 稻 dkhe
+焘 dkhu
 盗 dkme
 倒 dkre
 纛 dkse
@@ -567,6 +575,7 @@
 代 dlre
 待 dlte
 戴 dltg
+埭 dltl
 岱 dlue
 玳 dlwe
 怠 dlxe
@@ -596,12 +605,14 @@
 咄 doka
 哆 dokt
 多 dota
+掇 doua
 夺 doca
 铎 doja
 踱 doza
 哚 doke
 朵 dome
 垛 dote
+埵 doti
 躲 doue
 剁 dode
 垛 dote
@@ -714,6 +725,7 @@
 芬 ffca
 分 ffda
 吩 ffka
+棻 ffma
 氛 ffqa
 纷 ffsa
 玢 ffwa
@@ -788,8 +800,8 @@
 夫 fuay
 鄜 fuba
 呋 fuka
+孵 fula
 麸 fuma
-孵 fuoa
 肤 fura
 敷 fuua
 夫 fuah
@@ -961,6 +973,7 @@
 哽 ggke
 梗 ggme
 耿 ggoe
+绠 ggse
 埂 ggte
 更 ggre
 刚 ghda
@@ -1054,6 +1067,7 @@
 罐 grfe
 观 grje
 灌 grue
+掼 grub
 惯 grxe
 工 gsat
 弓 gsau
@@ -1079,6 +1093,7 @@
 皋 guba
 菇 guca
 轱 gucs
+菰 gucz
 咕 guka
 呱 gukg
 姑 guna
@@ -1102,6 +1117,7 @@
 固 guge
 雇 guhe
 顾 guie
+梏 gume
 故 guue
 皈 gvba
 龟 gvda
@@ -1139,6 +1155,7 @@
 褂 gwye
 诖 gwyg
 乖 gyaq
+掴 gyua
 拐 gyue
 夬 gyeh
 怪 gyxe
@@ -1182,6 +1199,7 @@
 诃 heya
 禾 heah
 荷 heca
+菏 hecu
 和 heha
 合 heka
 劾 hela
@@ -1298,6 +1316,7 @@
 诨 hpye
 欢 hrqa
 郇 hrba
+萑 hrca
 垸 hrta
 洹 hrua
 环 hrwa
@@ -1343,10 +1362,12 @@
 觳 huka
 糊 huma
 核 humd
+鹄 huna
 狐 huqa
 胡 hura
 湖 huua
 壶 huud
+醐 huya
 虎 huhe
 唬 huke
 浒 huue
@@ -1499,8 +1520,10 @@
 澄 igua
 惩 igxa
 诚 igya
+骋 igme
 逞 igze
 秤 ighe
+菖 ihca
 猖 ihqa
 昌 ihra
 伥 ihri
@@ -1642,6 +1665,7 @@
 吹 ivka
 炊 ivqa
 垂 ival
+陲 ivba
 锤 ivja
 捶 ivua
 揣 iyua
@@ -1716,6 +1740,7 @@
 机 jima
 鸡 jina
 姬 jini
+犄 jinq
 肌 jira
 缉 jisa
 矶 jisj
@@ -1771,7 +1796,6 @@
 霁 jiie
 既 jije
 觊 jijq
-祭 jijs
 骥 jimb
 妓 jine
 髻 jipe
@@ -1781,6 +1805,7 @@
 紀 jise
 继 jism
 系 jisp
+祭 jisr
 绩 jisz
 技 jiue
 济 jiuq
@@ -1793,6 +1818,7 @@
 迹 jize
 戋 jmau
 兼 jmao
+菅 jmca
 歼 jmda
 艰 jmga
 煎 jmha
@@ -1803,6 +1829,7 @@
 缄 jmsa
 坚 jmta
 尖 jmxa
+笺 jmza
 柬 jmey
 减 jmbe
 茧 jmce
@@ -1846,16 +1873,16 @@
 衿 jnyr
 筋 jnza
 堇 jnet
+尽 jnie
 锦 jnje
-尽 jnme
 仅 jnre
 紧 jnse
 谨 jnye
 荩 jnce
 烬 jnhe
+尽 jnie
 觐 jnje
 劲 jnle
-尽 jnme
 妗 jnne
 晋 jnre
 禁 jnse
@@ -1973,12 +2000,14 @@
 车 juar
 疽 juba
 苴 juca
+菹 jucu
 鞠 juga
 驹 juma
 狙 juqa
 居 jusa
 拘 juua
 佝 juua
+掬 juul
 菊 juca
 橘 juma
 桔 juma
@@ -2071,6 +2100,7 @@
 玠 jxwe
 诫 jxye
 茎 jaca
+菁 jacq
 荆 jacx
 京 jada
 精 jama
@@ -2180,8 +2210,8 @@
 烤 kkhe
 考 kkle
 拷 kkue
+靠 kkfe
 铐 kkje
-靠 kkne
 开 klar
 揩 klua
 剀 klde
@@ -2227,6 +2257,7 @@
 葵 kvca
 奎 kvda
 魁 kvva
+逵 kvza
 匮 kvoe
 溃 kvue
 馈 kvub
@@ -2325,6 +2356,7 @@
 厘 lica
 离 lida
 梨 lima
+骊 liml
 犁 lina
 狸 liqa
 黎 liua
@@ -2334,6 +2366,7 @@
 篱 liza
 里 liet
 李 lime
+娌 line
 俚 lire
 礼 lise
 理 liwe
@@ -2421,6 +2454,7 @@
 廉 lmga
 临 lmia
 镰 lmja
+梿 lmma
 联 lmoa
 磷 lmsa
 涟 lmua
@@ -2430,6 +2464,7 @@
 连 lmza
 脸 lmre
 敛 lmue
+琏 lmwe
 炼 lmhe
 链 lmje
 练 lmse
@@ -2530,6 +2565,7 @@
 泸 luua
 卤 lube
 虏 lule
+掳 luue
 鲁 luye
 陆 lube
 赂 lubg
@@ -2550,6 +2586,7 @@
 猎 lxqe
 埒 lxte
 洌 lxue
+捩 lxuq
 裂 lxye
 咧 lxke
 驴 lyma
@@ -2595,6 +2632,7 @@
 〇 lvia
 铃 lvja
 呤 lvka
+棂 lvma
 龄 lvna
 聆 lvoa
 伶 lvra
@@ -2627,6 +2665,7 @@
 呣 mbka
 牟 mbna
 侔 mbra
+缪 mbsa
 谋 mbya
 某 mbme
 喵 mcka
@@ -2673,8 +2712,8 @@
 莽 mhce
 咪 mika
 眯 mima
+靡 mifa
 弥 miga
-靡 migf
 糜 mima
 縻 misa
 祢 miso
@@ -2744,7 +2783,9 @@
 黾 mmke
 勉 mmle
 眄 mmme
+娩 mmne
 冕 mmre
+腼 mmrm
 缅 mmse
 沔 mmue
 面 mmem
@@ -2899,6 +2940,7 @@
 奶 nlne
 氖 nlqe
 耐 nlce
+萘 nlcd
 奈 nlde
 柰 nlme
 拈 nmua
@@ -2909,6 +2951,7 @@
 捻 nmue
 撵 nmuc
 廿 nmeg
+埝 nmte
 念 nmxe
 您 nnxa
 恁 nnxa
@@ -2996,6 +3039,7 @@
 呕 obke
 怄 obxe
 阿 oeba
+婀 oena
 屙 oesa
 莪 oeca
 额 oeia
@@ -3189,8 +3233,10 @@
 帕 paje
 怕 paxe
 剖 pbda
-抔 pbua
+掊 pbua
+抔 pbub
 咅 pbke
+掊 pbue
 飘 pcfa
 漂 pcua
 瓢 pcga
@@ -3209,6 +3255,7 @@
 彭 pgmu
 鹏 pgna
 膨 pgra
+堋 pgta
 澎 pgua
 朋 pgya
 篷 pgza
@@ -3244,6 +3291,7 @@
 枇 pima
 脾 pira
 毗 pita
+埤 pitb
 琵 piwa
 癖 pibe
 否 pike
@@ -3252,6 +3300,7 @@
 圮 pite
 僻 pire
 屁 pise
+埤 pite
 辟 pixe
 譬 piye
 番 pjma
@@ -3293,6 +3342,7 @@
 篇 pmza
 骈 pmma
 胼 pmra
+便 pmrg
 片 pmef
 骗 pmme
 姘 pnna
@@ -3353,6 +3403,7 @@
 沛 pzue
 配 pzye
 乒 pdao
+娉 pdna
 砯 pdsa
 苹 pdca
 萍 pdcu
@@ -3400,6 +3451,7 @@
 七 qiar
 柒 qiar
 凄 qiba
+萋 qica
 戚 qiga
 妻 qina
 欺 qiqa
@@ -3411,6 +3463,7 @@
 亓 qiba
 祁 qibs
 荠 qica
+萁 qicb
 芪 qicu
 奇 qida
 旗 qifa
@@ -3470,6 +3523,7 @@
 钤 qmjj
 乾 qmsa
 潜 qmua
+掮 qmuj
 浅 qmue
 谴 qmyz
 遣 qmze
@@ -3482,6 +3536,7 @@
 嵌 qmue
 亲 qnda
 钦 qnja
+骎 qnma
 侵 qnra
 衾 qnya
 芹 qnca
@@ -3511,6 +3566,7 @@
 俅 qqra
 泅 qqua
 球 qqwa
+遒 qqza
 圈 qrga
 悛 qrxa
 泉 qrba
@@ -3538,6 +3594,7 @@
 鹊 qtne
 确 qtse
 雀 qtwe
+悫 qtxe
 曲 quap
 驱 quma
 区 quoa
@@ -3648,6 +3705,7 @@
 狨 rsqa
 绒 rssa
 溶 rsua
+嵘 rsum
 冗 rsde
 茹 ruca
 蠕 ruia
@@ -3678,6 +3736,7 @@
 叟 sbke
 嗽 sbke
 色 sede
+啬 sese
 塞 sete
 涩 seue
 瑟 sewe
@@ -3692,6 +3751,7 @@
 司 sika
 嘶 sikj
 咝 siks
+鸶 sina
 丝 sisa
 撕 siua
 思 sixa
@@ -3701,7 +3761,8 @@
 覗 sije
 嗣 sike
 驷 sime
-姒 sine
+耜 sine
+姒 siny
 兕 sioe
 似 sire
 伺 sirk
@@ -3725,7 +3786,9 @@
 搔 skua
 嫂 skne
 扫 skue
+埽 skue
 臊 skre
+埽 skte
 腮 slra
 塞 slta
 赛 slbe
@@ -3734,6 +3797,7 @@
 唆 soka
 嗦 soks
 梭 soma
+桫 somu
 娑 sona
 缩 sosa
 锁 sojh
@@ -3752,6 +3816,7 @@
 蒜 srce
 算 srze
 凇 ssba
+菘 ssca
 松 ssma
 忪 ssxa
 耸 ssoe
@@ -3781,12 +3846,14 @@
 虽 svia
 随 svba
 隋 svbr
+绥 svsa
 髓 svge
 隧 svbe
 穗 svhe
 碎 svse
 祟 svsi
 岁 svue
+邃 svxe
 谇 svye
 遂 svze
 他 tara
@@ -3846,7 +3913,9 @@
 荑 tica
 题 tiia
 啼 tika
+绨 tisa
 提 tiua
+醍 tiya
 蹄 tiza
 体 tire
 剃 tide
@@ -3854,6 +3923,7 @@
 替 tire
 倜 tirv
 屉 tise
+绨 tisd
 涕 tiue
 惕 tixe
 悌 tixd
@@ -3883,6 +3953,8 @@
 碳 tjse
 探 tjue
 炭 tjuh
+焘 tkha
+绦 tksa
 掏 tkua
 饕 tkuh
 涛 tkuu
@@ -3920,6 +3992,7 @@
 恬 tmxa
 殄 tmde
 舔 tmke
+腆 tmre
 町 tmte
 忝 tmxe
 脱 tora
@@ -3976,6 +4049,7 @@
 秃 tuha
 突 tuxa
 荼 tuca
+菟 tucd
 图 tuga
 屠 tusa
 徒 tuta
@@ -3986,6 +4060,7 @@
 吐 tuke
 兔 tude
 吐 tuke
+堍 tute
 推 tvua
 忒 tvxa
 颓 tvia
@@ -3994,6 +4069,7 @@
 褪 tvye
 退 tvze
 贴 txba
+萜 txca
 帖 txja
 铁 txje
 帖 txjv
@@ -4029,6 +4105,7 @@
 煞 uahe
 霎 uaie
 收 ubua
+熟 ubha
 手 ubeq
 守 ubbe
 首 ubde
@@ -4064,6 +4141,7 @@
 身 ufau
 莘 ufca
 呻 ufka
+娠 ufna
 伸 ufra
 绅 ufsa
 参 ufsd
@@ -4226,6 +4304,7 @@
 吮 upke
 顺 upie
 瞬 upme
+舜 upve
 栓 urma
 闩 urmh
 拴 urua
@@ -4233,6 +4312,7 @@
 书 uuaq
 尗 uuar
 输 uuca
+菽 uuck
 蔬 uucv
 殊 uuda
 叔 uuka
@@ -4430,16 +4510,17 @@
 值 vira
 侄 virt
 直 visa
+埴 vita
 执 viua
 止 view
 祁 vibe
 芷 vice
+咫 viie
 凪 vije
 只 vike
 枳 vime
 旨 vire
 纸 vise
-咫 visk
 祉 visv
 址 vite
 指 viue
@@ -4534,6 +4615,7 @@
 寨 vlme
 债 vlre
 桌 voma
+棁 vomd
 倬 vora
 捉 voua
 拙 voui
@@ -4624,6 +4706,7 @@
 我 woge
 蛙 waia
 哇 waka
+娲 wana
 挖 waua
 洼 waug
 娃 wana
@@ -4672,6 +4755,7 @@
 宛 wjbe
 皖 wjbb
 莞 wjce
+菀 wjcb
 婉 wjne
 晚 wjre
 碗 wjse
@@ -4771,6 +4855,7 @@
 芟 wzcy
 委 wzhe
 炜 wzhw
+娓 wzne
 伟 wzre
 伪 wzrw
 尾 wzse
@@ -4808,6 +4893,7 @@
 骁 xcmy
 鸮 xcna
 硝 xcsa
+绡 xcsh
 消 xcua
 潇 xcuc
 箫 xcza
@@ -4910,6 +4996,7 @@
 蹊 xiza
 习 xiad
 席 xiga
+觋 xija
 媳 xina
 袭 xiya
 喜 xike
@@ -5014,6 +5101,7 @@
 嗅 xqke
 绣 xqse
 岫 xque
+琇 xqwe
 袖 xqye
 宣 xrba
 轩 xrca
@@ -5045,6 +5133,7 @@
 靴 xtga
 穴 xtba
 茓 xtca
+噱 xtka
 学 xtxa
 雪 xtie
 血 xtes
@@ -5131,6 +5220,7 @@
 饧 xaua
 荥 xauc
 省 xame
+擤 xaue
 醒 xaye
 兴 xabe
 荇 xace
@@ -5200,8 +5290,10 @@
 诱 ybye
 椰 yema
 耶 yeoa
+掖 yeua
 爷 yefa
 耶 yeoa
+揶 yeua
 也 yeew
 冶 yebe
 野 yele
@@ -5624,6 +5716,7 @@
 沿 yjua
 岩 yjus
 筵 yjza
+郾 yjbe
 奄 yjde
 兖 yjdb
 剡 yjdh
@@ -5797,6 +5890,7 @@
 予 yual
 隅 yuba
 舆 yuca
+萸 yucf
 鱼 yuda
 雩 yuia
 觎 yuja
@@ -5823,12 +5917,12 @@
 与 yueu
 予 yueo
 宇 yube
-羽 yubx
 圄 yuge
 禹 yuke
 伛 yure
 俣 yurw
 屿 yuue
+羽 yuxe
 语 yuye
 聿 yuea
 玉 yuef
@@ -5851,6 +5945,7 @@
 昱 yurl
 域 yute
 禺 yutj
+堉 yutr
 御 yutx
 浴 yuue
 峪 yuug
@@ -5872,6 +5967,7 @@
 萤 ydic
 营 ydka
 盈 ydma
+萦 ydsa
 茔 ydta
 莹 ydwa
 迎 ydza
@@ -5886,6 +5982,7 @@
 咂 zaka
 匝 zaoa
 扎 zaua
+䨿 zafa
 杂 zama
 砸 zasa
 咋 zake
@@ -5929,6 +6026,7 @@
 子 zieq
 秭 zihe
 籽 zime
+梓 zimx
 姊 zine
 仔 zire
 紫 zise
@@ -5967,6 +6065,7 @@
 载 zlce
 作 zora
 昨 zora
+捽 zoua
 琢 zowa
 左 zoge
 佐 zore

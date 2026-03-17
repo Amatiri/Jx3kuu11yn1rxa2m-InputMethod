@@ -291,7 +291,6 @@ def process_two_char_word(word):
 
     for i, codes in enumerate(codes_per_char):
         if codes == "--":
-            print(f"编码缺失：{word[i]}")
             return None
 
     code1 = codes_per_char[0].split('/')
@@ -352,7 +351,6 @@ def process_multi_char_word(word):
 
     for i, codes in enumerate(codes_per_char):
         if codes == "--":
-            print(f"编码缺失：{word[i]}")
             return None
 
     selected_codes = []
@@ -473,19 +471,10 @@ def query_chars(chars_string):
     for char in chars_string:
         if '\u3400' <= char <= '\u9fff' or 0x20000 <= ord(char) <= 0x33479 or '\uf900' <= char <= '\ufad9':
             goly+=char
-    is_multi_char = len(goly) > 1
     for char in goly:
         codes = query_by_char(char)
         if codes:
-            if is_multi_char:
-                processed_codes = []
-                for code in codes:
-                    if ':' in code:
-                        code = code.split(':')[0]
-                    processed_codes.append(code)
-                result_parts.append('/'.join(processed_codes))
-            else:
-                result_parts.append('/'.join(codes))
+            result_parts.append('/'.join(codes))
         else:
             result_parts.append("--")
             missing_chars.append(char)
