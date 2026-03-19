@@ -3,6 +3,7 @@
 宀 bbk
 阝 bbu
 艹 bck
+表情 bcq;
 凵 bcy
 亠 bdh
 ⺈ bdkt
@@ -140,6 +141,7 @@
 ι gio
 Ι gioc
 干部 gjbu
+感觉 gjjt
 κ gka
 Κ gkac
 高效 gkxc
@@ -211,6 +213,8 @@
 胡克希伍 hkxw hukexiw
 还是 hlui
 孩子 hlzi
+或者 hove
+活着 hove0
 环境 hrj;
 互联网 hulmw
 回答 hvda
@@ -298,6 +302,7 @@
 理论 lilp
 里面 limm
 历史 liui
+理由 liyb
 劳动 lkds
 老师 lkui
 连续 lmxu
@@ -318,6 +323,7 @@
 美利坚 mzlij
 美术 mzuu
 没有 mzy
+哪个 nage
 那样 nayh
 能够 nggb
 你好 nihk 
@@ -357,6 +363,7 @@
 黔驴技穷 qljq qmlyjiq
 钱库 qmku
 前面 qmmm
+前往 qmwh
 秋词 qqci
 秋辞 qqci2
 龟兹 qqci2d
@@ -535,6 +542,8 @@
 ず rzu
 ズ rzuk
 搜索 sbso
+四个 sige
+丝绸 siib
 思想 sixd
 四则运算 sizeyps szys
 死而后已 sohy siorhby
@@ -542,7 +551,6 @@
 算法 srfa
 虽然 svrj
 条件 tcjm
-° tdu
 特别 tebx
 醍醐灌顶 thgd tihugrd
 题目 timu
@@ -565,10 +573,16 @@
 ↓ txw
 → tyb
 ← tzo
+∀ uaa
 ∪ ub;4
 ≠ ubdy
+⊂ ubkhj
 收敛 ublm
+∉ ubuy
 双拼 udpn1
+° udu4
+≥ udydy
+∃ uee
 社会 uehv
 设计 ueji
 射击 ueji1
@@ -577,13 +591,16 @@
 身份证 ufffv
 什么 ufm
 神秘 ufmi
+∓ ufuvg
+¬ ufz1
 √ ugfhk tdv
 生活 ugh
 生物 ugwu
+≡ uhdy
+上课 uhke
 上面 uhmm
 上午 uhwu
-时时 ui2ui2
-× uig
+× uig2
 时候 uihb
 市场 uiih
 时间 uijm
@@ -594,20 +611,28 @@
 视频 uipn
 食品 uipn3
 事情 uiq;
-÷ uiu
+÷ uiu2
+时时 uiui2
 实实在在 uiuizlz
+⊥ uivvi
 实现 uixm
 使用 uiys
 º ujb0
 ¹ ujb1
-² ujb2
+² ujb2 up;fh
 ³ ujb3
 ∩ ujc1
+∠ ujc3
 ∫ ujf
+∅ uksji
+∏ uli
 色子 ulzi
 筛子 ulzi0
+∥ up;x;
 顺序 upxu
 ∑ uqh
+≌ uqrdg
+△ usjx
 ∴ usy
 实时监测 uujc uiuijmc
 数据 uuju
@@ -621,11 +646,17 @@
 树叶 uuye
 属于 uuyu
 数字 uuzi4
+∝ uvgbi
+± uvgfu
 睡觉 uvjc
 ∞ uwq
+≤ uxydy
 ≈ uydy
+⊙ uyr2
 ∵ uyw
+⊆ uziji
 周榜 vbb
+装修 vdxq
 这里 veli
 这些 vexx
 这样 veyh
@@ -633,16 +664,19 @@
 政府 vgfu
 整个 vgge
 整理 vgli
+证明 vgm;
 政治 vgvi
 中华民国 vhmg vshwmng
 中华人民共和国 vhrg vhrmghg
 震撼首发 vhuf vfhjubf
 旨意 vi3yi4
 知道 vidk
+直接 vijx
 只能 ving
 智能 ving2
 々 vis
 只是 viui
+至少 viuk
 只有 viyb
 质疑 viyi2
 执意 viyi4
@@ -665,6 +699,7 @@
 文件 wfjm
 稳健 wfjm4
 文件夹 wfjmj
+文明 wfm;
 问题 wft
 网络 whlo
 网盘 whpj
@@ -691,6 +726,8 @@
 项目 xdmu
 详细 xdxi
 西班牙 xibjy
+西北 xibz3
+西南 xinj2
 系统 xits
 蟋蟀 xiuy
 希望 xiwh
@@ -704,6 +741,7 @@
 选拔 xrba
 选项 xrxd
 匈牙利 xsyal
+学期 xtqi
 噱头 xttb
 学生 xtug
 学习 xtxi
@@ -711,6 +749,7 @@
 喜上眉梢 xumu xiuhmzu
 需要 xuyk
 仙之人兮列如麻 xvrm xvrxlrm
+下课 xwke
 下面 xwmm
 下午 xwwu
 下载 xwzl
@@ -721,7 +760,7 @@
 英语 y;yu
 有关 ybgr1
 友好 ybhk
-游玩 ybwj2
+游玩 ybwj
 优秀 ybxq
 样子 yhzi
 一次 yici
@@ -769,3 +808,4 @@
 做到 zodk
 昨天 zotm
 最后 zvhb
+最近 zvjn

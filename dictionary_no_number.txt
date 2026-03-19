@@ -274,6 +274,7 @@
 孛 bozs
 跛 boze
 簸 bozq
+晡 bura
 不 buaf
 卜 bueq
 哺 buke
@@ -653,6 +654,7 @@
 侗 dsre
 胨 dsrd
 胴 dsrt
+硐 dsse
 垌 dste
 洞 dsue
 峒 dsut
@@ -729,6 +731,7 @@
 氛 ffqa
 纷 ffsa
 玢 ffwa
+酚 ffya
 焚 ffha
 坟 ffta
 汾 ffua
@@ -959,6 +962,7 @@
 葛 gece
 舸 geve
 虼 geie
+硌 gese
 各 geue
 根 gfma
 跟 gfza
@@ -1199,6 +1203,7 @@
 诃 heya
 禾 heah
 荷 heca
+𬌗 heck
 菏 hecu
 和 heha
 合 heka
@@ -1265,13 +1270,16 @@
 憾 hjxe
 悍 hjxr
 翰 hjye
+蒿 hkca
 薅 hkcn
 蚝 hkia
 号 hkka
 皋 hkkg
 嚎 hkku
 毫 hkma
+壕 hkta
 豪 hkua
+濠 hkuu
 郝 hkbe
 皓 hkbe
 颢 hkie
@@ -1374,6 +1382,7 @@
 互 huef
 户 huej
 戽 hude
+瓠 huge
 扈 huke
 祜 huse
 护 huue
@@ -1548,6 +1557,7 @@
 蚩 iiia
 吃 iika
 哧 iikt
+眵 iima
 媸 iina
 鸱 iind
 魑 iiva
@@ -1564,6 +1574,7 @@
 齿 iice
 齒 iice
 歯 iice
+豉 iide
 耻 iioe
 侈 iire
 彳 iiea
@@ -1931,6 +1942,7 @@
 捐 jrua
 涓 jrur
 卷 jroe
+鄄 jrbe
 眷 jrme
 卷 jroe
 狷 jrqe
@@ -2071,6 +2083,7 @@
 接 jxua
 揭 jxur
 孑 jxaa
+㔾 jxal
 节 jxca
 竭 jxda
 杰 jxha
@@ -2447,6 +2460,7 @@
 崃 llua
 涞 llul
 赖 llbe
+赉 llbl
 睐 llme
 徕 llte
 莲 lmca
@@ -2465,6 +2479,7 @@
 脸 lmre
 敛 lmue
 琏 lmwe
+殓 lmde
 炼 lmhe
 链 lmje
 练 lmse
@@ -2663,6 +2678,7 @@
 嘛 makg
 哞 mbka
 呣 mbka
+眸 mbma
 牟 mbna
 侔 mbra
 缪 mbsa
@@ -2708,6 +2724,7 @@
 茫 mhcu
 氓 mhda
 盲 mhma
+硭 mhsa
 忙 mhxa
 莽 mhce
 咪 mika
@@ -2930,6 +2947,7 @@
 难 njwe
 孬 nkna
 呶 nkka
+硇 nksa
 挠 nkua
 脑 nkre
 瑙 nkwe
@@ -3213,6 +3231,7 @@
 喔 ooke
 而 oras
 儿 orad
+鸸 orna
 耳 oreu
 尔 orde
 饵 orue
@@ -3241,6 +3260,7 @@
 漂 pcua
 瓢 pcga
 朴 pcma
+殍 pcde
 漂 pcue
 漂 pcue
 票 pcxe
@@ -3321,6 +3341,7 @@
 庖 pkga
 炮 pkha
 咆 pkka
+匏 pkla
 狍 pkqa
 袍 pkya
 跑 pkze
@@ -3417,6 +3438,7 @@
 锹 qcja
 敲 qcpa
 缲 qcsa
+硗 qcsy
 悄 qcxa
 跷 qcza
 荞 qcca
@@ -3533,6 +3555,7 @@
 欠 qmde
 歉 qmqe
 倩 qmre
+堑 qmte
 嵌 qmue
 亲 qnda
 钦 qnja
@@ -3829,6 +3852,7 @@
 讼 ssyg
 送 ssze
 苏 suca
+甦 suca
 酥 suya
 俗 sura
 肃 suel
@@ -3844,6 +3868,7 @@
 速 suze
 荽 svca
 虽 svia
+眭 svma
 随 svba
 隋 svbr
 绥 svsa
@@ -3919,6 +3944,7 @@
 蹄 tiza
 体 tire
 剃 tide
+薙 tide
 剔 tide
 替 tire
 倜 tirv
@@ -3982,6 +4008,7 @@
 泰 tlue
 汰 tlut
 态 tlxe
+酞 tlye
 天 tmay
 添 tmua
 田 tmam
@@ -4416,6 +4443,7 @@
 撞 vdue
 遮 veza
 辙 veca
+辄 veco
 蛰 veia
 哲 veka
 折 veua
@@ -4456,6 +4484,7 @@
 睁 vgma
 狰 vgqa
 征 vgta
+徵 vgta
 峥 vgua
 怔 vgxa
 筝 vgza
@@ -4825,6 +4854,7 @@
 物 wune
 鹜 wunm
 婺 wunu
+晤 wure
 坞 wute
 务 wuue
 悟 wuxe
@@ -4945,8 +4975,8 @@
 羲 xihg
 熙 xihi
 烯 xihj
-熹 xihk
-熺 xihu
+熺 xihk
+熹 xihu
 熄 xihx
 蜥 xiia
 蟋 xiix
@@ -5048,6 +5078,7 @@
 馅 xmue
 岘 xmuj
 现 xmwe
+㔾 xmel
 心 xnae
 芯 xnca
 莘 xncd
@@ -5177,6 +5208,7 @@
 狎 xwqj
 侠 xwra
 暇 xwrk
+硖 xwsa
 峡 xwua
 遐 xwza
 下 xwea
@@ -5215,6 +5247,7 @@
 陉 xabg
 刑 xada
 形 xama
+硎 xasa
 行 xata
 型 xatd
 饧 xaua
@@ -5811,6 +5844,7 @@
 昀 ypra
 纭 ypsa
 陨 ypbe
+殒 ypde
 狁 ypqe
 允 ypse
 郓 ypbe
@@ -5995,6 +6029,7 @@
 揍 zbue
 则 zeda
 咋 zeka
+啧 zekq
 责 zeqa
 择 zeua
 泽 zeuk
@@ -6032,6 +6067,7 @@
 紫 zise
 自 ziem
 字 zibe
+眦 zime
 渍 ziue
 恣 zixe
 子 ziex

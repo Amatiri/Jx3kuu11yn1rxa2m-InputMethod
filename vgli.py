@@ -16,6 +16,7 @@ def get_abc_code(full_code):
     if len(full_code) < 3:
         return full_code
     return full_code[:3]
+
 first_level_map = {
     '不': 'bu44',  
     '从': 'cs2r',
@@ -44,48 +45,37 @@ first_level_map = {
 }
 def process_file(input_file, output_file):
     seen_entries = set()
-    entries = []
-    
+    entries = []  
     global first_level_map 
-    
     entries_by_first_char = {}
-    
     with open(input_file, 'r', encoding='utf-8') as f:
         for line in f:
             line = line.rstrip() 
             if not line:
                 continue
-
             parts = line.split(' ', 1)
             if len(parts) < 2:
                 continue  
-            
             hanzi, non_han = parts
             non_han_clean = non_han.rstrip()  
-
             if len(non_han_clean) <= 3:
                 continue
-
             entry_key = f"{hanzi} {non_han_clean}"
-
             if entry_key not in seen_entries:
                 seen_entries.add(entry_key)
                 entries.append((hanzi, non_han_clean))
-    
     seen_codes = set()
     code_unique_entries = []
     for hanzi, code in entries:
         if code not in seen_codes:
             seen_codes.add(code)
             code_unique_entries.append((hanzi, code))
-    
     for hanzi, code in code_unique_entries:
         if code and code[0].isalpha():
             first_char = code[0]
             if first_char not in entries_by_first_char:
                 entries_by_first_char[first_char] = []
             entries_by_first_char[first_char].append((hanzi, code))
-    
     for first_char, entry_list in entries_by_first_char.items():
         first_level_hanzi = None
         for hanzi, target_code in first_level_map.items():
@@ -93,32 +83,24 @@ def process_file(input_file, output_file):
                 first_level_hanzi = hanzi
                 target_first_level_code = target_code
                 break
-        
         if first_level_hanzi:
             for i, (hanzi, code) in enumerate(entry_list):
                 if hanzi == first_level_hanzi and code == target_first_level_code:
                     entry_list.insert(0, entry_list.pop(i))
                     break
-        
         if len(entry_list) > 1:
             tail_entries = entry_list[1:]
             tail_entries.sort(key=lambda x: sort_key(x[1]))
             entry_list[1:] = tail_entries
-    
     all_entries = []
     for first_char in sorted(entries_by_first_char.keys()):
         all_entries.extend(entries_by_first_char[first_char])
-    
     with open(output_file, 'w', encoding='utf-8') as f:
         for hanzi, non_han in all_entries:
             f.write(f"{hanzi} {non_han}\n")
-
-
+    print(f"汉字整理完成，条目总数 {len(all_entries)}")
             
-
-
 def sort_file_by_second_part(input_file, output_file):
-
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -127,27 +109,27 @@ def sort_file_by_second_part(input_file, output_file):
         for line_num, line in enumerate(lines, 1): 
             if not line.strip():  
                 continue
-                
             parts = line.split(' ', 1)
             if len(parts) < 2:
-                print(f"警告: 第{line_num}行没有空格分隔: {line}")
+                print(f"警告: 第{line_num}行没有空格分隔: {line.strip()}")
                 continue
-                
             first_part, second_part = parts
             parsed_lines.append((first_part, second_part, line))
-        
         parsed_lines.sort(key=lambda x: x[1])
-        
+        seen_second_parts = set()
+        unique_lines = []
+        for first, second, line in parsed_lines:
+            if second not in seen_second_parts:
+                seen_second_parts.add(second)
+                unique_lines.append(line)
         with open(output_file, 'w', encoding='utf-8') as f:
-            for _, _, original_line in parsed_lines:
-                f.write(original_line)
-        
-        print(f"排序完成!")
-        
+            f.writelines(unique_lines)  
+        print(f"词语整理完成，条目总数 {len(unique_lines)}")
     except FileNotFoundError:
         print(f"错误: 找不到输入文件 '{input_file}'")
     except Exception as e:
         print(f"错误: {e}")
+
 def merge_files_to_ahk(dictionary_file, ciyu_file, output_file):
 
     result_dict = {}
@@ -287,7 +269,7 @@ def process_filey(input_file, output_file):
                     outfile.write(f"{line}\n")
             for zi,ma in first_level_map.items():
                 outfile.write(f'{zi} {ma[0]}\n')
-        print(f"处理完成！结果已保存到 {output_file}")
+        print(f"码表转换完成，见{output_file}")
         
     except FileNotFoundError:
         print(f"错误：找不到文件 {input_file}")

@@ -332,7 +332,6 @@ def batch_add_entries():  # 核心
         subprocess.run(["python", "vgli.py"])
         if os.path.exists(temp_file):
             os.remove(temp_file)
-    print("批量录入完成！字典已保存并排序")
 def add_entry(char, code):
     """添加条目，已添加重码处理"""
     if len(code) < 3:
@@ -599,6 +598,7 @@ def main():
                         print(f"未录入汉字：{''.join(missing)}")
             elif choice == '8':
                 ciyumain()
+                sort_file_by_second_part("ciyu.txt", "ciyu.txt")
             elif choice == '9':
                 bmmamain()
             elif choice == '':
