@@ -48,6 +48,7 @@
 飑 bc1f
 彪 bc1h
 标 bc1m
+髟 bc1mi
 杓 bc1mu
 表 bc3q
 俵 bc4r
@@ -223,6 +224,7 @@
 贬 bm3b
 扁 bm3h
 匾 bm3o
+釆 bm46
 弁 bm4c
 苄 bm4cd
 卞 bm4d
@@ -1621,6 +1623,7 @@
 逴 io1zv
 辍 io4c
 辵 io4m
+龊 io4n
 绰 io4s
 趠 io4z.
 椿 ip1m
@@ -3390,6 +3393,7 @@
 珀 po4w
 迫 po4z
 铺 pu1j
+攴 pu1k
 仆 pu1r
 扑 pu1u
 葡 pu2c
@@ -4343,6 +4347,7 @@
 蔬 uu1cv
 殊 uu1d
 叔 uu1k
+殳 uu1kj
 梳 uu1m
 枢 uu1mq
 姝 uu1n
@@ -4722,6 +4727,7 @@
 祝 vu4s
 注 vu4u
 筑 vu4z
+隹 vv19
 锥 vv1j
 椎 vv1m
 追 vv1z
@@ -4804,8 +4810,8 @@
 窝 wo1x
 斡 wo4d
 卧 wo4i
-嗌 wo4km
 杌 wo4m
+龌 wo4n
 肟 wo4r
 握 wo4u
 沃 wo4uy

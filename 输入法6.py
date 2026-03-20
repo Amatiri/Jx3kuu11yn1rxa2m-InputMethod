@@ -461,7 +461,7 @@ def main_function(*args):
         return
 
     # 如果输入发生变化，重置状态（除了 previous_input 的比较）
-    if input_text != last_input_text:
+    if input_text.strip() != last_input_text:
         current_page = 0
         current_part_index = -1
         current_query_type = ""
@@ -508,16 +508,6 @@ def main_function(*args):
             update_display()
             output_text = first_chars
 
-    # 输入为空时清空显示并重置状态
-    if input_text == "":
-        first_chars_label.config(text='')
-        current_part_label.config(text='')
-        page_label.config(text='')
-        current_query_type = ""
-        current_split_parts = []
-        in_part_selection = False
-        current_phrase = ""
-
     if key_processed:
         current_phrase = ""
 
@@ -530,7 +520,7 @@ def main_function(*args):
                 output_text = current_phrase[1:-1]
             else:
                 output_text = processed
-
+                
         replace_content(input_text, output_text, do_paste=True, reset_entry=True)
         reset_input_state()
         return
