@@ -1,10 +1,10 @@
+*和help中的规则文本内容相同：*
 
-<<<<<<< HEAD
 # 解书音形程序使用
 
 ## 一、外观与设置
 
-<img title="" src="file:///D:/USB/图片/Screenshots/屏幕截图 2026-03-20 152804.png" alt="屏幕截图 2026-03-20 152804" width="614" height="281">
+<img width="614" height="281" alt="屏幕截图 2026-03-20 152804" src="https://github.com/user-attachments/assets/5b9f43f8-ee1e-45c3-9bb3-95a835cb68f8" />
 
 **界面布局**
 
@@ -237,7 +237,7 @@ a，e，i，o，u同全拼。
 iu→q，ua/ia→w，uan/ü(v)an/er→r，ü(v)e→t，uai/ü(v)→y（声母jqxy的，ü(v)→u），uo→o，un/ü(v)n→p，ong/iong→s，uang/iang→d，en→f，eng→g，ang→h，an→j，ao→k，ai→l，ei→z，ie→x，iao→c，ui→v，ou→b，in→n，ian→m，ing→；
 
 *以下为搜狗双拼对照表*
-![](D:\USB\图片\Screenshots\屏幕截图%202026-01-10%20105116.png)
+<img width="1264" height="378" alt="屏幕截图 2026-01-10 105116" src="https://github.com/user-attachments/assets/a003271e-0671-4833-9af4-2b4aa3cec2c8" />
 
 **调码（C）声调：**
 
@@ -804,5 +804,3 @@ iu→q，ua/ia→w，uan/ü(v)an/er→r，ü(v)e→t，uai/ü(v)→y（声母jqx
 合体字：
 
 先部首码，再附加。附加分副码是否省略：省略副码：用平仄。副码不省略：用副码。
-=======
->>>>>>> 134d778e54b4988b8b065ac9b5281cbee78715b5
