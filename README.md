@@ -3,6 +3,7 @@
 # 解书音形程序使用
 
 ## 一、外观与设置
+<img width="614" height="281" alt="屏幕截图 2026-03-20 152804" src="https://github.com/user-attachments/assets/f228710d-d337-46e7-af09-062d34d65e18" />
 
 **界面布局**
 
@@ -13,6 +14,7 @@
   3. 第三行：状态提示（如“字 1/2 页 1”）
 - 底部状态栏：设置选项和字典条目数统计
 
+
 **设置选项**
 
 - 自动上字：点击切换开启（绿）/关闭（红）
@@ -21,6 +23,7 @@
   - 开启时：多字词输入按空格优先上屏词语
 - 部首表：点击切换显示（绿）/隐藏（红）
   - 显示部首编码参考表，窗口高度自动调整
+<img width="530" height="345" alt="屏幕截图 2026-03-17 200329" src="https://github.com/user-attachments/assets/41de87e7-f133-4d00-b1d3-81033f512b91" />
 
 **窗口特性**
 
@@ -29,6 +32,7 @@
 - 半透明效果：95%透明度，不遮挡下方内容
 
 ## 二、输入功能
+
 
 **单字输入**
 
@@ -60,6 +64,7 @@
 - 内输/外输：仅在输入法程序预设的框内输入/在任意全局输入框输入，用←+→切换。外输时根据光标位置移动输入界面。为了避免快捷键冲突，可按esc+1取消内输外输切换功能，此时仅支持内输，即“仅内输”。
 
 ## 三、管理功能（newedit.py）
+<img width="625" height="160" alt="屏幕截图 2026-03-20 152814" src="https://github.com/user-attachments/assets/177c7440-39a7-4fd1-aac8-fb8f81d453b8" />
 
 1. **批量录入** - 批量录入汉字
    
@@ -233,6 +238,9 @@ zh，ch，sh→v，i，u。
 a，e，i，o，u同全拼。
 
 iu→q，ua/ia→w，uan/ü(v)an/er→r，ü(v)e→t，uai/ü(v)→y（声母jqxy的，ü(v)→u），uo→o，un/ü(v)n→p，ong/iong→s，uang/iang→d，en→f，eng→g，ang→h，an→j，ao→k，ai→l，ei→z，ie→x，iao→c，ui→v，ou→b，in→n，ian→m，ing→；
+
+*以下为搜狗双拼对照表*
+<img width="1264" height="378" alt="屏幕截图 2026-01-10 105116" src="https://github.com/user-attachments/assets/29a22178-804b-4aaf-9458-fb85ee50d7a8" />
 
 **调码（C）声调：**
 
