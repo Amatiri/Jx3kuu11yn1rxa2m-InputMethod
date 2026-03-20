@@ -367,7 +367,6 @@ def add_entry(char, code):
         if new_conflict_in_list:
             print(f"新编码 '{new_conflict_code}' 仍与其他条目冲突，请继续处理")
             new_conflict_code = abc_code + input(f"为 '{conflict_hanzi}' 输入另一个新的形码: ")
-        
         modified_entries.append((conflict_hanzi, new_conflict_code))
         new_code = abc_code + input(f"为 '{char}' 输入新的形码: ")
         temp_check_list.append((conflict_hanzi, new_conflict_code))

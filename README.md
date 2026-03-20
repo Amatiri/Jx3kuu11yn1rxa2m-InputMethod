@@ -4,6 +4,8 @@
 
 ## 一、外观与设置
 
+<img title="" src="file:///D:/USB/图片/Screenshots/屏幕截图 2026-03-20 152804.png" alt="屏幕截图 2026-03-20 152804" width="614" height="281">
+
 **界面布局**
 
 - 顶部输入框：实时显示输入内容，支持文本编辑
@@ -233,6 +235,9 @@ zh，ch，sh→v，i，u。
 a，e，i，o，u同全拼。
 
 iu→q，ua/ia→w，uan/ü(v)an/er→r，ü(v)e→t，uai/ü(v)→y（声母jqxy的，ü(v)→u），uo→o，un/ü(v)n→p，ong/iong→s，uang/iang→d，en→f，eng→g，ang→h，an→j，ao→k，ai→l，ei→z，ie→x，iao→c，ui→v，ou→b，in→n，ian→m，ing→；
+
+*以下为搜狗双拼对照表*
+![](D:\USB\图片\Screenshots\屏幕截图%202026-01-10%20105116.png)
 
 **调码（C）声调：**
 

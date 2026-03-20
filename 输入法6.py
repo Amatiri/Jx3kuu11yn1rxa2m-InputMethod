@@ -901,6 +901,5 @@ entry_count_label.pack(side=tk.LEFT, padx=(0, 2))
 
 def on_main_window_close():
     window.destroy()
-
 window.protocol("WM_DELETE_WINDOW", on_main_window_close)
 window.mainloop()

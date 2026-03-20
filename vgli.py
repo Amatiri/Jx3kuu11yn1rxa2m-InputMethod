@@ -140,7 +140,6 @@ def merge_files_to_ahk(dictionary_file, ciyu_file, output_file):
                 line = line.strip()
                 if not line or line.startswith(';'):
                     continue  
-                
                 parts = line.split()
                 if len(parts) >= 2:
                     value = parts[0]  

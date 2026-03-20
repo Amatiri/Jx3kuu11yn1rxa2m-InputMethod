@@ -222,37 +222,26 @@ def generate_all_combinations(code1, code2):
     
     if c2["C"]:
         combos.append(c1["AB"] + c2["AB"] + c2["C"])
-    
     if c2["C"] and c2["D"]:
         combos.append(c1["AB"] + c2["AB"] + c2["C"] + c2["D"])
-    
     if c2["C"] and c2["D"] and c2["E"]:
         combos.append(c1["AB"] + c2["AB"] + c2["C"] + c2["D"] + c2["E"])
-    
     if c1["C"] and c2["C"]:
         combos.append(c1["AB"] + c1["C"] + c2["AB"] + c2["C"])
-    
     if c1["C"] and c2["C"] and c2["D"]:
         combos.append(c1["AB"] + c1["C"] + c2["AB"] + c2["C"] + c2["D"])
-    
     if c1["C"] and c2["C"] and c2["D"] and c2["E"]:
         combos.append(c1["AB"] + c1["C"] + c2["AB"] + c2["C"] + c2["D"] + c2["E"])
-    
     if c1["C"] and c1["D"] and c2["C"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c2["AB"] + c2["C"])
-    
     if c1["C"] and c1["D"] and c2["C"] and c2["D"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c2["AB"] + c2["C"] + c2["D"])
-    
     if c1["C"] and c1["D"] and c2["C"] and c2["D"] and c2["E"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c2["AB"] + c2["C"] + c2["D"] + c2["E"])
-    
     if c1["C"] and c1["D"] and c1["E"] and c2["C"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c1["E"] + c2["AB"] + c2["C"])
-    
     if c1["C"] and c1["D"] and c1["E"] and c2["C"] and c2["D"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c1["E"] + c2["AB"] + c2["C"] + c2["D"])
-
     if c1["C"] and c1["D"] and c1["E"] and c2["C"] and c2["D"] and c2["E"]:
         combos.append(c1["AB"] + c1["C"] + c1["D"] + c1["E"] + c2["AB"] + c2["C"] + c2["D"] + c2["E"])
     
