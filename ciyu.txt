@@ -53,6 +53,7 @@
 不仅 bujn
 不列颠 bulxd
 部首 buub3
+攵 buw
 不闻 buwf2
 布纹 buwf2s
 夂 buwv
@@ -303,6 +304,7 @@
 纪释析义 juxy jiuixiyi
 解书音形 juyx jxuuynx
 家庭 jwt;
+结合 jxhe
 结束 jxuu
 科技 keji
 科学 kext
@@ -337,6 +339,7 @@
 类型 lzx;
 名称 m;ig
 明天 m;tm
+描述 mcuu
 盲打 mhda3 
 耄耋 mkdx
 腼腆 mmtm
@@ -574,8 +577,10 @@
 算法 srfa
 虽然 svrj
 条件 tcjm
+调整 tcvg
 特别 tebx
 醍醐灌顶 thgd tihugrd
+提交 tijc
 题目 timu
 体系 tixi
 体现 tixm
@@ -583,6 +588,7 @@
 韬光养晦 tkgdyhh tgyh
 涂蜡的氧化切制铜楼梯 tldt tldyhqvtlt
 添加 tmjw
+填写 tmxx
 同步 tsbu
 痛苦 tsku
 同时 tsui
@@ -664,7 +670,6 @@
 枢纽 uunq
 输入 uuru
 输入法 uuruf
-攵 uuw
 数学 uuxt
 ∈ uuy
 树叶 uuye
@@ -689,6 +694,7 @@
 整个 vgge
 整理 vgli
 证明 vgm;
+整体 vgti
 政治 vgvi
 中华民国 vhmg vshwmng
 中华人民共和国 vhrg vhrmghg

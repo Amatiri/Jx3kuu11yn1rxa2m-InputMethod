@@ -809,6 +809,7 @@
 麸 fu1m
 肤 fu1r
 敷 fu1u
+趺 fu1z
 夫 fu26
 弗 fu29
 郛 fu2b
@@ -1100,6 +1101,7 @@
 菇 gu1c
 轱 gu1cs
 菰 gu1cz
+蛄 gu1i
 咕 gu1k
 呱 gu1kg
 姑 gu1n
@@ -1248,6 +1250,7 @@
 航 hh2v
 沆 hh4u
 顸 hj1i
+蚶 hj1ig
 憨 hj1x
 酣 hj1y
 寒 hj2b
@@ -1255,6 +1258,7 @@
 邗 hj2bs
 函 hj2c
 含 hj2k
+晗 hj2r
 涵 hj2u
 韩 hj2w
 喊 hj3k
@@ -2405,6 +2409,7 @@
 立 li4d
 利 li4h
 雳 li4i
+蛎 li4ic
 鉝 li4j
 吏 li4k
 呖 li4kc
@@ -2491,6 +2496,7 @@
 邻 ln2b
 麟 ln2g
 临 ln2i
+啉 ln2k
 林 ln2m
 磷 ln2s
 淋 ln2u
@@ -2978,6 +2984,7 @@
 恁 nn2x.
 娜 no2n
 挪 no2u
+喏 no4k
 糯 no4m
 懦 no4x
 诺 no4y
@@ -3011,6 +3018,7 @@
 捏 nx1u
 乜 nx49
 镍 nx4j
+啮 nx4k
 臬 nx4m
 聂 nx4o
 涅 nx4u
@@ -3466,6 +3474,7 @@
 枪 qd1m
 戕 qd1p
 腔 qd1r
+跄 qd1z
 强 qd2g
 墙 qd2t
 强 qd3g
@@ -3474,6 +3483,7 @@
 戗 qd4g
 炝 qd4h
 呛 qd4k
+跄 qd4z
 七 qi14
 柒 qi14.
 凄 qi1b
@@ -3503,6 +3513,7 @@
 祈 qi2s
 祇 qi2su
 圻 qi2t
+畦 qi2tg
 崎 qi2u
 岐 qi2uv
 歧 qi2v
@@ -3623,6 +3634,7 @@
 雀 qt4w
 悫 qt4x
 曲 qu10
+蛆 qu1i
 驱 qu1m
 区 qu1o
 屈 qu1s
@@ -3657,6 +3669,7 @@
 窃 qx4x
 怯 qx4xt
 轻 q;1c
+圊 q;1g
 蜻 q;1i
 卿 q;1j
 青 q;1q
@@ -4674,6 +4687,7 @@
 转 vr3c
 赚 vr4b
 转 vr4c
+啭 vr4k
 传 vr4r
 撰 vr4u
 中 vs15

@@ -48,6 +48,7 @@
 飑 bcfa
 彪 bcha
 标 bcma
+髟 bcmi
 杓 bcmu
 表 bcqe
 俵 bcre
@@ -223,6 +224,7 @@
 贬 bmbe
 扁 bmhe
 匾 bmoe
+釆 bmeh
 弁 bmce
 苄 bmcd
 卞 bmde
@@ -807,6 +809,7 @@
 麸 fuma
 肤 fura
 敷 fuua
+趺 fuza
 夫 fuah
 弗 fual
 郛 fuba
@@ -1098,6 +1101,7 @@
 菇 guca
 轱 gucs
 菰 gucz
+蛄 guia
 咕 guka
 呱 gukg
 姑 guna
@@ -1246,6 +1250,7 @@
 航 hhva
 沆 hhue
 顸 hjia
+蚶 hjig
 憨 hjxa
 酣 hjya
 寒 hjba
@@ -1253,6 +1258,7 @@
 邗 hjbs
 函 hjca
 含 hjka
+晗 hjra
 涵 hjua
 韩 hjwa
 喊 hjke
@@ -1621,6 +1627,7 @@
 逴 iozv
 辍 ioce
 辵 iome
+龊 ione
 绰 iose
 趠 ioze
 椿 ipma
@@ -2402,6 +2409,7 @@
 立 lide
 利 lihe
 雳 liie
+蛎 liic
 鉝 lije
 吏 like
 呖 likc
@@ -2488,6 +2496,7 @@
 邻 lnba
 麟 lnga
 临 lnia
+啉 lnka
 林 lnma
 磷 lnsa
 淋 lnua
@@ -2975,6 +2984,7 @@
 恁 nnxa
 娜 nona
 挪 noua
+喏 noke
 糯 nome
 懦 noxe
 诺 noye
@@ -3008,6 +3018,7 @@
 捏 nxua
 乜 nxel
 镍 nxje
+啮 nxke
 臬 nxme
 聂 nxoe
 涅 nxue
@@ -3390,6 +3401,7 @@
 珀 powe
 迫 poze
 铺 puja
+攴 puka
 仆 pura
 扑 puua
 葡 puca
@@ -3462,6 +3474,7 @@
 枪 qdma
 戕 qdpa
 腔 qdra
+跄 qdza
 强 qdga
 墙 qdta
 强 qdge
@@ -3470,6 +3483,7 @@
 戗 qdge
 炝 qdhe
 呛 qdke
+跄 qdze
 七 qiar
 柒 qiar
 凄 qiba
@@ -3499,6 +3513,7 @@
 祈 qisa
 祇 qisu
 圻 qita
+畦 qitg
 崎 qiua
 岐 qiuv
 歧 qiva
@@ -3619,6 +3634,7 @@
 雀 qtwe
 悫 qtxe
 曲 quap
+蛆 quia
 驱 quma
 区 quoa
 屈 qusa
@@ -3653,6 +3669,7 @@
 窃 qxxe
 怯 qxxt
 轻 qaca
+圊 qaga
 蜻 qaia
 卿 qaja
 青 qaqa
@@ -4343,6 +4360,7 @@
 蔬 uucv
 殊 uuda
 叔 uuka
+殳 uukj
 梳 uuma
 枢 uumq
 姝 uuna
@@ -4669,6 +4687,7 @@
 转 vrce
 赚 vrbe
 转 vrce
+啭 vrke
 传 vrre
 撰 vrue
 中 vsat
@@ -4722,6 +4741,7 @@
 祝 vuse
 注 vuue
 筑 vuze
+隹 vvao
 锥 vvja
 椎 vvma
 追 vvza
@@ -4804,8 +4824,8 @@
 窝 woxa
 斡 wode
 卧 woie
-嗌 wokm
 杌 wome
+龌 wone
 肟 wore
 握 woue
 沃 wouy
