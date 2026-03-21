@@ -429,6 +429,7 @@
 摧 cv1uu
 瘁 cv4b
 萃 cv4c
+啐 cv4k
 粹 cv4m
 脆 cv4r
 悴 cv4x
@@ -540,6 +541,7 @@
 萏 dj4c
 弹 dj4g
 蛋 dj4i
+啖 dj4k
 氮 dj4q
 但 dj4r
 旦 dj4rh
@@ -1114,6 +1116,7 @@
 贾 gu3bx
 毂 gu3c
 钴 gu3j
+蛊 gu3m
 牯 gu3n
 骨 gu3r
 股 gu3rp
@@ -1368,6 +1371,7 @@
 乎 hu11
 烀 hu1h
 呼 hu1k
+唿 hu1kx
 忽 hu1x
 葫 hu2c
 弧 hu2g
@@ -1515,6 +1519,7 @@
 衬 if4y
 趁 if4z
 称 ig1h
+蛏 ig1i
 铛 ig1j
 噌 ig1k
 柽 ig1m
@@ -2654,6 +2659,7 @@
 羚 l;2hr
 零 l;2i
 〇 l;2i.
+蛉 l;2ir
 铃 l;2j
 呤 l;2k
 棂 l;2m
@@ -4004,6 +4010,7 @@
 滔 tk1uy
 陶 tk2b
 萄 tk2c
+啕 tk2k
 桃 tk2m
 淘 tk2u
 洮 tk2uv
@@ -4148,6 +4155,7 @@
 厦 ua4c
 煞 ua4h
 霎 ua4i
+唼 ua4k
 收 ub1u
 熟 ub2h
 手 ub31
@@ -4423,6 +4431,7 @@
 拃 va3u
 乍 va41
 炸 va4h
+蚱 va4i
 咤 va4k
 栅 va4m
 柞 va4mv
@@ -4639,6 +4648,7 @@
 栈 vj4m
 绽 vj4s
 钊 vk1j
+啁 vk1k
 昭 vk1r
 招 vk1u
 朝 vk1y
@@ -5335,6 +5345,7 @@
 又 yb44
 宥 yb4b
 囿 yb4g
+蚴 yb4i
 右 yb4k
 柚 yb4m
 釉 yb4my
@@ -5855,6 +5866,7 @@
 印 yn4j
 胤 yn4r
 哟 yo1k
+唷 yo1kr
 哟 yo0k
 晕 yp1r
 郧 yp2b
@@ -5973,6 +5985,7 @@
 予 yu39
 宇 yu3b
 圄 yu3g
+圉 yu3gx
 禹 yu3k
 伛 yu3r
 俣 yu3rw

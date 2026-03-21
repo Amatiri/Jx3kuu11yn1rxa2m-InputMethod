@@ -107,6 +107,7 @@
 电影院 dmy;y
 — dpv
 ￥ dqm
+动态 dstl
 东西 dsx
 ！ dth
 … dul
@@ -305,6 +306,7 @@
 纪释析义 juxy jiuixiyi
 解书音形 juyx jxuuynx
 家庭 jwt;
+结构 jxgb
 结合 jxhe
 结束 jxuu
 科技 keji
