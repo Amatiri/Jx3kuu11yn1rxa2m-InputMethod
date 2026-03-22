@@ -700,7 +700,7 @@ bg_color = '#FFF3C7'
 label_bg = '#EFE3AE'
 
 real_time_var = tk.StringVar()
-real_time_var.trace("w", main_function)
+real_time_var.trace_add("write", main_function)
 
 main_frame = tk.Frame(window, bg=bg_color, padx=2, pady=0)
 main_frame.pack(fill=tk.BOTH, expand=False)

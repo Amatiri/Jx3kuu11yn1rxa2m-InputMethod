@@ -429,6 +429,7 @@
 摧 cvuu
 瘁 cvbe
 萃 cvce
+啐 cvke
 粹 cvme
 脆 cvre
 悴 cvxe
@@ -540,6 +541,7 @@
 萏 djce
 弹 djge
 蛋 djie
+啖 djke
 氮 djqe
 但 djre
 旦 djrh
@@ -1114,6 +1116,7 @@
 贾 gubx
 毂 guce
 钴 guje
+蛊 gume
 牯 gune
 骨 gure
 股 gurp
@@ -1368,6 +1371,7 @@
 乎 huaq
 烀 huha
 呼 huka
+唿 hukx
 忽 huxa
 葫 huca
 弧 huga
@@ -1515,6 +1519,7 @@
 衬 ifye
 趁 ifze
 称 igha
+蛏 igia
 铛 igja
 噌 igka
 柽 igma
@@ -2654,6 +2659,7 @@
 羚 lvhr
 零 lvia
 〇 lvia
+蛉 lvir
 铃 lvja
 呤 lvka
 棂 lvma
@@ -4004,6 +4010,7 @@
 滔 tkuy
 陶 tkba
 萄 tkca
+啕 tkka
 桃 tkma
 淘 tkua
 洮 tkuv
@@ -4148,6 +4155,7 @@
 厦 uace
 煞 uahe
 霎 uaie
+唼 uake
 收 ubua
 熟 ubha
 手 ubeq
@@ -4423,6 +4431,7 @@
 拃 vaue
 乍 vaea
 炸 vahe
+蚱 vaie
 咤 vake
 栅 vame
 柞 vamv
@@ -4639,6 +4648,7 @@
 栈 vjme
 绽 vjse
 钊 vkja
+啁 vkka
 昭 vkra
 招 vkua
 朝 vkya
@@ -5335,6 +5345,7 @@
 又 ybef
 宥 ybbe
 囿 ybge
+蚴 ybie
 右 ybke
 柚 ybme
 釉 ybmy
@@ -5855,6 +5866,7 @@
 印 ynje
 胤 ynre
 哟 yoka
+唷 yokr
 哟 yoke
 晕 ypra
 郧 ypba
@@ -5973,6 +5985,7 @@
 予 yueo
 宇 yube
 圄 yuge
+圉 yugx
 禹 yuke
 伛 yure
 俣 yurw
