@@ -613,12 +613,7 @@ def initial(event):
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
                 code_char_count += 1
                 if event.name == "space":
-                    current_text = entry_box.get()
-                    cursor_pos = entry_box.index(tk.INSERT)
-                    new_text = current_text[:cursor_pos] + " " + current_text[cursor_pos:]
-                    entry_box.delete(0, tk.END)
-                    entry_box.insert(0, new_text)
-                    entry_box.icursor(cursor_pos + 1)
+                    entry_box.insert(0, " ")
                 else:
                     char = event.name
                     # 构造一个模拟的 tkinter 事件对象

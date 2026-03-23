@@ -23,6 +23,8 @@
 ⺌ bhd
 灬 bho
 彑 bih
+笔记 biji
+笔迹 biji4
 彐 bio
 𡗗 bip
 必须 bixu
@@ -35,6 +37,9 @@
 保存 bkcp
 百度 bldu
 勹 blp
+变换 bmhr
+变幻 bmhr4
+边患 bmhr4x
 变化 bmhw
 变成 bmig
 编程 bmig2
@@ -258,6 +263,7 @@
 彳亍 iii
 魑魅魍魉 iimzwhl imwl
 超级 ikji
+超模 ikmo
 超市 ikui
 拆分 ilff1 
 重新 isxn
@@ -302,6 +308,7 @@
 居然 jurj
 锦上添花 juth jnuhtmh
 具体 juti
+矩阵 juvf
 纪释析义输入法 juxf juxyurf
 纪释析义 juxy jiuixiyi
 解书音形 juyx jxuuynx
@@ -783,6 +790,7 @@
 需要 xuyk
 仙之人兮列如麻 xvrm xvrxlrm
 下课 xwke
+下列 xwlx
 下面 xwmm
 下午 xwwu
 下载 xwzl
