@@ -588,3 +588,6 @@ def bmmamain():
     if not os.path.exists('dictionary.txt'):
         print("未找到 dictionary.txt 文件")
     game.run()
+if __name__ == "__main__":
+    print("此文件为管理程序 newedit.py 的辅助模块。请勿直接运行此文件，如需使用请通过 newedit.py 的菜单调用。")
+    _=input()

@@ -1,0 +1,4 @@
+pypinyin
+keyboard
+pyperclip
+pywin32
