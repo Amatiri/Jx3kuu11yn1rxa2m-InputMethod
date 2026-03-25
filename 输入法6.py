@@ -24,8 +24,8 @@ last_input_text = ""                         # 上一次输入的文本，用于
 auto_commit_enabled = "1"                    # 自动上字开关（"1"启用）
 phrase_priority = "1"                        # 优先上词开关（"1"启用）
 external_mode = False                        # 外输模式开关（True表示外输）
-window = None                                # 主窗口对象
-
+window = None                               # 主窗口对象
+window_closing = False   # 窗口是否正在关闭
 # 外输模式下的辅助变量
 key_press_counter = 0        # 按键计数防抖
 code_char_count = 0          # 当前已输入的编码字符数（用于退格和清空）
@@ -563,9 +563,9 @@ def initial(event):
     全局键盘监听回调（外输模式时有效）。
     捕获按键并模拟输入到输入框，同时处理功能键。
     """
-    global key_press_counter, code_char_count, external_mode
-
-    if not external_mode:
+    global key_press_counter, code_char_count, external_mode, window_closing
+    
+    if not external_mode or window_closing:
         key_press_counter = 0
         code_char_count = 0
         return
@@ -576,12 +576,7 @@ def initial(event):
         # 处理字母数字等编码键
         if event.name in "qwertyuiopasdfghjklzcxvbnm" or (event.name in ";.'1234567890" and code_char_count != 0):
             code_char_count += 1
-            current_text = entry_box.get()
-            cursor_pos = entry_box.index(tk.INSERT)
-            new_text = current_text[:cursor_pos] + event.name + current_text[cursor_pos:]
-            entry_box.delete(0, tk.END)
-            entry_box.insert(0, new_text)
-            entry_box.icursor(cursor_pos + 1)
+            entry_box.insert(tk.INSERT, event.name)
         # 处理功能键
         elif event.name in ["-", "=", "!", "@", "#", "$", "%", "space", "up", "down", "left", "right", "backspace"] and code_char_count != 0:
             if event.name == "-":
@@ -613,7 +608,7 @@ def initial(event):
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
                 code_char_count += 1
                 if event.name == "space":
-                    entry_box.insert(0, " ")
+                    entry_box.insert(tk.INSERT, " ")
                 else:
                     char = event.name
                     # 构造一个模拟的 tkinter 事件对象
@@ -895,6 +890,8 @@ entry_count_label = tk.Label(settings_frame, textvariable=entry_count_var,
 entry_count_label.pack(side=tk.LEFT, padx=(0, 2))
 
 def on_main_window_close():
+    global window_closing
+    window_closing = True
     window.destroy()
 window.protocol("WM_DELETE_WINDOW", on_main_window_close)
 window.mainloop()
