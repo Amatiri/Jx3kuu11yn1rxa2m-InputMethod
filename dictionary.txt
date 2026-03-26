@@ -356,6 +356,7 @@
 沧 ch1u
 舱 ch1v
 藏 ch2c
+疵 ci1b
 差 ci1h
 呲 ci1k
 茨 ci2c
@@ -1342,6 +1343,7 @@
 昏 hp1r
 浑 hp2u
 混 hp2uk
+馄 hp2ur
 魂 hp2v
 珲 hp2w
 混 hp4u
@@ -1782,7 +1784,6 @@
 奇 ji1d
 剞 ji1dd
 积 ji1h
-嵇 ji1hu
 稽 ji1hy
 叽 ji1k
 唧 ji1kj
@@ -1798,6 +1799,7 @@
 圾 ji1tj
 畸 ji1tq
 饥 ji1u
+嵇 ji1uh
 激 ji1uu
 玑 ji1w
 羁 ji1wg
@@ -2158,6 +2160,7 @@
 菁 j;1cq
 荆 j;1cx
 京 j;1d
+旌 j;1f
 精 j;1m
 睛 j;1mq
 晶 j;1r
@@ -2597,6 +2600,7 @@
 六 lq43
 栾 lr2m
 娈 lr2n
+鸾 lr2ny
 峦 lr2u
 挛 lr2uy
 孪 lr2z
@@ -2841,6 +2845,7 @@
 冒 mk4m
 眊 mk4mm
 貌 mk4q
+袤 mk4y
 霾 ml2i
 埋 ml2t
 荬 ml3c
@@ -2991,6 +2996,7 @@
 坭 ni2t
 泥 ni2u
 怩 ni2x
+旎 ni3f
 祢 ni3s
 拟 ni3u
 倪 ni4m.
@@ -3818,6 +3824,7 @@
 入 ru42
 洳 ru4u
 褥 ru4y
+蕤 rv2c
 蕊 rv3c
 芮 rv4c
 蚋 rv4i
@@ -4119,6 +4126,7 @@
 沱 to2u
 鼍 to2y
 跎 to2z
+庹 to3g
 椭 to3m
 妥 to3v
 唾 to4k
@@ -4441,6 +4449,7 @@
 淑 uu1uk
 疏 uu1v
 赎 uu2b
+孰 uu2d
 熟 uu2h
 秫 uu2hu
 塾 uu2t
@@ -4962,6 +4971,7 @@
 恶 wu4xy
 误 wu4y
 薇 wz1c
+葳 wz1cg
 危 wz1d
 威 wz1g
 偎 wz1r
@@ -5487,6 +5497,7 @@
 一 yi22
 夷 yi26
 宜 yi2b
+痍 yi2bd
 贻 yi2bt
 疑 yi2bu
 移 yi2h
@@ -5496,7 +5507,7 @@
 姨 yi2n
 匜 yi2o
 仪 yi2r
-胰 yi2rg
+胰 yi2rd
 圯 yi2t
 饴 yi2u
 沂 yi2uj
@@ -6068,6 +6079,7 @@
 予 yu39
 宇 yu3b
 圄 yu3g
+庾 yu3gf
 圉 yu3gx
 禹 yu3k
 伛 yu3r
