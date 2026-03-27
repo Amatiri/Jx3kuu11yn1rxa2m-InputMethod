@@ -23,10 +23,15 @@
 ⺌ bhd
 灬 bho
 彑 bih
+笔画 bihw
+比划 bihw4
+壁画 bihw4t
 笔记 biji
 笔迹 biji4
+避免 bimm
 彐 bio
 𡗗 bip
+比如 biru
 必须 bixu
 皀 bjd
 𠘨 bjf
@@ -102,6 +107,7 @@
 胆子 djzi0
 淡紫 djzi3
 单字 djzi4
+道理 dkli
 倒数 dkuu
 导数 dkuu4
 ） dky
@@ -168,6 +174,7 @@
 根据 gfju
 γ gga
 Γ ggac
+更多 ggdo
 更新 ggxn
 觥筹交错 gijc gsibjcc
 ι gio
@@ -229,6 +236,7 @@
 Ζ gzec
 后面 hbmm
 候选 hbxr
+合理 heli
 核心 hexn
 何意味 heyiwz
 鹤发童颜 hfty hefatsy
@@ -245,6 +253,7 @@
 胡克希伍 hkxw hukexiw
 还是 hlui
 孩子 hlzi
+获得 hode
 或者 hove
 活着 hove0
 环境 hrj;
@@ -264,6 +273,7 @@
 常用字 ihysz
 彳亍 iii
 魑魅魍魉 iimzwhl imwl
+产生 ijug
 超级 ikji
 超模 ikmo
 超市 ikui
@@ -300,10 +310,12 @@
 浸入 jn4ru42
 进步 jnbu
 进化 jnhw4
+尽量 jnld
 进入 jnru
 今天 jntm
 金属 jnuu
 进行 jnx; 
+进一步 jnyib
 决定 jtd;
 觉得 jtde
 绝对 jtdv
@@ -318,6 +330,7 @@
 结构 jxgb
 结合 jxhe
 结束 jxuu
+矿泉水 kdqru
 科技 keji
 科学 kext
 可以 key
@@ -431,6 +444,7 @@
 人类 rflz 
 人民币 rfmnb
 忍耐 rfnl
+认真 rfvf
 认为 rfwz
 が rga
 ガ rgak
@@ -642,6 +656,7 @@
 上课 uhke
 上面 uhmm
 上午 uhwu
+上限 uhxm4
 × uig2
 时候 uihb
 市场 uiih
@@ -798,6 +813,7 @@
 下列 xwlx
 下面 xwmm
 下午 xwwu
+下限 xwxm4
 下载 xwzl
 写作 xxzo
 协作 xxzo4
@@ -853,5 +869,6 @@
 自行车 zix;i
 做到 zodk
 昨天 zotm
+遵循 zpxp
 最后 zvhb
 最近 zvjn
