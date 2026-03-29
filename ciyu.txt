@@ -62,6 +62,7 @@
 部分 buff
 不仅 bujn
 不列颠 bulxd
+部署配置 bupv buuupzv
 部首 buub3
 攵 buw
 不闻 buwf2
@@ -119,6 +120,7 @@
 电影院 dmy;y
 — dpv
 ￥ dqm
+动漫 dsmj
 动态 dstl
 东西 dsx
 ！ dth
@@ -155,6 +157,7 @@
 复合 fuhe2
 负荷 fuhe4
 附和 fuhe4h
+敷衍 fuyj
 复杂 fuza
 非常 fzih
 α gal
@@ -288,6 +291,7 @@
 经纪 j;ji4s 
 境界 j;jx
 教科书 jckeu
+交流 jclq
 教育 jcyu
 讲解 jdjx 
 鞠躬尽瘁 jgjc jugsjnc
@@ -364,6 +368,7 @@
 类型 lzx;
 名称 m;ig
 明天 m;tm
+名字 m;zi
 描述 mcuu
 盲打 mhda3 
 耄耋 mkdx
@@ -372,6 +377,7 @@
 目标 mubc
 玫瑰 mzgv
 美利坚 mzlij
+美少女 mzukn
 美术 mzuu
 没有 mzy
 哪个 nage
@@ -754,6 +760,8 @@
 文本 wfbf
 文档 wfdh
 稳当 wfdh0
+问候 wfhb
+温厚 wfhb4
 文化 wfhw
 文件 wfjm
 稳健 wfjm4
@@ -848,6 +856,7 @@
 音乐 ynyt
 运行 ypx;
 原理 yrli
+原来 yrll
 原始 yrui
 圆石 yrui2
 原式 yrui4

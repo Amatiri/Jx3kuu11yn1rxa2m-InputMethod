@@ -50,6 +50,7 @@
 标 bc1m
 髟 bc1mi
 杓 bc1mu
+婊 bc3n
 表 bc3q
 俵 bc4r
 𰻝 bd2z
@@ -491,6 +492,7 @@
 铛 dh1j
 𪠽 dh1k
 珰 dh1w
+裆 dh1y
 党 dh3o
 挡 dh3u
 宕 dh4b
@@ -534,6 +536,7 @@
 娣 di4n
 缔 di4s
 地 di4t
+谛 di4y
 第 di4z
 递 di4zd
 丹 dj14
@@ -1219,6 +1222,7 @@
 肓 hd1r
 慌 hd1x
 黄 hd2b
+隍 hd2bw
 煌 hd2h
 蝗 hd2i
 凰 hd2j
@@ -1550,6 +1554,7 @@
 尘 if2t
 沉 if2u
 忱 if2x
+谌 if2y
 称 if4h
 龀 if4n
 衬 if4y
@@ -1581,6 +1586,7 @@
 秤 ig4h
 菖 ih1c
 阊 ih1m
+娼 ih1n
 猖 ih1q
 昌 ih1r
 伥 ih1ri
@@ -1640,9 +1646,11 @@
 觇 ij1j
 搀 ij1u
 蝉 ij2i
+婵 ij2n
 缠 ij2s
 禅 ij2sd
 馋 ij2u
+谗 ij2y
 产 ij37
 铲 ij3j
 阐 ij3m
@@ -1930,6 +1938,7 @@
 饯 jm4uj
 涧 jm4um
 舰 jm4v
+谏 jm4y
 箭 jm4z
 践 jm4zj
 巾 jn11
@@ -1965,6 +1974,7 @@
 龟 jp1dt
 钧 jp1j
 君 jp1k
+皲 jp1p
 均 jp1t
 郡 jp4b
 菌 jp4c
@@ -2124,6 +2134,7 @@
 戛 jw2g
 颊 jw2i
 铗 jw2j
+袷 jw2y
 甲 jw35
 贾 jw3b
 钾 jw3j
@@ -2154,6 +2165,7 @@
 睫 jx2m
 桀 jx2mt
 桔 jx2mu
+婕 jx2n
 偈 jx2r
 结 jx2s
 洁 jx2u
@@ -2201,6 +2213,7 @@
 靖 j;4dq
 镜 j;4j
 劲 j;4l
+婧 j;4n
 胫 j;4r
 境 j;4t
 径 j;4tg
@@ -2262,6 +2275,7 @@
 肯 kf3r
 垦 kf3t
 恳 kf3x
+裉 kf4y
 吭 kg1k
 坑 kg1t
 忐 kg3x
@@ -2333,6 +2347,7 @@
 岿 kv1u
 窥 kv1x
 悝 kv1xl
+隗 kv2b
 葵 kv2c
 奎 kv2d
 馗 kv2dj
@@ -2671,6 +2686,7 @@
 碌 lu4si
 渌 lu4u
 路 lu4z
+逯 lu4zi
 俩 lw3r
 咧 lx1k
 咧 lx3k
@@ -2959,6 +2975,7 @@
 咩 mx1k
 蔑 mx4c
 灭 mx4h
+郿 mz2b
 莓 mz2c
 煤 mz2h
 霉 mz2i
@@ -3177,6 +3194,7 @@
 恶 oe4x
 愕 oe4xk
 鳄 oe4y
+谔 oe4yk
 遏 oe4z
 呃 oe0k
 恩 of1x
@@ -3462,6 +3480,8 @@
 骈 pm2m
 胼 pm2r
 便 pm2rg
+谝 pm2y
+谝 pm3y
 片 pm44
 骗 pm4m
 姘 pn1n
@@ -3746,6 +3766,7 @@
 觑 qu4j
 趣 qu4z
 掐 qw1u
+袷 qw1y
 拤 qw2u
 卡 qw31
 洽 qw4u
@@ -4030,6 +4051,7 @@
 挑 tc3u
 窕 tc3x
 眺 tc4m
+粜 tc4mi
 跳 tc4z
 特 te4n
 忑 te4x
@@ -5009,6 +5031,7 @@
 悟 wu4x
 恶 wu4xy
 误 wu4y
+隈 wz1b
 薇 wz1c
 葳 wz1cg
 危 wz1d
@@ -5031,6 +5054,7 @@
 沩 wz2uw
 惟 wz2x
 违 wz2z
+隗 wz3b
 苇 wz3c
 萎 wz3ch
 芟 wz3cy.
@@ -5293,6 +5317,7 @@
 宣 xr1b
 轩 xr1c
 喧 xr1k
+谖 xr1y
 玄 xr2d
 旋 xr2f
 璇 xr2w
@@ -5324,6 +5349,7 @@
 学 xt2x
 雪 xt3i
 血 xt42
+谑 xt4y
 戌 xu1g
 㶷 xu1h
 需 xu1i
@@ -5500,6 +5526,7 @@
 叶 ye4k
 腋 ye4r
 液 ye4u
+谒 ye4y
 央 yh16
 殃 yh1d
 秧 yh1h
@@ -6159,6 +6186,7 @@
 愈 yu4x
 誉 yu4y
 裕 yu4yg
+谕 yu4yr
 遇 yu4z
 英 y;1c
 应 y;1g
