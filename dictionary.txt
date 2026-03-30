@@ -1728,6 +1728,7 @@
 础 iu3s
 处 iu3u
 亍 iu41
+豖 iu44
 触 iu4k
 俶 iu4r
 绌 iu4s
@@ -3022,6 +3023,7 @@
 尿 nc4s
 娘 nd2n
 酿 nd4y
+呢 ne1k
 讷 ne4y
 呢 ne0k
 嫩 nf4n
@@ -5587,6 +5589,7 @@
 以 yi32
 乙 yi38
 苡 yi3c
+旖 yi3f
 蚁 yi3i
 钇 yi3j
 椅 yi3m
