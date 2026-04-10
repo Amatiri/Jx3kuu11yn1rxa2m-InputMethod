@@ -63,6 +63,7 @@
 不仅 bujn
 不列颠 bulxd
 部署配置 bupv buuupzv
+补贴 butx
 部首 buub3
 攵 buw
 不闻 buwf2
@@ -90,6 +91,7 @@
 打字 da3zi4 
 达到 dadk
 打开 dakl
+大众 davs
 大小 daxc
 豆包 dbb
 ’ ddy
@@ -98,6 +100,7 @@
 德意志 deyiv
 ； dfh
 等待 dgdl
+等级 dgji
 地方 difh
 地理 dili3
 第一 diyi
@@ -143,6 +146,7 @@
 发展 favj
 发现 faxm
 法则 faze
+奋斗 ffdb
 分析 ffxi
 方法 fhfa
 方面 fhmm
@@ -158,9 +162,11 @@
 复合 fuhe2
 负荷 fuhe4
 附和 fuhe4h
+复兴 fux;
 敷衍 fuyj
 复杂 fuza
 非常 fzih
+飞机 fzji
 α gal
 Α galc
 β gbe
@@ -170,6 +176,7 @@
 δ gde
 Δ gdec
 疙瘩 geda0
+格局 geju
 ε gep
 Ε gepc
 η get
@@ -179,6 +186,7 @@
 γ gga
 Γ ggac
 更多 ggdo
+改革开放 ggkf glgeklf
 更新 ggxn
 觥筹交错 gijc gsibjcc
 ι gio
@@ -215,6 +223,7 @@
 官吏 grli4
 惯例 grli4r
 关系 grxi
+关于 gryu
 σ gsi
 Σ gsic
 工程 gsig
@@ -233,6 +242,7 @@
 Υ gupc
 故事 guui
 规范 gvfj
+规模 gvmo
 规则 gvze
 恭喜发财 gxfc gsxifac
 ξ gxi
@@ -241,6 +251,7 @@
 Ζ gzec
 后面 hbmm
 候选 hbxr
+黄昏 hdhp
 合理 heli
 核心 hexn
 何意味 heyiwz
@@ -272,6 +283,8 @@
 创新 idxn
 创业 idye
 创造 idzk
+城市 igui
+城镇 igvf4
 成为 igwz 
 程序 igxu
 程序员 igxuy
@@ -285,6 +298,8 @@
 超模 ikmo
 超市 ikui
 拆分 ilff1 
+重复 isfu
+充满 ismj
 重新 isxn
 处理 iuli3
 出现 iuxm
@@ -300,11 +315,13 @@
 讲解 jdjx 
 鞠躬尽瘁 jgjc jugsjnc
 基本 jibf
+机会 jihv
 计算 jisr
 计算机 jisrj
 技术 jiuu
 极限 jixm
 继续 jixu
+给予 jiyu
 犄角旮旯 jjgl jijcgal
 简单 jmdj
 监控 jmks
@@ -327,6 +344,7 @@
 决定 jtd;
 觉得 jtde
 绝对 jtdv
+举措 juco
 居然 jurj
 锦上添花 juth jnuhtmh
 具体 juti
@@ -335,9 +353,12 @@
 纪释析义 juxy jiuixiyi
 解书音形 juyx jxuuynx
 家庭 jwt;
+价值 jwvi
 结构 jxgb
 结合 jxhe
+接纳 jxna
 结束 jxuu
+借助 jxvu
 矿泉水 kdqru
 科技 keji
 科学 kext
@@ -359,6 +380,7 @@
 离开 likl
 理论 lilp
 里面 limm
+例如 liru
 历史 liui
 理由 liyb
 劳动 lkds
@@ -392,17 +414,20 @@
 你好 nihk 
 你说得对 niuodedv
 年龄 nml;
+年轻 nmq;
 俄罗斯 oelos
 安全 ojqr
 奥地利 okdil
 而且 orqx
 平台 p;tl
+蓬勃 pgbo
 朋友 pgyb
 批量 pild
 判断 pjdr
 排序 plxu
 拼音 pnyn
 葡萄牙 putky
+培训 pzxp
 培养 pzyh
 情况 q;kd
 庆祝 q;vu 
@@ -427,6 +452,7 @@
 黔驴技穷 qljq qmlyjiq
 钱库 qmku
 前面 qmmm
+潜能 qmng
 前往 qmwh
 秋词 qqci
 秋辞 qqci2
@@ -557,6 +583,7 @@
 サ rsak
 せ rse
 セ rsek
+融合 rshe
 し rsi
 シ rsik
 そ rso
@@ -619,8 +646,10 @@
 调整 tcvg
 特别 tebx
 醍醐灌顶 thgd tihugrd
+提供 tigs
 提交 tijc
 题目 timu
+提示 tiui
 提问 tiwf
 体系 tixi
 体现 tixm
@@ -649,6 +678,7 @@
 ⊂ ubkhj
 收敛 ublm
 ∉ ubuy
+首先 ubxm
 双拼 udpn1
 ° udu4
 ≥ udydy
@@ -671,6 +701,7 @@
 上面 uhmm
 上午 uhwu
 上限 uhxm4
+时代 uidl
 × uig2
 时候 uihb
 市场 uiih
@@ -683,6 +714,7 @@
 食品 uipn3
 事情 uiq;
 ÷ uiu2
+实施 uiui1
 时时 uiui2
 实实在在 uiuizlz
 ⊥ uivvi
@@ -735,6 +767,7 @@
 震动 vfds4
 针对 vfdv
 真正 vfvg
+政策 vgce
 政府 vgfu
 整个 vgge
 整理 vgli
@@ -746,6 +779,7 @@
 震撼首发 vhuf vfhjubf
 旨意 vi3yi4
 知道 vidk
+支持 viii
 直接 vijx
 只能 ving
 智能 ving2
@@ -765,8 +799,11 @@
 战士 vjui4
 战事 vjui4k
 着重 vovs
+转化 vrhw
+转向 vrxd
 中国 vsg
 重要 vsyk
+逐步 vubu
 文本 wfbf
 文档 wfdh
 稳当 wfdh0
@@ -778,10 +815,12 @@
 文件夹 wfjmj
 文明 wfm;
 问题 wft
+温馨 wfxn
 网络 whlo
 网盘 whpj
 完成 wjig
 晚上 wjuh
+完善 wjuj
 无可奉告 wkfg wukefgg
 外面 wlmm
 我知道 wovid
@@ -795,10 +834,12 @@
 为了 wzle
 葳蕤 wzrv
 为什么 wzufm
+形成 x;ig
 性质 x;vi
 兴致 x;vi4
 行为 x;wz
 效率 xcly
+想法 xdfa
 相辅相成 xdfuxdi xfxi
 相关 xdgr
 项目 xdmu
@@ -868,6 +909,7 @@
 银杏 ynx;4m
 音乐 ynyt
 运行 ypx;
+愿景 yrj;
 原理 yrli
 原来 yrll
 原始 yrui
@@ -885,9 +927,11 @@
 舆论 yulp
 语文 yuwf
 怎么样 zfmey
+增加 zgjw
 字典 zidm
 自动 zids
 自己 zij
+自我 ziwo
 自行车 zix;i
 做到 zodk
 昨天 zotm
