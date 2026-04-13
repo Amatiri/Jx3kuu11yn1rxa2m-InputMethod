@@ -578,7 +578,7 @@ def initial(event):
             code_char_count += 1
             entry_box.insert(tk.INSERT, event.name)
         # 处理功能键
-        elif event.name in ["-", "=", "!", "@", "#", "$", "%", "space", "up", "down", "left", "right", "backspace"] and code_char_count != 0:
+        elif event.name in ["-", "=", "!", "@", "#", "$", "%", "space", "up", "down", "left", "right", "backspace","enter"] and code_char_count != 0:
             if event.name == "-":
                 navigate_parts("prev")
                 time.sleep(0.05)
@@ -605,6 +605,9 @@ def initial(event):
                     entry_box.icursor(cursor_pos - 1)
                 if code_char_count > 0:
                     code_char_count -= 1
+            elif event.name == "enter":
+                 entry_box.delete(0, tk.END)
+                 code_char_count = 0
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
                 code_char_count += 1
                 if event.name == "space":
