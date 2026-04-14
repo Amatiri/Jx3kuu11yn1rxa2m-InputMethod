@@ -243,6 +243,7 @@
 遍 bm4z
 宾 bn1b
 彬 bn1m
+傧 bn1r
 缤 bn1s
 滨 bn1u
 濒 bn1ui
@@ -408,12 +409,15 @@
 搓 co1u
 撮 co1uz
 蹉 co1z
-嵯 co2u
+矬 co2u
+嵯 co2uh
 厝 co4c
 错 co4j
+锉 co4jz
 挫 co4u
 措 co4ux
 村 cp1m
+皴 cp1p
 存 cp2z
 忖 cp3x
 寸 cp44
@@ -445,6 +449,7 @@
 萃 cv4c
 啐 cv4k
 粹 cv4m
+毳 cv4mm
 脆 cv4r
 淬 cv4u
 悴 cv4x
@@ -596,6 +601,7 @@
 呔 dl1kt
 待 dl1t
 歹 dl37
+傣 dl3r
 逮 dl3z
 大 dl46
 贷 dl4b
@@ -693,6 +699,8 @@
 阇 du1mv
 厾 du1t
 椟 du2m
+犊 du2n
+牍 du2p
 毒 du2q
 独 du2qi
 渎 du2u
@@ -841,6 +849,7 @@
 佛 fo2r
 夫 fu16
 鄜 fu1b
+稃 fu1h
 呋 fu1k
 孵 fu1l
 麸 fu1m
@@ -1075,6 +1084,7 @@
 杲 gk3r
 搞 gk3u
 郜 gk4b
+锆 gk4j
 告 gk4n
 诰 gk4y
 赅 gl1b
@@ -1168,6 +1178,7 @@
 钴 gu3j
 蛊 gu3m
 牯 gu3n
+鹄 gu3nk
 骨 gu3r
 股 gu3rp
 古 gu3s
@@ -1574,6 +1585,7 @@
 坼 ie4ti
 撤 ie4u
 澈 ie4uu
+掣 ie4uv
 郴 if1b
 抻 if1u
 琛 if1w
@@ -1941,6 +1953,7 @@
 间 jm1m
 监 jm1mi
 奸 jm1n
+犍 jm1nj
 肩 jm1r
 缄 jm1s
 坚 jm1t
@@ -1950,6 +1963,7 @@
 减 jm3b
 茧 jm3c
 剪 jm3d
+锏 jm3j
 检 jm3m
 枧 jm3mm
 睑 jm3mr
@@ -1967,6 +1981,7 @@
 键 jm4jj
 见 jm4m
 监 jm4mi
+毽 jm4mj
 槛 jm4mm
 间 jm4mr
 牮 jm4n
@@ -2123,6 +2138,7 @@
 苴 ju1c
 菹 ju1cu
 鞠 ju1g
+锔 ju1j
 驹 ju1m
 椐 ju1ms
 狙 ju1q
@@ -2134,6 +2150,7 @@
 趄 ju1z
 菊 ju2c
 焗 ju2h
+锔 ju2j
 橘 ju2m
 桔 ju2m.
 局 ju2s
@@ -2150,6 +2167,7 @@
 炬 ju4h
 锯 ju4j
 句 ju4l
+犋 ju4n
 俱 ju4r
 倨 ju4rs
 据 ju4u
@@ -2329,6 +2347,7 @@
 垦 kf3t
 恳 kf3x
 裉 kf4y
+铿 kg1j
 吭 kg1k
 坑 kg1t
 忐 kg3x
@@ -2508,6 +2527,8 @@
 啷 lh1k
 郎 lh2b
 廊 lh2g
+稂 lh2h
+锒 lh2j
 榔 lh2m
 狼 lh2q
 琅 lh2w
@@ -2529,6 +2550,7 @@
 罹 li2ww
 篱 li2z
 里 li35
+锂 li3j
 李 li3m
 娌 li3n
 俚 li3r
@@ -2570,6 +2592,7 @@
 例 li4r
 俐 li4rh
 俪 li4rl
+傈 li4rx
 砾 li4s
 珞 li4s.w
 砺 li4sc
@@ -3160,6 +3183,7 @@
 您 nn2x
 恁 nn2x.
 娜 no2n
+傩 no2r
 挪 no2u
 喏 no4k
 糯 no4m
@@ -3252,6 +3276,7 @@
 莪 oe2c
 额 oe2i
 蛾 oe2iw
+锇 oe2j
 哦 oe2k
 鹅 oe2n
 娥 oe2nw
@@ -3756,6 +3781,7 @@
 钱 qm2j
 钳 qm2jg
 钤 qm2jj
+犍 qm2n
 乾 qm2s
 潜 qm2u
 掮 qm2uj
@@ -3816,6 +3842,7 @@
 全 qr2r
 拳 qr2u
 诠 qr2y
+筌 qr2z
 犬 qr36
 绻 qr3s
 畎 qr3t
@@ -3885,6 +3912,7 @@
 氢 q;1qg
 倾 q;1r
 清 q;1u
+氰 q;2q
 晴 q;2r
 擎 q;2u
 情 q;2x
@@ -4170,11 +4198,13 @@
 塘 th2tg
 帑 th3j
 倘 th3r
+傥 th3ro
 躺 th3u
 淌 th3uh
 烫 th4h
 趟 th4z
 剔 ti1d
+锑 ti1j
 梯 ti1m
 踢 ti1z
 荑 ti2c
@@ -5338,6 +5368,7 @@
 隙 xi4b
 郤 xi4bg
 郄 xi4bp
+舄 xi4f
 戏 xi4g
 阋 xi4m
 细 xi4s
@@ -6387,6 +6418,7 @@
 增 zg1t
 憎 zg1x
 赠 zg4b
+锃 zg4j
 赃 zh1b
 牂 zh1p
 脏 zh1r

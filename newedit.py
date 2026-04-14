@@ -325,7 +325,8 @@ def batch_add_entries():  # 核心
         for hanzi, full_code in final_entries:
             f.write(f"{hanzi} {full_code}\n")
     try:
-        process_file(temp_file, "dictionary.txt")
+        single_count=process_file(temp_file, "dictionary.txt")
+        print(f"完成！汉字条目：{single_count}")
         os.remove(temp_file)
     except ImportError:
         import subprocess
@@ -583,7 +584,8 @@ def main():
             elif choice == '4':
                 interactive_mode()
             elif choice == '5':
-                main_menu()
+                single,phrase=main_menu()
+                print(f"整理完成！码表条目：{single}+{phrase} ")
             elif choice == '6':
                 run_input_method()
             elif choice == '7':
@@ -597,7 +599,8 @@ def main():
                         print(f"未录入汉字：{''.join(missing)}")
             elif choice == '8':
                 ciyumain()
-                sort_file_by_second_part("ciyu.txt", "ciyu.txt")
+                a=sort_file_by_second_part("ciyu.txt", "ciyu.txt")
+                print(f"完成！词语条目：{a}")
             elif choice == '9':
                 bmmamain()
             elif choice == '':

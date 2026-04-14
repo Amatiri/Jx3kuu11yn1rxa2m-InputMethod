@@ -81,6 +81,8 @@
 词汇 cihv
 词语 ciyu 
 餐馆 cjgr3 
+操作 ckzo
+菜单 cldj
 错误 cowu
 存在 cpzl
 。 d..
@@ -91,6 +93,7 @@
 打字 da3zi4 
 达到 dadk
 打开 dakl
+答案 daoj
 大众 davs
 大小 daxc
 豆包 dbb
@@ -148,6 +151,7 @@
 法则 faze
 奋斗 ffdb
 分析 ffxi
+风险 fgxm3
 方法 fhfa
 方面 fhmm
 方案 fhoj
@@ -288,6 +292,7 @@
 成为 igwz 
 程序 igxu
 程序员 igxuy
+常规 ihgv
 尝试 ihui4 
 常用 ihys
 常用字 ihysz
@@ -298,6 +303,7 @@
 超模 ikmo
 超市 ikui
 拆分 ilff1 
+传播 irbo
 重复 isfu
 充满 ismj
 重新 isxn
@@ -316,6 +322,7 @@
 鞠躬尽瘁 jgjc jugsjnc
 基本 jibf
 机会 jihv
+纪录片 jilup
 计算 jisr
 计算机 jisrj
 技术 jiuu
@@ -345,6 +352,7 @@
 觉得 jtde
 绝对 jtdv
 举措 juco
+距离 juli
 居然 jurj
 锦上添花 juth jnuhtmh
 具体 juti
@@ -480,6 +488,7 @@
 ド rdok
 づ rdu
 ヅ rduk
+热门 remf
 人类 rflz 
 人民币 rfmnb
 忍耐 rfnl
@@ -791,6 +800,7 @@
 执意 viyi4
 之意 viyi4x
 直译 viyi4y
+展开 vjkl
 这就是 vju
 展示 vjui
 沾湿 vjui1
@@ -799,6 +809,7 @@
 战士 vjui4
 战事 vjui4k
 着重 vovs
+这期神了 vqul veqiufl
 转化 vrhw
 转向 vrxd
 中国 vsg

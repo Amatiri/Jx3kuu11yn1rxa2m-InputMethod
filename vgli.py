@@ -98,7 +98,7 @@ def process_file(input_file, output_file):
     with open(output_file, 'w', encoding='utf-8') as f:
         for hanzi, non_han in all_entries:
             f.write(f"{hanzi} {non_han}\n")
-    print(f"汉字整理完成，条目总数 {len(all_entries)}")
+    return len(all_entries)
             
 def sort_file_by_second_part(input_file, output_file):
     try:
@@ -111,7 +111,6 @@ def sort_file_by_second_part(input_file, output_file):
                 continue
             parts = line.split(' ', 1)
             if len(parts) < 2:
-                print(f"警告: 第{line_num}行没有空格分隔: {line.strip()}")
                 continue
             first_part, second_part = parts
             parsed_lines.append((first_part, second_part, line))
@@ -124,11 +123,12 @@ def sort_file_by_second_part(input_file, output_file):
                 unique_lines.append(line)
         with open(output_file, 'w', encoding='utf-8') as f:
             f.writelines(unique_lines)  
-        print(f"词语整理完成，条目总数 {len(unique_lines)}")
+        return len(unique_lines)
     except FileNotFoundError:
         print(f"错误: 找不到输入文件 '{input_file}'")
     except Exception as e:
         print(f"错误: {e}")
+    return None
 
 def merge_files_to_ahk(dictionary_file, ciyu_file, output_file):
 
@@ -268,7 +268,6 @@ def process_filey(input_file, output_file):
                     outfile.write(f"{line}\n")
             for zi,ma in first_level_map.items():
                 outfile.write(f'{zi} {ma[0]}\n')
-        print(f"码表转换完成，见{output_file}")
         
     except FileNotFoundError:
         print(f"错误：找不到文件 {input_file}")
@@ -277,9 +276,13 @@ def process_filey(input_file, output_file):
     
     
 def main_menu():
-    process_file("dictionary.txt", "dictionary.txt")
-    sort_file_by_second_part("ciyu.txt", "ciyu.txt")
+    single_count = process_file("dictionary.txt", "dictionary.txt")
+    phrase_count = sort_file_by_second_part("ciyu.txt", "ciyu.txt")
     #merge_files_to_ahk("dictionary.txt", "ciyu.txt", "dictionary+t.ahk")
     process_filey("dictionary.txt", "dictionary_no_number.txt")
+    return single_count, phrase_count
+
 if __name__ == "__main__":
-    main_menu()
+    single,phrase=main_menu()
+    print(f"整理完成！码表条目：{single}+{phrase} ")
+    input()
