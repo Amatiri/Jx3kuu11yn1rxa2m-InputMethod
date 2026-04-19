@@ -615,7 +615,6 @@ def paste_text(text, reset_entry=True):
     pyperclip.copy(text)
     for _ in range(code_char_before_cursor):
         keyboard.press_and_release("backspace")
-    time.sleep(0.01)
     for _ in range(code_char_after_cursor):
         keyboard.press_and_release("delete")
 
@@ -624,7 +623,7 @@ def paste_text(text, reset_entry=True):
     code_char_after_cursor = 0
 
     keyboard.release("shift")
-    time.sleep(0.05)
+    time.sleep(0.01)
     keyboard.press_and_release('ctrl+v')
 
     if reset_entry:

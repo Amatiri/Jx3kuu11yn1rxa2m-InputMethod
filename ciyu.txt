@@ -366,6 +366,7 @@
 结构 jxgb
 结合 jxhe
 接纳 jxna
+介绍 jxuk
 结束 jxuu
 借助 jxvu
 矿泉水 kdqru
@@ -374,6 +375,7 @@
 可以 key
 看来 kjll
 看着 kjve
+考虑 kkly
 考试 kkui
 开始 klui
 扩展 kovj
@@ -418,6 +420,7 @@
 美术 mzuu
 没有 mzy
 哪个 nage
+那些 naxx
 那样 nayh
 能够 nggb
 你好 nihk 
@@ -826,7 +829,7 @@
 稳健 wfjm4
 文件夹 wfjmj
 文明 wfm;
-问题 wft
+问题 wfti
 温馨 wfxn
 网络 whlo
 网盘 whpj
@@ -858,6 +861,7 @@
 详细 xdxi
 西班牙 xibjy
 西北 xibz3
+习近平 xijnp
 西南 xinj2
 系统 xits
 蟋蟀 xiuy
@@ -873,6 +877,7 @@
 修改 xqgl
 选拔 xrba
 选项 xrxd
+选择 xrze
 匈牙利 xsyal
 学期 xtqi
 噱头 xttb
@@ -897,6 +902,7 @@
 友好 ybhk
 游玩 ybwj
 优秀 ybxq
+由于 ybyu
 样子 yhzi
 一次 yici
 一定 yid;
@@ -909,6 +915,7 @@
 以下 yixw
 一些 yixx
 一样 yiyh
+意义 yiyi44
 研究 yjjq
 要求 ykqq
 一目了然 ymlr yimulcr

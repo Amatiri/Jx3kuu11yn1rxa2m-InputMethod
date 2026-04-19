@@ -297,6 +297,7 @@
 埠 bu4t
 埔 bu4tf
 步 bu4v
+瓿 bu4w
 怖 bu4x
 簿 bu4z
 蔽 bx1cu
@@ -409,6 +410,7 @@
 搓 co1u
 撮 co1uz
 蹉 co1z
+痤 co2b
 矬 co2u
 嵯 co2uh
 厝 co4c
@@ -1031,6 +1033,7 @@
 艮 gf39
 艮 gf49
 亘 gf4r
+赓 gg1b
 庚 gg1g
 羹 gg1h
 耕 gg1n
@@ -1693,6 +1696,7 @@
 斥 ii44
 炽 ii4h
 叱 ii4k
+啻 ii4kd
 眙 ii4m
 赤 ii4t
 敕 ii4u
@@ -2338,6 +2342,7 @@
 轲 ke1ck
 科 ke1h
 颗 ke1i
+颏 ke1id
 蝌 ke1ih
 棵 ke1m
 柯 ke1mk
@@ -2345,6 +2350,7 @@
 磕 ke1s
 坷 ke1tk
 珂 ke1w
+颏 ke2i
 咳 ke2k
 壳 ke2u
 坷 ke3tk
@@ -2636,6 +2642,7 @@
 滥 lj4u
 捞 lk1u
 牢 lk2b
+痨 lk2bl
 唠 lk2k
 劳 lk2l
 崂 lk2u
@@ -3492,6 +3499,7 @@
 剖 pb1d
 掊 pb2u
 抔 pb2ub
+裒 pb2y
 咅 pb3k
 掊 pb3u
 飘 pc1f
@@ -3554,6 +3562,7 @@
 埤 pi2tb
 琵 pi2w
 癖 pi3b
+痞 pi3bk
 否 pi3k
 吡 pi3kb
 匹 pi3o
@@ -3879,6 +3888,7 @@
 瘸 qt2b
 芍 qt4c
 却 qt4j
+阕 qt4m
 鹊 qt4n
 确 qt4s
 雀 qt4w
@@ -3902,6 +3912,7 @@
 娶 qu3n
 取 qu3o
 觑 qu4j
+阒 qu4m
 趣 qu4z
 掐 qw1u
 袷 qw1y
@@ -4128,6 +4139,7 @@
 松 ss1m
 淞 ss1u
 忪 ss1x
+竦 ss3d
 耸 ss3o
 㧐 ss3u.
 悚 ss3x
@@ -4417,6 +4429,7 @@
 挺 t;3u
 艇 t;3v
 是 ui4r
+痧 ua1b
 莎 ua1c
 刹 ua1d
 煞 ua1h
@@ -5190,6 +5203,7 @@
 兀 wu44
 勿 wu47
 寤 wu4b
+痦 wu4bk
 戊 wu4g
 靰 wu4go
 焐 wu4h
@@ -5408,11 +5422,13 @@
 鲜 xm1y
 暹 xm1z
 贤 xm2b
+痫 xm2bm
 咸 xm2g
 弦 xm2gd
 闲 xm2m
 嫌 xm2n
 娴 xm2nm
+鹇 xm2nx
 衔 xm2t
 涎 xm2u
 㳄 xm2u.q
