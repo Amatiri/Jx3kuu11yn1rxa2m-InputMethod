@@ -6,9 +6,9 @@
 
 **依赖库安装**：`pip install pypinyin keyboard pyperclip pywin32`。所有文件需放在同一目录下。
 
-**运行**：输入法前端：输入法6.py。管理工具： newedit.py。码表整理工具：vgli.py。newedit.py可以运行输入法前端和整理工具，建议以管理工具为主要运行项。
+**运行**：输入法前端：ime.py。管理工具： main.py。main.py可以运行输入法前端和整理工具，建议以管理工具为主要运行项。
 
-**其他**：帮助文档：help文件夹。管理工具附加功能：addition.py。汉字码表：dictionary.txt。词语码表：ciyu.txt。
+**其他**：帮助文档：help/。汉字码表：dictionary.txt。词语码表：ciyu.txt。功能模块包：manager/。文件路径与常量配置：config.py。
 
 ## 二、外观与设置
 

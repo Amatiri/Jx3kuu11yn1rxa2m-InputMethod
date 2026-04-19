@@ -1545,6 +1545,7 @@
 差 ia1h
 杈 ia1m
 插 ia1u
+馇 ia1um
 察 ia2b
 茶 ia2c
 苴 ia2cq
@@ -2086,7 +2087,8 @@
 绢 jr4s
 隽 jr4w
 扃 js1h
-炯 js3hj
+炯 js3h
+颎 js3hq
 炅 js3r
 窘 js3x
 迥 js3z
@@ -2746,6 +2748,7 @@
 鸾 lr2ny
 峦 lr2u
 挛 lr2uy
+脔 lr2y
 孪 lr2z
 卵 lr35
 乱 lr4k
@@ -4030,6 +4033,7 @@
 飒 sa4d
 嗖 sb1k
 搜 sb1u
+馊 sb1uk
 艘 sb1v
 叟 sb3k
 嗽 sb4k
@@ -5600,6 +5604,7 @@
 泻 xx4ud
 懈 xx4x
 谢 xx4y
+亵 xx4yv
 兴 x;1b
 猩 x;1q
 星 x;1r
