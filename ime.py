@@ -31,8 +31,9 @@ external_mode = False                        # 外输模式开关（True表示�
 window = None                               # 主窗口对象
 window_closing = False   # 窗口是否正在关闭
 # 外输模式下的辅助变量
-key_press_counter = 0        # 按键计数防抖
-code_char_count = 0          # 当前已输入的编码字符数（用于退格和清空）
+key_press_counter = 0           # 按键计数防抖
+code_char_before_cursor = 0     # 光标前的编码字符数
+code_char_after_cursor = 0      # 光标后的编码字符数
 
 # ==================== 词典文件操作 ====================
 
@@ -508,7 +509,7 @@ def on_key_press(event):
 
 def toggle():
     """切换内外输模式，热键：左+右"""
-    global external_mode
+    global external_mode, code_char_before_cursor, code_char_after_cursor
     if external_mode:
         external_mode = False
         window.title("解书音形-内输")
@@ -523,27 +524,32 @@ def toggle():
     entry_box.delete(0, tk.END)
     entry_count_var.set(f"{get_entry_count()}")
     keyboard.press_and_release("shift")
+    # 重置计数器
+    code_char_before_cursor = 0
+    code_char_after_cursor = 0
 def initial(event):
     """
     全局键盘监听回调（外输模式时有效）。
     捕获按键并模拟输入到输入框，同时处理功能键。
     """
-    global key_press_counter, code_char_count, external_mode, window_closing
+    global key_press_counter, code_char_before_cursor, code_char_after_cursor, external_mode, window_closing
     
     if not external_mode or window_closing:
         key_press_counter = 0
-        code_char_count = 0
+        code_char_before_cursor = 0
+        code_char_after_cursor = 0
         return
 
     key_press_counter += 1
     if key_press_counter == 2:
         key_press_counter = 1
         # 处理字母数字等编码键
-        if event.name in "qwertyuiopasdfghjklzcxvbnm" or (event.name in ";.'1234567890" and code_char_count != 0):
-            code_char_count += 1
+        if event.name in "qwertyuiopasdfghjklzcxvbnm" or (event.name in ";.'1234567890" and code_char_before_cursor + code_char_after_cursor != 0):
+            # 在光标位置插入字符，因此只增加光标前的编码计数
+            code_char_before_cursor += 1
             entry_box.insert(tk.INSERT, event.name)
         # 处理功能键
-        elif event.name in ["-", "=", "!", "@", "#", "$", "%", "space", "up", "down", "left", "right", "backspace","enter"] and code_char_count != 0:
+        elif event.name in ["-", "=", "!", "@", "#", "$", "%", "space", "up", "down", "left", "right", "backspace","enter"] and code_char_before_cursor + code_char_after_cursor != 0:
             if event.name == "-":
                 navigate_parts("prev")
                 time.sleep(0.05)
@@ -557,68 +563,85 @@ def initial(event):
             elif event.name == "down":
                 navigate_pages("down")
             elif event.name == "left":
+                # 光标左移：光标前编码数减1，光标后编码数加1
+                if code_char_before_cursor > 0:
+                    code_char_before_cursor -= 1
+                    code_char_after_cursor += 1
                 entry_box.icursor(entry_box.index(tk.INSERT) - 1)
             elif event.name == "right":
+                # 光标右移：光标后编码数减1，光标前编码数加1
+                if code_char_after_cursor > 0:
+                    code_char_after_cursor -= 1
+                    code_char_before_cursor += 1
                 entry_box.icursor(entry_box.index(tk.INSERT) + 1)
             elif event.name == "backspace":
                 current_text = entry_box.get()
                 cursor_pos = entry_box.index(tk.INSERT)
                 if cursor_pos > 0:
+                    # 如果光标前有编码字符，则退格会删除一个编码字符
                     new_text = current_text[:cursor_pos-1] + current_text[cursor_pos:]
                     entry_box.delete(0, tk.END)
                     entry_box.insert(0, new_text)
                     entry_box.icursor(cursor_pos - 1)
-                if code_char_count > 0:
-                    code_char_count -= 1
+                if code_char_before_cursor > 0:
+                    code_char_before_cursor -= 1
             elif event.name == "enter":
-                 entry_box.delete(0, tk.END)
-                 code_char_count = 0
-                 keyboard.press_and_release("backspace")
+                entry_box.delete(0, tk.END)
+                code_char_before_cursor = 0
+                code_char_after_cursor = 0
+                keyboard.press_and_release("backspace")
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
-                code_char_count += 1
+                code_char_before_cursor += 1
+            
                 if event.name == "space":
                     entry_box.insert(tk.INSERT, " ")
+
                 else:
                     char = event.name
-                    # 构造一个模拟的 tkinter 事件对象
                     ev = tk.Event()
                     ev.char = char
                     handle_selection_keys(ev)
-
-    if code_char_count == 0:
+    if code_char_before_cursor + code_char_after_cursor == 0:
         entry_box.delete(0, tk.END)
 
 def paste_text(text, reset_entry=True):
     """
     将文本粘贴到外部程序（外输模式）。
-    先退格删除已输入的编码字符，然后模拟 Ctrl+V 粘贴。
+    先退格删除光标前的编码字符，再按 Delete 删除光标后的编码字符，然后模拟 Ctrl+V 粘贴。
     """
-    global external_mode, code_char_count
+    global external_mode, code_char_before_cursor, code_char_after_cursor
     if not external_mode or not text:
         return
-    if code_char_count != 0:
-        for _ in range(code_char_count):
-            keyboard.press_and_release("backspace")
-    code_char_count = 0
     pyperclip.copy(text)
+    for _ in range(code_char_before_cursor):
+        keyboard.press_and_release("backspace")
+    time.sleep(0.01)
+    for _ in range(code_char_after_cursor):
+        keyboard.press_and_release("delete")
+
+    # 重置计数器
+    code_char_before_cursor = 0
+    code_char_after_cursor = 0
+
     keyboard.release("shift")
     time.sleep(0.05)
     keyboard.press_and_release('ctrl+v')
+
     if reset_entry:
         entry_box.delete(0, tk.END)
         real_time_var.set('')
     return True
 
 def start_keyboard_listener():
-    """启动全局键盘监听线程"""
-    global external_mode, key_press_counter, code_char_count
+    global external_mode, key_press_counter, code_char_before_cursor, code_char_after_cursor
     keyboard.add_hotkey('left+right', toggle, suppress=True)
     keyboard.on_press(initial, suppress=False)
     keyboard.wait('esc+1')
     keyboard.clear_all_hotkeys()
     external_mode = False
     key_press_counter = 0
-    code_char_count = 0
+    code_char_before_cursor = 0
+    code_char_after_cursor = 0
     if window:
         window.title("解书音形-仅内输")
 
