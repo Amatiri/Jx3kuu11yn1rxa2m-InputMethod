@@ -78,12 +78,12 @@ def generate_default_codes_for_word(word, selected_codes):
     if n == 3:
         code = ab_list[0] + ab_list[1] + initial_list[2]
     elif n == 4:
-        code1 = ''.join(initial_list)
-        code2 = ab_list[0] + ab_list[1] + ab_list[2] + initial_list[3]
+        code1 = ab_list[0] + ab_list[1] + ab_list[2] + initial_list[3]
+        code2 = ''.join(initial_list)
         code = code1 + " " + code2
     elif n >= 5:
-        code1 = ''.join(initial_list[:3]) + initial_list[-1]
-        code2 = ''.join(initial_list)
+        code1 = ''.join(initial_list)
+        code2 = ''.join(initial_list[:3]) + initial_list[-1]
         code = code1 + " " + code2
     defaults = code
     return defaults

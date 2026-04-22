@@ -28,6 +28,7 @@
 壁画 bihw4t
 笔记 biji
 笔迹 biji4
+哔哩哔哩 bilibil
 避免 bimm
 彐 bio
 𡗗 bip
@@ -40,6 +41,7 @@
 冂 bjt
 廴 bjz
 保存 bkcp
+拜拜 blbl
 百度 bldu
 勹 blp
 变换 bmhr
@@ -124,6 +126,7 @@
 电脑 dmnk
 电视机 dmuij
 电影院 dmy;y
+多邻国 dolng
 — dpv
 ￥ dqm
 动漫 dsmj
@@ -161,6 +164,7 @@
 繁体字 fjtiz
 反应 fjy;
 反映 fjy;4
+翻译 fjyi
 封妻荫子 fqyz fgqiynz
 符合 fuhe
 复合 fuhe2
@@ -177,6 +181,7 @@
 Β gbec
 χ gch
 Χ gchc
+高德地图 gddt gkdedit
 δ gde
 Δ gdec
 疙瘩 geda0
@@ -373,6 +378,7 @@
 科技 keji
 科学 kext
 可以 key
+肯定 kfd;
 看来 kjll
 看着 kjve
 考虑 kkly
@@ -382,7 +388,10 @@
 困难 kpnj
 空间 ksjm
 控制 ksvi
+酷狗 kugb
 领导 l;dk
+拉风 lafg
+拉缝 lafg4
 了解 lcjx 
 了结 lcjx2 
 良莠不齐 ldybbuq lybq
@@ -399,6 +408,7 @@
 连续 lmxu
 吝啬 lnse
 论文 lpwf
+路人 lurf
 录入 luru
 列表 lxbc
 趔趄 lxqx
@@ -409,9 +419,11 @@
 名字 m;zi
 描述 mcuu
 盲打 mhda3 
+米哈游 mihay
 耄耋 mkdx
 腼腆 mmtm
 模式 moui
+明日方舟 mrfv m;rifhv
 目标 mubc
 没关系 mzgrx
 玫瑰 mzgv
@@ -469,6 +481,8 @@
 秋词 qqci
 秋辞 qqci2
 龟兹 qqci2d
+权当 qrdh1
+全能 qrng
 确实 qtui2 
 驱动 quds
 ー r;;
@@ -526,6 +540,7 @@
 日期 riqi
 ゅ riu
 ュ riuk
+人畜无害 riwh rfiuwuh
 然后 rjh
 じ rji
 ジ rjik
@@ -646,15 +661,17 @@
 ゾ rzok
 ず rzu
 ズ rzuk
+搜狗输入法 sbgbuuruf
 搜索 sbso
 四个 sige
 丝绸 siib
 思想 sixd
-四则运算 sizeyps szys
+扫描 skmc
 死而后已 sohy siorhby
 所以 soyi
 算法 srfa
 虽然 svrj
+四则运算 szys sizeyps
 条件 tcjm
 调整 tcvg
 特别 tebx
@@ -667,6 +684,7 @@
 体系 tixi
 体现 tixm
 体育 tiyu
+淘宝 tkbk
 韬光养晦 tkgdyhh tgyh
 讨论 tklp
 涂蜡的氧化切制铜楼梯 tldt tldyhqvtlt
@@ -688,6 +706,7 @@
 ∀ uaa
 ∪ ub;4
 ≠ ubdy
+手机 ubji
 ⊂ ubkhj
 收敛 ublm
 ∉ ubuy
@@ -792,6 +811,7 @@
 震撼首发 vhuf vfhjubf
 旨意 vi3yi4
 知道 vidk
+支付宝 vifub
 支持 viii
 直接 vijx
 只能 ving
@@ -833,6 +853,7 @@
 温馨 wfxn
 网络 whlo
 网盘 whpj
+王者 whve
 完成 wjig
 晚上 wjuh
 完善 wjuj
@@ -849,6 +870,7 @@
 为了 wzle
 葳蕤 wzrv
 为什么 wzufm
+微信 wzxn
 形成 x;ig
 性质 x;vi
 兴致 x;vi4
@@ -864,6 +886,7 @@
 习近平 xijnp
 西南 xinj2
 系统 xits
+喜上眉梢 xiuhmzu
 蟋蟀 xiuy
 希望 xiwh
 洗澡 xizk
@@ -884,7 +907,8 @@
 学生 xtug
 学习 xtxi
 许多 xudo
-喜上眉梢 xumu xiuhmzu
+畜牧 xumu
+序幕 xumu4
 需要 xuyk
 仙之人兮列如麻 xvrm xvrxlrm
 下课 xwke
