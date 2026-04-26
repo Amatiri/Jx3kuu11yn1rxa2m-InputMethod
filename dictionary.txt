@@ -316,6 +316,7 @@
 邶 bz4b
 辈 bz4c
 茀 bz4cf
+蓓 bz4cr
 焙 bz4h
 钡 bz4j
 贝 bz4m
@@ -1000,6 +1001,7 @@
 岣 gb3u
 冓 gb45
 购 gb4b
+彀 gb4g
 构 gb4m
 够 gb4t
 垢 gb4th
@@ -1918,6 +1920,7 @@
 亟 ji29
 疾 ji2b
 辑 ji2c
+蒺 ji2cb
 藉 ji2cn
 殛 ji2d
 戢 ji2g
@@ -2048,6 +2051,7 @@
 紧 jn3s
 谨 jn3y
 荩 jn4c
+靳 jn4g
 烬 jn4h
 尽 jn4i
 觐 jn4j
@@ -2487,6 +2491,7 @@
 胯 kw4r
 挎 kw4u
 跨 kw4z
+蒯 ky3c
 㧟 ky3u
 哙 ky4k
 狯 ky4q
@@ -2933,6 +2938,7 @@
 喵 mc1k
 苗 mc2c
 瞄 mc2m
+鹋 mc2n
 描 mc2u
 藐 mc3c
 秒 mc3h
@@ -3091,6 +3097,7 @@
 茉 mo4cm
 殁 mo4d
 秣 mo4h
+蓦 mo4m
 默 mo4q
 脉 mo4r
 磨 mo4s
@@ -3245,6 +3252,7 @@
 挪 no2u
 喏 no4k
 糯 no4m
+搦 no4u
 懦 no4x
 诺 no4y
 妞 nq1n
@@ -3360,6 +3368,7 @@
 谔 oe4yk
 遏 oe4z
 呃 oe0k
+蒽 of1c
 恩 of1x
 摁 of4u
 鞥 og1g
@@ -4064,6 +4073,7 @@
 汝 ru3u
 乳 ru3v
 入 ru42
+蓐 ru4c
 洳 ru4u
 褥 ru4y
 蕤 rv2c
@@ -4100,6 +4110,7 @@
 丧 sh19
 桑 sh1m
 嗓 sh3k
+搡 sh3u
 丧 sh49
 私 si1h
 蛳 si1i
@@ -4152,7 +4163,8 @@
 塞 sl1t
 赛 sl4b
 塞 sl4t
-莎 so1c
+蓑 so1c
+莎 so1cu
 唆 so1k
 嗦 so1ks
 梭 so1m
@@ -4583,6 +4595,7 @@
 裳 uh0y
 失 ui16
 尸 ui17
+蓍 ui1c
 施 ui1f
 虱 ui1i
 狮 ui1q
@@ -4836,6 +4849,7 @@
 着 ve0m
 真 vf1b
 贞 vf1bb
+蓁 vf1c
 斟 vf1d
 针 vf1j
 帧 vf1jb
@@ -5161,6 +5175,7 @@
 汶 wf4u
 嗡 wg1k
 翁 wg1y
+蓊 wg3c
 瓮 wg4w
 汪 wh1u
 亡 wh22
