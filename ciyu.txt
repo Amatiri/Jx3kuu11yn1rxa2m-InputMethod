@@ -14,6 +14,7 @@
 屮 bci
 艹 bck
 表情 bcq;
+表示 bcui
 凵 bcy
 亠 bdh
 ⺈ bdkt
@@ -862,6 +863,8 @@
 无可奉告 wkfg wukefgg
 外面 wlmm
 我知道 wovid
+无关 wugr
+五官 wugr1
 无关痛痒 wugrtsy wgty
 物理 wuli
 无穷 wuqs
@@ -881,6 +884,8 @@
 想法 xdfa
 相辅相成 xdfuxdi xfxi
 相关 xdgr
+响亮 xdld
+向量 xdld4
 项目 xdmu
 详细 xdxi
 西班牙 xibjy
@@ -894,7 +899,9 @@
 洗澡 xizk
 现代 xmdl
 现实 xmui
+线性 xmx;4
 线性方程组 xmx;fhigz
+线性相关 xmx;xdg xxxg
 现在 xmzl
 新建 xnjm
 信笺 xnjm1

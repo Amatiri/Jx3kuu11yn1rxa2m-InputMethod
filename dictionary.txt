@@ -676,6 +676,7 @@
 顿 dp4i
 钝 dp4j
 盾 dp4m
+楯 dp4mm
 砘 dp4s
 沌 dp4u
 遁 dp4z
@@ -684,6 +685,7 @@
 短 dr3u
 断 dr4j
 锻 dr4jp
+椴 dr4m
 段 dr4p
 缎 dr4s
 东 ds14
@@ -1565,6 +1567,7 @@
 苴 ia2cq
 茬 ia2cz
 查 ia2m
+槎 ia2mh
 𥻗 ia2mm
 猹 ia2q
 碴 ia2s
@@ -1818,6 +1821,7 @@
 陲 iv2b
 锤 iv2j
 棰 iv2m
+槌 iv2mv
 捶 iv2u
 揣 iy1u
 搋 iy1uh
@@ -1928,6 +1932,7 @@
 吉 ji2k
 极 ji2m
 棘 ji2mc
+楫 ji2mk
 嫉 ji2n
 佶 ji2r
 级 ji2s
@@ -1982,6 +1987,7 @@
 戋 jm17
 兼 jm19
 菅 jm1c
+蒹 jm1cd
 歼 jm1d
 艰 jm1g
 煎 jm1h
@@ -2196,8 +2202,10 @@
 桔 ju2m.
 局 ju2s
 莒 ju3c
+蒟 ju3cl
 咀 ju3k
-枸 ju3m
+榉 ju3m
+枸 ju3ml
 矩 ju3u
 沮 ju3uq
 举 ju3x
@@ -2584,10 +2592,12 @@
 狼 lh2q
 琅 lh2w
 朗 lh3y
+蒗 lh4c
 阆 lh4m
 浪 lh4u
 哩 li1k
 厘 li2c
+蓠 li2cd
 离 li2d
 喱 li2k
 梨 li2m
@@ -2718,6 +2728,7 @@
 殓 lm4d
 炼 lm4h
 链 lm4j
+楝 lm4m
 练 lm4s
 恋 lm4x
 拎 ln1u
@@ -2852,6 +2863,7 @@
 咧 lx0k
 驴 ly2m
 闾 ly2mk
+榈 ly2mm
 旅 ly3f
 铝 ly3j
 吕 ly3k
@@ -3210,6 +3222,7 @@
 囡 nj1g
 南 nj29
 喃 nj2k
+楠 nj2m
 男 nj2t
 难 nj2w
 赧 nj3i
@@ -3895,6 +3908,7 @@
 邱 qq1b
 秋 qq1h
 蚯 qq1i
+楸 qq1m
 湫 qq1u
 求 qq26
 赇 qq2b
@@ -4706,6 +4720,7 @@
 筛 ul1z
 晒 ul4r
 说 uo1y
+蒴 uo4c
 烁 uo4h
 铄 uo4j
 槊 uo4m
@@ -4782,6 +4797,7 @@
 谁 uz2y
 这 ve4z
 喳 va1k
+楂 va1m
 扎 va1u
 揸 va1ui
 渣 va1um
@@ -5674,6 +5690,7 @@
 吓 xw4k
 夏 xw4u
 蝎 xx1i
+楔 xx1m
 些 xx1o
 歇 xx1q
 揳 xx1u
@@ -6505,6 +6522,7 @@
 荧 y;2h
 蝇 y;2i
 萤 y;2ic
+蓥 y;2j
 营 y;2k
 盈 y;2m
 萦 y;2s
