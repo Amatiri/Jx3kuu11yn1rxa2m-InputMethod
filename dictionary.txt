@@ -372,6 +372,7 @@
 疵 ci1b
 差 ci1h
 呲 ci1k
+跐 ci1z
 茨 ci2c
 辞 ci2k
 磁 ci2s
@@ -477,9 +478,11 @@
 达 da2z
 答 da2zh
 笪 da2zr
+跶 da2zz
 打 da3u
 大 da46
 瘩 da0b
+跶 da0z
 都 db1b
 兜 db1o
 斗 db34
@@ -509,6 +512,7 @@
 得 de0tr
 登 dg1b
 灯 dg1h
+戥 dg3g
 等 dg3z
 邓 dg4b
 凳 dg4j
@@ -712,6 +716,7 @@
 峒 ds4ut
 恫 ds4x
 都 du1b
+嘟 du1k
 督 du1m
 阇 du1mv
 厾 du1t
@@ -1035,7 +1040,8 @@
 隔 ge2b
 葛 ge2c
 蛤 ge2i
-鬲 ge2k
+嗝 ge2k
+鬲 ge2kj
 格 ge2m
 阁 ge2mu
 葛 ge3c
@@ -1302,6 +1308,7 @@
 谎 hd3y
 晃 hd4r
 喝 he1k
+嗬 he1kc
 呵 he1kk
 诃 he1y
 禾 he26
@@ -1626,6 +1633,7 @@
 澈 ie4uu
 掣 ie4uv
 郴 if1b
+嗔 if1k
 抻 if1u
 琛 if1w
 臣 if25
@@ -2205,7 +2213,8 @@
 拘 ju1u
 佝 ju1u.
 掬 ju1ul
-琚 ju1w
+雎 ju1w
+琚 ju1ws
 趄 ju1z
 菊 ju2c
 焗 ju2h
@@ -2388,6 +2397,7 @@
 颗 ke1i
 颏 ke1id
 蝌 ke1ih
+嗑 ke1k
 棵 ke1m
 柯 ke1mk
 牁 ke1p
@@ -2403,6 +2413,7 @@
 客 ke4b
 刻 ke4d
 剋 ke4ds
+嗑 ke4k
 骒 ke4m
 氪 ke4q
 克 ke4s
@@ -2496,10 +2507,12 @@
 奎 kv2d
 馗 kv2dj
 喹 kv2k
+暌 kv2r
 揆 kv2u
 魁 kv2v
 逵 kv2z
 傀 kv3r
+跬 kv3z
 喟 kv4k
 匮 kv4o
 溃 kv4u
@@ -3228,6 +3241,7 @@
 旎 ni3f
 祢 ni3s
 拟 ni3u
+睨 ni4m
 倪 ni4m.
 匿 ni4o
 腻 ni4r
@@ -3316,6 +3330,7 @@
 乜 nx49
 镍 nx4j
 啮 nx4k
+嗫 nx4ko
 臬 nx4m
 聂 nx4o
 涅 nx4u
@@ -3640,6 +3655,7 @@
 吡 pi3kb
 匹 pi3o
 圮 pi3t
+睥 pi4m
 僻 pi4r
 屁 pi4s
 埤 pi4t
@@ -3910,6 +3926,7 @@
 芹 qn2c
 芩 qn2cj
 秦 qn2h
+嗪 qn2k
 勤 qn2l
 矜 qn2m
 禽 qn2r
@@ -4245,7 +4262,8 @@
 肃 su49
 宿 su4b
 夙 su4j
-觫 su4k
+嗉 su4k
+觫 su4ku
 素 su4q
 塑 su4t
 溯 su4u
@@ -4256,7 +4274,8 @@
 速 su4z
 荽 sv1c
 虽 sv1i
-眭 sv1m
+睢 sv1m
+眭 sv1mg
 随 sv2b
 隋 sv2br
 绥 sv2s
@@ -5368,6 +5387,7 @@
 娓 wz3n
 猥 wz3q
 伟 wz3r
+韪 wz3re
 伪 wz3rw
 尾 wz3s
 纬 wz3sw
@@ -5540,6 +5560,7 @@
 鲜 xm1y
 酰 xm1yo
 暹 xm1z
+跹 xm1zz
 贤 xm2b
 痫 xm2bm
 咸 xm2g
@@ -5560,6 +5581,7 @@
 猃 xm3q
 显 xm3r
 鲜 xm3y
+跣 xm3z
 限 xm4b
 陷 xm4bd
 宪 xm4bx
@@ -5632,6 +5654,7 @@
 轩 xr1c
 萱 xr1cb
 喧 xr1k
+暄 xr1r
 瑄 xr1w
 谖 xr1y
 玄 xr2d
@@ -5684,6 +5707,7 @@
 诩 xu3yy
 蓄 xu4c
 序 xu4g
+煦 xu4h
 叙 xu4k
 勖 xu4l
 婿 xu4n
@@ -5781,6 +5805,7 @@
 牙 ya24
 芽 ya2c
 蚜 ya2i
+睚 ya2m
 伢 ya2r
 衙 ya2t
 崖 ya2u
@@ -6326,8 +6351,6 @@
 耀 yk4g
 钥 yk4j
 要 yk4x
-严 ym27
-验 ym4m
 阴 yn1b
 荫 yn1c
 茵 yn1cg

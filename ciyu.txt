@@ -27,6 +27,8 @@
 笔画 bihw
 比划 bihw4
 壁画 bihw4t
+毕竟 bij;
+必经 bij;1
 笔记 biji
 笔迹 biji4
 哔哩哔哩 bilibil
@@ -130,6 +132,7 @@
 多邻国 dolng
 — dpv
 ￥ dqm
+动画 dshw
 动漫 dsmj
 动态 dstl
 东西 dsx
@@ -278,6 +281,7 @@
 好罢 hkba
 胡克希伍 hkxw hukexiw
 还是 hlui
+还有 hlyb
 孩子 hlzi
 获得 hode
 或者 hove
@@ -310,6 +314,8 @@
 超市 ikui
 拆分 ilff1 
 传播 irbo
+传统 irts
+串通 irts1
 重复 isfu
 充满 ismj
 重新 isxn
@@ -318,6 +324,7 @@
 出租车 iuzui
 警纪 j;3ji4 
 经典 j;dm3 
+经过 j;go
 经济 j;ji 
 经纪 j;ji4s 
 境界 j;jx
@@ -344,6 +351,9 @@
 简体字 jmtiz
 建设 jmue
 建筑 jmvu
+检验 jmyj
+简言之 jmyjv
+建言献策 jmyjxmc jyxc
 禁入 jn4ru4
 浸入 jn4ru42
 进步 jnbu
@@ -420,6 +430,8 @@
 名称 m;ig
 明天 m;tm
 名字 m;zi
+麻将 majd
+麻酱 majd4
 描述 mcuu
 盲打 mhda3 
 米哈游 mihay
@@ -446,6 +458,7 @@
 俄罗斯 oelos
 安全 ojqr
 奥地利 okdil
+二次元 orciy
 而且 orqx
 平台 p;tl
 蓬勃 pgbo
@@ -454,6 +467,7 @@
 判断 pjdr
 排序 plxu
 拼音 pnyn
+扑克 puke
 葡萄牙 putky
 培训 pzxp
 培养 pzyh
@@ -937,6 +951,7 @@
 有关 ybgr1
 友好 ybhk
 游玩 ybwj
+游戏 ybxi
 优秀 ybxq
 由于 ybyu
 样子 yhzi
