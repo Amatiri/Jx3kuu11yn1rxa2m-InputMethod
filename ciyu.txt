@@ -443,6 +443,8 @@
 目标 mubc
 没关系 mzgrx
 玫瑰 mzgv
+美丽 mzli
+魅力 mzli4
 美利坚 mzlij
 美少女 mzukn
 美术 mzuu
@@ -759,6 +761,7 @@
 事件 uijm4
 实践 uijm4z
 世界 uijx
+时刻 uike
 实力 uili
 视频 uipn
 食品 uipn3
@@ -829,6 +832,7 @@
 中华人民共和国 vhrg vhrmghg
 震撼首发 vhuf vfhjubf
 旨意 vi3yi4
+直播 vibo
 知道 vidk
 支付宝 vifub
 支持 viii
@@ -977,6 +981,8 @@
 音形 ynx;2
 隐性 ynx;4
 银杏 ynx;4m
+音韵 ynyp
+氤氲 ynyp1
 音乐 ynyt
 运行 ypx;
 愿景 yrj;
