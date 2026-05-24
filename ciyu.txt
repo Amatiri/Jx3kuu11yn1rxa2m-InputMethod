@@ -386,6 +386,7 @@
 结构 jxgb
 桔槔 jxgk1m
 结合 jxhe
+接触 jxiu4
 接纳 jxna
 介绍 jxuk
 结束 jxuu
@@ -690,6 +691,7 @@
 搜索 sbso
 四个 sige
 丝绸 siib
+思考 sikk
 思想 sixd
 扫描 skmc
 死而后已 sohy siorhby
