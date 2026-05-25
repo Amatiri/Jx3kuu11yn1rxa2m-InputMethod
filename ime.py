@@ -533,7 +533,8 @@ def initial(event):
     捕获按键并模拟输入到输入框，同时处理功能键。
     """
     global key_press_counter, code_char_before_cursor, code_char_after_cursor, external_mode, window_closing
-    
+    if keyboard.is_pressed('ctrl') or keyboard.is_pressed('alt') or keyboard.is_pressed('win'):
+        return
     if not external_mode or window_closing:
         key_press_counter = 0
         code_char_before_cursor = 0
@@ -633,7 +634,7 @@ def paste_text(text, reset_entry=True):
 
 def start_keyboard_listener():
     global external_mode, key_press_counter, code_char_before_cursor, code_char_after_cursor
-    keyboard.add_hotkey('left+right', toggle, suppress=True)
+    keyboard.add_hotkey('left+right', toggle, suppress=False)
     keyboard.on_press(initial, suppress=False)
     keyboard.wait('esc+1')
     keyboard.clear_all_hotkeys()

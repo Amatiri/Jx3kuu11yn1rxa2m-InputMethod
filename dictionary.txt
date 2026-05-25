@@ -2157,6 +2157,7 @@
 旧 jq4r
 舅 jq4t
 救 jq4u
+蠲 jr1i
 鹃 jr1n
 娟 jr1nk
 捐 jr1u
@@ -3785,6 +3786,7 @@
 迫 po4z
 铺 pu1j
 攴 pu1k
+噗 pu1ky
 仆 pu1r
 扑 pu1u
 葡 pu2c
