@@ -590,7 +590,7 @@ def initial(event):
                 entry_box.delete(0, tk.END)
                 code_char_before_cursor = 0
                 code_char_after_cursor = 0
-                keyboard.press_and_release("backspace")
+                keyboard.press_and_release("left")
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
                 code_char_before_cursor += 1
             

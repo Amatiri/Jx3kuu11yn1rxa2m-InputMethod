@@ -1,3 +1,4 @@
+病毒 b;du
 丶 bad
 乛 bag
 𠃌 bak
@@ -10,11 +11,14 @@
 宀 bbk
 癶 bbo
 阝 bbu
+表达 bcda
 卄 bcg
 屮 bci
 艹 bck
 表情 bcq;
 表示 bcui
+标准 bcvp
+表现 bcxm
 凵 bcy
 亠 bdh
 ⺈ bdkt
@@ -23,12 +27,15 @@
 囗 bgo
 ⺌ bhd
 灬 bho
+帮助 bhvu
+帮我 bhwo
 彑 bih
 笔画 bihw
 比划 bihw4
 壁画 bihw4t
 毕竟 bij;
 必经 bij;1
+比较 bijc
 笔记 biji
 笔迹 biji4
 哔哩哔哩 bilibil
@@ -36,6 +43,7 @@
 彐 bio
 𡗗 bip
 比如 biru
+比赛 bisl
 必须 bixu
 皀 bjd
 𠘨 bjf
@@ -44,6 +52,10 @@
 冂 bjt
 廴 bjz
 保存 bkcp
+报告 bkgk
+保护 bkhu
+保持 bkii
+保证 bkvg
 拜拜 blbl
 百度 bldu
 勹 blp
@@ -59,13 +71,16 @@
 彡 bms
 匚 bob
 㔾 boe
+博士 boui
 丬 bpj
 㐅 bpn
 乄 bpng
 龶 bq;
 不错 buco
 部分 buff
+补充 buis
 不仅 bujn
+布局 buju
 不列颠 bulxd
 部署配置 bupv buuupzv
 补贴 butx
@@ -81,6 +96,7 @@
 尢 byh
 讠 byj
 北京 bzj;
+背景 bzj;3
 辶 bzv
 测试 ceu 
 词汇 cihv
@@ -126,6 +142,7 @@
 导数 dkuu4
 ） dky
 （ dkz
+代码 dlma
 ： dmh
 电话 dmhw
 电脑 dmnk
@@ -169,14 +186,17 @@
 繁体 fjti
 反提 fjti2
 繁体字 fjtiz
+反正 fjvg
 反应 fjy;
 反映 fjy;4
 翻译 fjyi
 封妻荫子 fqyz fgqiynz
+辅导员 fudky
 符合 fuhe
 复合 fuhe2
 负荷 fuhe4
 附和 fuhe4h
+服务 fuwu
 复兴 fux;
 敷衍 fuyj
 复杂 fuza
@@ -216,6 +236,7 @@
 搞笑 gkxc4
 λ gla
 Λ glac
+改动 glds
 μ gmu
 Μ gmuc
 ν gnu
@@ -291,6 +312,7 @@
 获得 hode
 或者 hove
 活着 hove0
+换行 hrhh
 环境 hrj;
 互联网 hulmw
 回答 hvda
@@ -313,6 +335,7 @@
 常用字 ihysz
 彳亍 iii
 魑魅魍魉 iimzwhl imwl
+产品 ijpn
 产生 ijug
 超级 ikji
 超模 ikmo
@@ -344,6 +367,7 @@
 计算 jisr
 计算机 jisrj
 技术 jiuu
+机制 jivi
 极限 jixm
 继续 jixu
 给予 jiyu
@@ -425,6 +449,7 @@
 老师 lkui
 连续 lmxu
 吝啬 lnse
+逻辑 loji
 论文 lpwf
 路人 lurf
 录入 luru
@@ -458,6 +483,7 @@
 没有 mzy
 哪个 nage
 那些 naxx
+哪些 naxx1
 那样 nayh
 能够 nggb
 你好 nihk 
@@ -466,6 +492,7 @@
 年轻 nmq;
 俄罗斯 oelos
 安全 ojqr
+按下 ojxw
 奥地利 okdil
 二次元 orciy
 而且 orqx
@@ -480,6 +507,7 @@
 葡萄牙 putky
 培训 pzxp
 培养 pzyh
+清楚 q;iu
 情况 q;kd
 庆祝 q;vu 
 罄竹难书 q;vunju qvnu
@@ -720,6 +748,7 @@
 添加 tmjw
 填写 tmxx
 同步 tsbu
+通过 tsgo
 痛苦 tsku
 同时 tsui
 通知 tsvi
@@ -727,6 +756,8 @@
 ↑ tuh
 图库 tuku
 图片 tupm
+℃ tuud
+退格 tvge
 退出 tviu
 推理 tvli
 ↓ txw
@@ -847,6 +878,7 @@
 支付宝 vifub
 支持 viii
 直接 vijx
+质量 vild
 只能 ving
 智能 ving2
 々 vis
@@ -866,12 +898,14 @@
 战士 vjui4
 战事 vjui4k
 着重 vovs
+屯蹶否塞 vpjtpis vjps
 这期神了 vqul veqiufl
 转化 vrhw
 转向 vrxd
 中国 vsg
 重要 vsyk
 逐步 vubu
+注意 vuyi
 文本 wfbf
 文档 wfdh
 稳当 wfdh0
@@ -890,15 +924,18 @@
 完成 wjig
 晚上 wjuh
 完善 wjuj
+完整 wjvg
 无可奉告 wkfg wukefgg
 外面 wlmm
 我知道 wovid
+无法 wufa
 无关 wugr
 五官 wugr1
 无关痛痒 wugrtsy wgty
 物理 wuli
 无穷 wuqs
 物是人非 wurf wuuirff
+无所谓 wusow
 维护 wzhu
 渭城朝雨浥轻尘 wzigvkyuyiq;i wivyyqi
 微积分 wzjif
@@ -911,6 +948,7 @@
 兴致 x;vi4
 行为 x;wz
 效率 xcly
+消息 xcxi
 想法 xdfa
 相辅相成 xdfuxdi xfxi
 相关 xdgr
@@ -970,6 +1008,8 @@
 优秀 ybxq
 有意思 ybyisi0
 由于 ybyu
+也会 yehv
+也能 yeng
 样子 yhzi
 一次 yici
 一定 yid;
@@ -985,6 +1025,7 @@
 一样 yiyh
 意义 yiyi44
 研究 yjjq
+要点 ykdm
 要求 ykqq
 一目了然 ymlr yimulcr
 因此 ynci
@@ -1020,6 +1061,7 @@
 增加 zgjw
 字典 zidm
 自动 zids
+字符 zifu
 自己 zij
 自我 ziwo
 自行车 zix;i
@@ -1027,5 +1069,6 @@
 做到 zodk
 昨天 zotm
 遵循 zpxp
+总之 zsvi
 最后 zvhb
 最近 zvjn

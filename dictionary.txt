@@ -32,8 +32,8 @@
 爸 ba4f
 靶 ba4g
 霸 ba4i
-耙 ba4m
-杷 ba4mb
+杷 ba4m
+耙 ba4n
 坝 ba4t
 把 ba4u
 灞 ba4ui
@@ -2911,6 +2911,7 @@
 鹿 lu4g
 露 lu4i
 录 lu4iu
+盝 lu4m
 禄 lu4s
 碌 lu4si
 渌 lu4u
@@ -5213,6 +5214,7 @@
 琢 vo2w
 酌 vo2y
 诼 vo2yi
+屯 vp19
 肫 vp1r
 谆 vp1y
 准 vp3b
