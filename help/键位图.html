@@ -334,6 +334,14 @@
             border-top: 1px solid #eee;
             padding-top: 12px;
         }
+        .notes a {
+            color: #2c6e9e;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .notes a:hover {
+            text-decoration: underline;
+        }
 
         @media (max-width: 880px) {
             .keyboard { min-width: 700px; }
@@ -375,6 +383,9 @@
     </div>
 
     <div id="infoCard" class="card empty-card"></div>
+    <div class="notes">
+        <a href="https://github.com/Amatiri/Jx3kuu11yn1rxa2m-InputMethod" target="_blank" rel="noopener noreferrer">📦 GitHub 仓库 · 解书音形输入法</a>
+    </div>
 </div>
 
 <script>
@@ -449,15 +460,15 @@
 
     // 余单笔画映射（形码视图下专用）
     const strokeMap = {
-        'D': '丶',
-        'H': '一',
-        'U': '丨',
-        'P': '丿',
+        'D': '丶 点',
+        'H': '一 横',
+        'U': '丨 竖',
+        'P': '丿 撇',
         'Y': '乙',
-        'G': '乛',
-        'K': '𠃌',
-        'W': '乚',
-        'V': '𡿨'
+        'G': '乛 钩',
+        'K': '𠃌 框',
+        'W': '乚 弯',
+        'V': '𡿨 折'
     };
 
     // 键盘布局
