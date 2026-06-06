@@ -120,14 +120,13 @@ def split_sequence(original):
         new_parts = []
         for part in parts:
             # 判断各种需要分割的条件
-            condition1 = False   # 无数字且长度>2
-            condition2 = False   # 数字出现在第3位之后（且是数字段开头）
-            condition3 = False   # 长度>5且无点
-            condition4 = False   # 有点且点后部分长度>1
-            condition5 = False   # 一个数字，其前一位也是数字，后一位存在且不是数字，在此数字后分隔
+            condition1 = False   # 连续双拼
+            condition2 = False   # 调码定位
+            condition3 = False   # 独体字四码打全
+            condition4 = False   # 合体字五码打全
+            condition5 = False   # 补码打全
             positions = []       # 用于条件2的插入位置
-            positions5 = []      # 用于条件5的数字位置（在其后插入）
-
+            positions3 = []      # 用于条件3的数字位置（在其后插入）
             if not any(char.isdigit() for char in part) and len(part) > 2:
                 condition1 = True
             for index, char in enumerate(part):
@@ -136,12 +135,12 @@ def split_sequence(original):
                     positions.append(index)
                 if (char.isdigit() and index > 0 and part[index-1].isdigit()
                         and index + 1 < len(part) and not part[index+1].isdigit()):
-                    condition5 = True
-                    positions5.append(index)
+                    condition3 = True
+                    positions3.append(index)
             if len(part) > 5 and '.' not in part:
-                condition3 = True
-            if '.' in part and len(part.split(".")[1]) > 1:
                 condition4 = True
+            if '.' in part and len(part.split(".")[1]) > 1:
+                condition5 = True
 
             if condition1:
                 new_part = "'".join([part[i:i+2] for i in range(0, len(part), 2)])
@@ -154,18 +153,18 @@ def split_sequence(original):
                 new_parts.extend(new_part.split("'"))
                 can_split_more = True
             elif condition3:
-                new_part = part[:5] + "'" + part[5:]
+                new_part = part
+                for pos in sorted(positions3, reverse=True):
+                    new_part = new_part[:pos+1] + "'" + new_part[pos+1:]
                 new_parts.extend(new_part.split("'"))
                 can_split_more = True
             elif condition4:
-                ff = len(part.split(".")[0]) + 2
-                new_part = part[:ff] + "'" + part[ff:]
+                new_part = part[:5] + "'" + part[5:]
                 new_parts.extend(new_part.split("'"))
                 can_split_more = True
             elif condition5:
-                new_part = part
-                for pos in sorted(positions5, reverse=True):
-                    new_part = new_part[:pos+1] + "'" + new_part[pos+1:]
+                ff = len(part.split(".")[0]) + 2
+                new_part = part[:ff] + "'" + part[ff:]
                 new_parts.extend(new_part.split("'"))
                 can_split_more = True
             else:

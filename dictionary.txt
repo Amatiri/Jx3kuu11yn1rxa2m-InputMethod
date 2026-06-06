@@ -1036,6 +1036,7 @@
 冓 gb45
 购 gb4b
 彀 gb4g
+觏 gb4j
 构 gb4m
 媾 gb4n
 够 gb4t
@@ -2063,6 +2064,7 @@
 犍 jm1nj
 肩 jm1r
 缄 jm1s
+缣 jm1sd
 坚 jm1t
 搛 jm1u
 湔 jm1uq
@@ -2693,7 +2695,9 @@
 骊 li2ml
 犁 li2n
 鹂 li2nl
+嫠 li2nw
 狸 li2q
+缡 li2s
 黎 li2u
 漓 li2ud
 璃 li2w
@@ -4434,11 +4438,13 @@
 特 te4n
 忑 te4x
 忒 te4xi
+慝 te4xn
 疼 tg2b
 藤 tg2c
 腾 tg2m
 滕 tg2u
 誊 tg2y
+耥 th1n
 汤 th1u
 蹚 th1z
 唐 th2g
@@ -4450,6 +4456,7 @@
 塘 th2tg
 搪 th2u
 溏 th2ug
+瑭 th2w
 帑 th3j
 倘 th3r
 傥 th3ro
@@ -4514,6 +4521,7 @@
 饕 tk1uh
 涛 tk1uu
 滔 tk1uy
+韬 tk1w
 陶 tk2b
 萄 tk2c
 啕 tk2k
@@ -4863,6 +4871,7 @@
 剡 uj4d
 扇 uj4h
 善 uj4k
+骟 uj4m
 禅 uj4s
 擅 uj4u
 汕 uj4uu
@@ -6497,7 +6506,8 @@
 徭 yk2tf
 摇 yk2u
 峣 yk2ut
-珧 yk2w
+瑶 yk2w
+珧 yk2wv
 窑 yk2x
 谣 yk2y
 遥 yk2z

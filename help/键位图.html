@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>解书音形 · 交互式键位图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        :root {
+            --key-bg: #e8e8e8;
+            --key-border: #b0b0b0;
+            --key-shadow: rgba(0, 0, 0, 0.18);
+            --key-text: #1a1a1a;
+            --container-bg: #ffffff;
+            --surface-shadow: 0 2px 16px rgba(0, 0, 0, 0.10);
+            --key-radius: 6px;
+            --gap-row: 4px;
+            --gap-col: 4px;
+
+            --action-bg: #a8e6a3;
+            --action-border: #70c76f;
+            --action-hover: #95d690;
+            --action-active: #82c67d;
+
+            --encode-bg: #a3d8f0;
+            --encode-border: #6aa8cc;
+            --encode-hover: #8fcbe6;
+            --encode-active: #7bbcd9;
+
+            --bright-bg: #fff9a3;
+            --bright-border: #d4c02a;
+            --bright-hover: #f2eb95;
+            --bright-active: #e5de85;
+            --bright-text: #5c4d00;
+
+            --func-bg: #f4c2c2;
+            --func-border: #d99b9b;
+            --func-hover: #eab0b0;
+            --func-active: #e09e9e;
+            --func-text: #6b2c2c;
+
+            --disabled-bg: #c0c0c0;
+            --disabled-border: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', 'Helvetica Neue', sans-serif;
+            background: #e2e3e7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .page-wrapper {
+            background: var(--container-bg);
+            border-radius: 20px;
+            padding: 24px 20px 20px;
+            box-shadow: var(--surface-shadow), 0 8px 40px rgba(0, 0, 0, 0.08);
+            max-width: 1000px;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            gap: 12px;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c2c2c;
+        }
+
+        .view-switch {
+            display: flex;
+            gap: 12px;
+            background: #f0f0f3;
+            padding: 6px 12px;
+            border-radius: 40px;
+        }
+
+        .view-switch label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #444;
+        }
+
+        .view-switch input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .keyboard {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-row);
+            min-width: 800px;
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        .keyboard-row {
+            display: grid;
+            gap: var(--gap-col);
+            width: 100%;
+            grid-template-columns: repeat(60, 1fr);
+        }
+
+        .key {
+            position: relative;
+            background: var(--key-bg);
+            border: 1.5px solid var(--key-border);
+            border-radius: var(--key-radius);
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 4px 0 0 5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--key-text);
+            line-height: 1.2;
+            min-height: 52px;
+            box-shadow: 0 2px 4px var(--key-shadow), 0 0 0 1px rgba(255,255,255,0.7) inset;
+            transition: all 0.1s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .key-action, .key-encode, .key-bright, .key-func {
+            transition: transform 0.08s ease, filter 0.08s ease;
+        }
+        .key-action:hover, .key-encode:hover, .key-bright:hover, .key-func:hover {
+            transform: translateY(-1px);
+            filter: brightness(0.96);
+        }
+        .key-action:active, .key-encode:active, .key-bright:active, .key-func:active {
+            transform: translateY(1px);
+            filter: brightness(0.92);
+        }
+
+        .key-disabled {
+            background: var(--disabled-bg);
+            border-color: var(--disabled-border);
+            color: #555;
+            cursor: default;
+            pointer-events: auto;
+        }
+        .key-disabled:hover, .key-disabled:active {
+            transform: none;
+            filter: none;
+        }
+
+        .key .corner-tl { position: absolute; top: 3px; left: 5px; font-size: 0.65rem; font-weight: 600; color: #3a3a3a; }
+        .key .corner-tr { position: absolute; top: 3px; right: 5px; font-size: 0.65rem; font-weight: 600; color: #3a3a3a; }
+        .key .corner-bl { position: absolute; bottom: 3px; left: 5px; font-size: 0.65rem; font-weight: 600; color: #3a3a3a; }
+        .key .corner-br { 
+            position: absolute; bottom: 3px; right: 5px; 
+            font-size: 0.6rem; font-weight: 600; color: #3a3a3a;
+            max-width: 90%; white-space: normal; line-height: 1.2; text-align: right;
+            background: rgba(255,255,220,0.7); border-radius: 3px; padding: 1px 2px;
+        }
+        .key .main-text { font-size: 1rem; font-weight: 800; margin-top: 2px; margin-left: 2px; }
+
+        .key-bright .corner-tr {
+            font-size: 1rem !important;
+            font-weight: 900 !important;
+        }
+
+        .key-action { background: var(--action-bg); border-color: var(--action-border); color: #1a4d1a; }
+        .key-encode { background: var(--encode-bg); border-color: var(--encode-border); color: #1a3d4d; }
+        .key-bright { background: var(--bright-bg); border-color: var(--bright-border); color: var(--bright-text); }
+        .key-func { background: var(--func-bg); border-color: var(--func-border); color: var(--func-text); }
+
+        .row-spacebar {
+            display: flex;
+            justify-content: center;
+            margin-top: 4px;
+        }
+        .key-spacebar {
+            position: relative;
+            background: var(--action-bg);
+            border: 1.5px solid var(--action-border);
+            border-radius: var(--key-radius);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #1a4d1a;
+            min-height: 52px;
+            width: 41%;
+            box-shadow: 0 2px 4px var(--key-shadow), 0 0 0 1px rgba(255,255,255,0.7) inset;
+            transition: all 0.08s ease;
+        }
+        .key-spacebar:hover {
+            transform: translateY(-1px);
+            filter: brightness(0.96);
+        }
+        .key-spacebar:active {
+            transform: translateY(1px);
+            filter: brightness(0.92);
+        }
+        .spacebar-label {
+            position: absolute;
+            bottom: 3px;
+            right: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #1a4d1a;
+            background: rgba(255,255,200,0.7);
+            padding: 0 3px;
+            border-radius: 4px;
+        }
+
+        .bottom-panel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .legend {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 14px;
+            font-size: 0.8rem;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .arrow-section {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 12px 16px;
+            border-radius: 14px;
+            text-align: center;
+        }
+        .arrow-cluster {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            width: 160px;
+            margin: 8px auto 0;
+        }
+        .arrow-key {
+            position: relative;
+            background: var(--action-bg);
+            border: 1.5px solid var(--action-border);
+            border-radius: 6px;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1a4d1a;
+            cursor: pointer;
+            transition: 0.05s linear;
+        }
+        .arrow-key:hover {
+            transform: translateY(-1px);
+            filter: brightness(0.96);
+        }
+        .arrow-key:active {
+            transform: translateY(1px);
+        }
+        .arrow-corner {
+            position: absolute;
+            bottom: 2px;
+            right: 5px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            background: rgba(255,255,200,0.8);
+            padding: 0 2px;
+            border-radius: 3px;
+            color: #1a4d1a;
+        }
+
+        .card {
+            margin-top: 20px;
+            background: #fef7e0;
+            border-left: 5px solid #ffc90e;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #2c3e4e;
+            min-height: 70px;
+            transition: 0.1s;
+        }
+        .card.empty-card {
+            background: #f8f9fa;
+            border-left-color: #ddd;
+            color: transparent;
+        }
+        .notes {
+            margin-top: 16px;
+            font-size: 0.7rem;
+            color: #777;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 12px;
+        }
+
+        @media (max-width: 880px) {
+            .keyboard { min-width: 700px; }
+            .key { font-size: 0.7rem; min-height: 44px; padding: 3px 0 0 4px; }
+            .key .main-text { font-size: 0.85rem; }
+            .key .corner-tl, .key .corner-tr, .key .corner-bl, .key .corner-br { font-size: 0.55rem; }
+            .key-bright .corner-tr { font-size: 0.8rem !important; }
+            .card { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="title-row">
+        <div class="page-title">解书音形 · 交互键位图</div>
+        <div class="view-switch">
+            <label><input type="radio" name="view" value="yin" checked> 音码键位</label>
+            <label><input type="radio" name="view" value="xing"> 形码键位</label>
+        </div>
+    </div>
+
+    <div id="keyboardContainer" class="keyboard"></div>
+
+    <div class="bottom-panel">
+        <div class="legend" id="legendPanel"></div>
+        <div class="arrow-section">
+            <div style="font-weight:600; margin-bottom:6px;">方向键与翻页</div>
+            <div class="arrow-cluster">
+                <div></div>
+                <div class="arrow-key" data-action="up">↑<span class="arrow-corner">上页</span></div>
+                <div></div>
+                <div class="arrow-key" data-action="left">←<span class="arrow-corner">左</span></div>
+                <div class="arrow-key" data-action="down">↓<span class="arrow-corner">下页</span></div>
+                <div class="arrow-key" data-action="right">→<span class="arrow-corner">右</span></div>
+            </div>
+            <div style="font-size:0.7rem; margin-top:8px;">←+→ 切换内外输 &nbsp;|&nbsp; esc+1 禁用外输
+</div>
+        </div>
+    </div>
+
+    <div id="infoCard" class="card empty-card"></div>
+</div>
+
+<script>
+    // ======================= 数据定义 =======================
+    const sspMap = {
+        'Q': 'iu', 'W': 'ua/ia', 'R': 'uan/er', 'T': 'ue', 'Y': 'ü/uai',
+        'O': 'uo', 'P': 'un', 'S': 'ong/iong', 'D': 'uang/iang',
+        'F': 'en', 'G': 'eng', 'H': 'ang', 'J': 'an', 'K': 'ao', 'L': 'ai', ';': 'ing',
+        'Z': 'ei', 'X': 'ie', 'C': 'iao', 'V': 'ui', 'B': 'ou', 'N': 'in', 'M': 'ian'
+    };
+    const zhChSh = { 'U': 'sh', 'I': 'ch', 'V': 'zh' };
+
+    // 形码部首表
+    const radicalMap = {
+        'B': ['宀', '阝', '冫', '贝', '疒', '白', '卜', '八', '匕', '癶'],
+        'C': ['车', '艹', '厂', '凵', '寸', '卄', '屮'],
+        'D': ['刀', '歹', '大', '亠', '冖', '丷', '斗', '豆'],
+        'F': ['风', '方', '父', '缶', '臼', '辰', '非'],
+        'G': ['工', '广', '弓', '光', '囗', '革', '戈', '瓜', '艮', '谷', '骨'],
+        'H': ['火', '户', '禾', '⺌', '羊', '虍', '黑'],
+        'I': ['虫', '页', '雨', '弋', '彐', '彑', '臣', '赤', '𡗗', '尺'],
+        'J': ['金', '巾', '廴', '冂', '几', '𠘨', '卩', '己', '见', '斤', '皀'],
+        'K': ['口', '又', '舌', '用', '角'],
+        'L': ['娄', '云', '勹', '力', '龙', '老', '卤', '里', '卵'],
+        'M': ['木', '彡', '釆', '马', '门', '皿', '毛', '目', '矛', '米', '麦'],
+        'N': ['女', '牛', '鸟', '耒', '齿'],
+        'O': ['耳', '匚', '二', '儿', '㔾'],
+        'P': ['攴', '片', '殳', '丬', '皮', '髟', '㐅'],
+        'Q': ['气', '犬', '豸', '欠', '青'],
+        'R': ['人', '肉', '入', '日', 'リ'],
+        'S': ['示', '丝', '石', '尸', '十', '厶', '巳'],
+        'T': ['土', '彳', '幺', '夕', '田'],
+        'U': ['攵', '水', '矢', '手', '食', '山', '士', '豕', '身'],
+        'V': ['乑', '争', '舟', '止', '爪', '鬼', '支'],
+        'W': ['王', '网', '瓦', '韦', '隹', '文'],
+        'X': ['穴', '𰃮', '心', '西', '小', '巛', '血', '辛', '习'],
+        'Y': ['言', '酉', '月', '鱼', '衣', '尢', '聿', '业', '羽', '黾', '音'],
+        'Z': ['辶', '竹', '足', '子', '自', '走']
+    };
+    const bieRadicals = {
+        'B': ['阝'], 'C': ['车', '厂', '凵'], 'D': ['亠', '冖', '丷'], 'F': ['臼', '辰'],
+        'H': ['⺌', '羊'], 'I': ['页', '雨', '弋', '彐', '彑'], 'K': ['又', '舌', '用', '角'],
+        'L': ['云', '勹'], 'M': ['彡', '釆'], 'N': ['耒', '齿'], 'O': ['匚', '㔾'],
+        'P': ['殳', '髟', '㐅'], 'Q': ['豸'], 'R': ['リ'], 'S': ['示', '石', '尸', '十'],
+        'T': ['彳', '幺', '夕'], 'U': ['攵'], 'V': ['乑', '鬼'], 'W': ['隹'], 'X': ['巛'], 'Y': ['黾'], 'Z': ['辶', '竹']
+    };
+    const shapeSymbol = { 1:'丨',2:'一',3:'八',4:'㐅',5:'中',6:'大',7:'厂',8:'乙',9:'复',0:'口' };
+    const shapeDesc = {
+        1:'竖形：字形瘦高/有贯穿竖画',2:'横形：字形矮宽/有贯穿横画',3:'开形：笔画相互分开',
+        4:'错形：有主导的交错粘连',5:'称形：上下或左右对称',6:'大形：横撇捺构成主要框架',
+        7:'偏形：重心不稳，左下/右下空缺',8:'奇形：其他均不符合/重码',9:'复形：结构复杂/隶变无法辨认',0:'闭形：有主导封闭部件'
+    };
+    const funcInfo = {
+        'A': '副码省略时的占位符（占空码），码表中不写',
+        'E': '副码次选字母（当余字解析码被较高优先级占用时使用）',
+        ';': '副码，表示未简字',
+        '.': '补码前缀，用于繁异体字，如 .f .t 等'
+    };
+    const actionCard = {
+        'Backspace': '删除：删除前一个编码字符',
+        'Enter': '留码：外输时保留当前编码，不上屏汉字',
+        "'": '分隔：多字输入时显式拆分编码',
+        '-': '前字：多字输入时切换到上一个字的选择',
+        '=': '后字：多字输入时切换到下一个字的选择',
+        'Space': '空格：上屏首选字/词',
+        'Shift': 'Shift+1~5 选择第1-5候选字；Shift+1 上屏词语候选',
+        'Left': '左箭头：光标左移',
+        'Right': '右箭头：光标右移',
+        'Up': '上页：查看上一页候选',
+        'Down': '下页：查看下一页候选'
+    };
+
+    // 余单笔画映射（形码视图下专用）
+    const strokeMap = {
+        'D': '丶',
+        'H': '一',
+        'U': '丨',
+        'P': '丿',
+        'Y': '乙',
+        'G': '乛',
+        'K': '𠃌',
+        'W': '乚',
+        'V': '𡿨'
+    };
+
+    // 键盘布局
+    const rowsLayout = [
+        ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace'],
+        ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\'],
+        ['Caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'Enter'],
+        ['Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Shift']
+    ];
+    const spans = {
+        '`':4, '1':4, '2':4, '3':4, '4':4, '5':4, '6':4, '7':4, '8':4, '9':4, '0':4, '-':4, '=':4, 'Backspace':8,
+        'Tab':6, 'Q':4, 'W':4, 'E':4, 'R':4, 'T':4, 'Y':4, 'U':4, 'I':4, 'O':4, 'P':4, '[':4, ']':4, '\\':6,
+        'Caps':7, 'A':4, 'S':4, 'D':4, 'F':4, 'G':4, 'H':4, 'J':4, 'K':4, 'L':4, ';':4, "'":4, 'Enter':9,
+        'Shift':9, 'Z':4, 'X':4, 'C':4, 'V':4, 'B':4, 'N':4, 'M':4, ',':4, '.':4, '/':4
+    };
+
+    let currentView = 'yin';
+
+    function buildKeyData() {
+        let flat = [];
+        for (let r of rowsLayout) {
+            for (let k of r) flat.push(k);
+        }
+        let keys = [];
+        let shiftCount = 0;
+        for (let i = 0; i < flat.length; i++) {
+            let k = flat[i];
+            let span = spans[k] || 4;
+            let isRightShift = false;
+            if (k === 'Shift') {
+                shiftCount++;
+                if (shiftCount === 2) {
+                    isRightShift = true;
+                    span = 11;
+                } else {
+                    span = 9;
+                }
+            }
+            keys.push({ main: k, span: span, idx: i, isRightShift: isRightShift });
+        }
+        return keys;
+    }
+
+    function getKeyType(main, view, isRightSh=false) {
+        if (isRightSh || main === 'Tab' || main === 'Caps') return 'disabled';
+        // 永久禁用的符号（音码和形码下都不可用）
+        const alwaysDisabled = ['`', '[', ']', '\\', ',', '/'];
+        if (alwaysDisabled.includes(main)) return 'disabled';
+        // 音码视图下，. 禁用
+        if (view === 'yin' && main === '.') return 'disabled';
+        // 音码视图下数字6-9禁用
+        if (view === 'yin' && /[6-9]/.test(main)) return 'disabled';
+        
+        const actionKeys = ['Backspace', 'Enter', "'", '-', '=', 'Shift', 'Space', 'Left', 'Right', 'Up', 'Down'];
+        if (actionKeys.includes(main)) return 'action';
+        
+        // 形码视图下，. 为功能键
+        if (view === 'xing' && main === '.') return 'func';
+        if (main === 'A' || main === 'E' || main === '.') return 'func';
+        
+        if (view === 'yin') {
+            if (/[A-Z]/.test(main) && main !== ';') return 'encode';
+            if (main === ';') return 'func';
+            if (/[0-5]/.test(main)) return 'bright';
+        } else {
+            if (/[0-9]/.test(main)) return 'bright';
+            if (/[A-Z]/.test(main)) return 'encode';
+            if (main === ';' || main === 'A' || main === 'E') return 'func';
+        }
+        return 'disabled';
+    }
+
+    function getCornerContent(main, view, isRightSh=false) {
+        if (isRightSh) return { tl:'', tr:'', bl:'', br:'' };
+        if (main === 'Tab' || main === 'Caps') return { tl:'', tr:'', bl:'', br:'' };
+        let tl='', tr='', bl='', br='';
+        if (view === 'yin') {
+            if (/[1-4]/.test(main)) {
+                const toneMap = {'1':'ˉ','2':'ˊ','3':'ˇ','4':'ˋ'};
+                tr = toneMap[main];
+                const candidate = ['一','二','三','四','五'][parseInt(main)-1];
+                br = candidate;
+            } else if (main === '5') {
+                br = '五';
+            } else if (main === '0') {
+                tr = '轻';
+            } else if (/[A-Z]/.test(main)) {
+                if (sspMap[main]) br = sspMap[main];
+                if (zhChSh[main]) tr = zhChSh[main];
+                if (main === 'O') tr = '零';
+            } else if (main === ';') {
+                br = 'ing';
+            }
+            // 音码下 . 不显示任何标注
+            if (main === 'Backspace') br = '删除';
+            if (main === 'Enter') br = '留码';
+            if (main === "'") br = '分隔';
+            if (main === '-') br = '前字';
+            if (main === '=') br = '后字';
+            if (main === 'Shift') br = '选字';
+        } else {
+            if (/[0-9]/.test(main)) {
+                let num = parseInt(main);
+                bl = shapeSymbol[num];
+            } else if (/[A-Z]/.test(main) && bieRadicals[main]) {
+                let bieList = bieRadicals[main];
+                let display = bieList.slice(0,5).join(' ');
+                if (bieList.length > 5) display += ' …';
+                br = display;
+            } else if (main === 'A') br = '常';
+            else if (main === 'E') br = '次';
+            else if (main === ';') br = '未';
+            else if (main === '.') br = '补';
+            if (main === 'Backspace') br = '删除';
+            if (main === 'Enter') br = '留码';
+            if (main === "'") br = '分隔';
+            if (main === '-') br = '前字';
+            if (main === '=') br = '后字';
+            if (main === 'Shift') br = '选字';
+        }
+        return { tl, tr, bl, br };
+    }
+
+    function getCardText(main, view, isRightSh=false) {
+        if (isRightSh) return null;
+        if (main === 'Tab' || main === 'Caps') return null;
+        if (view === 'yin' && /[6-9]/.test(main)) return null;
+        const alwaysDisabled = ['`', '[', ']', '\\', ',', '/'];
+        if (alwaysDisabled.includes(main)) return null;
+        if (view === 'yin' && main === '.') return null;  // 音码下 . 无信息
+        
+        if (view === 'yin') {
+            if (actionCard[main]) return actionCard[main];
+            return '';
+        } else {
+            if (actionCard[main]) return actionCard[main];
+            if (/[0-9]/.test(main)) {
+                let num = parseInt(main);
+                return `📌 独体构形 · ${shapeSymbol[num]}（${shapeDesc[num]}）`;
+            }
+            if (main === 'A' || main === 'E' || main === ';' || main === '.') {
+                return `🔤 副码/补码特殊键：${funcInfo[main] || '特殊用途'}`;
+            }
+            if (/[A-Z]/.test(main) && radicalMap[main]) {
+                let all = radicalMap[main];
+                let bieSet = new Set(bieRadicals[main] || []);
+                let formatted = all.map(r => bieSet.has(r) ? `<b>${r}</b>` : r).join(' · ');
+                let baseText = `📖 部首集合：${formatted} （加粗字体为别码部首，需记忆）`;
+                // 追加余单笔画信息（如果该字母在笔画映射中）
+                if (strokeMap[main]) {
+                    baseText += `<br>✍️ 余单笔画：${strokeMap[main]}`;
+                }
+                return baseText;
+            }
+            return '操作键，详见上方说明';
+        }
+    }
+
+    function hideCard() {
+        const card = document.getElementById('infoCard');
+        if (card) {
+            card.innerHTML = '';
+            card.classList.add('empty-card');
+        }
+    }
+
+    function showCard(keyMain, text) {
+        const card = document.getElementById('infoCard');
+        if (!card) return;
+        if (!text || text.trim() === '') {
+            hideCard();
+            return;
+        }
+        card.innerHTML = `💡 ${text}`;
+        card.classList.remove('empty-card');
+    }
+
+    function renderKeyboard() {
+        const container = document.getElementById('keyboardContainer');
+        const keysData = buildKeyData();
+        let html = '';
+        let rowKeys = [];
+        for (let i=0; i<keysData.length; i++) {
+            rowKeys.push(keysData[i]);
+            const next = keysData[i+1];
+            const isLast = i === keysData.length-1;
+            const isRowEnd = (keysData[i].main === 'Enter') || (keysData[i].main === '\\' && next?.main === 'Caps') || (keysData[i].main === 'Shift' && rowKeys.length >= 12);
+            if (isLast || isRowEnd) {
+                html += '<div class="keyboard-row" style="grid-template-columns: repeat(60, 1fr);">';
+                for (let k of rowKeys) {
+                    let main = k.main;
+                    let span = k.span;
+                    let isRShift = k.isRightShift;
+                    let typeClass = getKeyType(main, currentView, isRShift);
+                    let corner = getCornerContent(main, currentView, isRShift);
+                    let cardText = getCardText(main, currentView, isRShift);
+                    let mainText = main;
+                    if (main === 'Backspace') mainText = '⌫';
+                    if (main === 'Enter') mainText = '↵';
+                    if (main === 'Shift') mainText = isRShift ? '⇧' : '⇧';
+                    if (main === 'Caps') mainText = '⇪';
+                    if (main === 'Tab') mainText = '⇥';
+                    
+                    let hasOnclick = (typeClass !== 'disabled' && cardText !== null);
+                    let onclickAttr = '';
+                    if (hasOnclick) {
+                        let safeText = cardText.replace(/`/g, '\\`');
+                        onclickAttr = `onclick="showCard('${main.replace(/'/g, "\\'")}', \`${safeText}\`)"`;
+                    } else {
+                        onclickAttr = `onclick="hideCard()"`;
+                    }
+                    html += `<div class="key key-${typeClass}" style="grid-column: span ${span};" ${onclickAttr}>
+                                <span class="main-text">${mainText}</span>`;
+                    if (corner.tl) html += `<span class="corner-tl">${corner.tl}</span>`;
+                    if (corner.tr) html += `<span class="corner-tr">${corner.tr}</span>`;
+                    if (corner.bl) html += `<span class="corner-bl">${corner.bl}</span>`;
+                    if (corner.br) html += `<span class="corner-br">${corner.br}</span>`;
+                    html += `</div>`;
+                }
+                html += '</div>';
+                rowKeys = [];
+            }
+        }
+        const spaceCard = actionCard['Space'].replace(/`/g, '\\`');
+        html += `<div class="row-spacebar"><div class="key-spacebar" onclick="showCard('Space', \`${spaceCard}\`)"><span>Space</span><span class="spacebar-label">上屏</span></div></div>`;
+        container.innerHTML = html;
+        updateLegend();
+    }
+
+    function updateLegend() {
+        const legendDiv = document.getElementById('legendPanel');
+        if (currentView === 'yin') {
+            legendDiv.innerHTML = `
+                <div class="legend-item"><div class="legend-color" style="background:#a3d8f0;"></div><span>蓝色：初韵码共用字母</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#fff9a3;"></div><span>亮黄：数字0-5（声调/选字）</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#f4c2c2;"></div><span>浅红：A/E/; 仅用于韵码</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#a8e6a3;"></div><span>绿色：操作键位</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#c0c0c0;"></div><span>灰色：无功能（不可点击）</span></div>
+            `;
+        } else {
+            legendDiv.innerHTML = `
+                <div class="legend-item"><div class="legend-color" style="background:#a3d8f0;"></div><span>蓝色：部首码（标注别码部首）</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#fff9a3;"></div><span>亮黄：独体构形</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#f4c2c2;"></div><span>浅红：副码/补码用符</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#a8e6a3;"></div><span>绿色：操作键位</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#c0c0c0;"></div><span>灰色：无功能（不可点击）</span></div>
+            `;
+        }
+    }
+
+    function bindArrowKeys() {
+        const arrows = document.querySelectorAll('.arrow-key');
+        arrows.forEach(arrow => {
+            arrow.removeEventListener('click', bindArrowKeys.handler);
+            const handler = (e) => {
+                let key = arrow.innerText.trim()[0];
+                let msg = actionCard[key] || `${key} 方向键：用于翻页或移动光标`;
+                if (key === '←') msg = actionCard['Left'];
+                if (key === '→') msg = actionCard['Right'];
+                if (key === '↑') msg = actionCard['Up'];
+                if (key === '↓') msg = actionCard['Down'];
+                showCard(key, msg);
+            };
+            arrow.addEventListener('click', handler);
+            bindArrowKeys.handler = handler;
+        });
+    }
+
+    function initViewSwitch() {
+        const radios = document.querySelectorAll('input[name="view"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    currentView = e.target.value;
+                    renderKeyboard();
+                    bindArrowKeys();
+                    hideCard();
+                }
+            });
+        });
+    }
+
+    renderKeyboard();
+    initViewSwitch();
+    bindArrowKeys();
+    hideCard();
+</script>
+</body>
+</html>
