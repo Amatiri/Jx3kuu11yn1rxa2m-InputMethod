@@ -50,10 +50,12 @@
 标 bc1m
 髟 bc1mi
 杓 bc1mu
+摽 bc1u
 婊 bc3n
 表 bc3q
 裱 bc3y
 俵 bc4r
+摽 bc4u
 鳔 bc4y
 𰻝 bd2z
 贲 bf1b
@@ -840,7 +842,7 @@
 砜 fg1s
 峰 fg1u
 沣 fg1uf
-沨 fg1uj
+沨 fg1up
 冯 fg2b
 缝 fg2s
 逢 fg2z
@@ -1236,6 +1238,7 @@
 毂 gu3c
 钴 gu3j
 蛊 gu3m
+榖 gu3mp
 牯 gu3n
 鹄 gu3nk
 骨 gu3r
@@ -1776,6 +1779,7 @@
 敕 ii4u
 饬 ii4ur
 翅 ii4y
+踅 ii4z
 觇 ij1j
 搀 ij1u
 蝉 ij2i
@@ -2860,6 +2864,7 @@
 络 lo4s
 洛 lo4u
 泺 lo4ul
+摞 lo4us
 珞 lo4w
 咯 lo0k
 啰 lo0kw
@@ -3125,6 +3130,7 @@
 满 mj3u
 蔓 mj4c
 曼 mj4r
+墁 mj4t
 漫 mj4u
 慢 mj4x
 谩 mj4y
@@ -3136,6 +3142,7 @@
 旄 mk2f
 锚 mk2j
 牦 mk2n
+髦 mk2p
 卯 mk35
 茆 mk3c
 铆 mk3j
@@ -3210,6 +3217,7 @@
 莫 mo4c
 茉 mo4cm
 殁 mo4d
+靺 mo4g
 秣 mo4h
 蓦 mo4m
 默 mo4q
@@ -3356,6 +3364,7 @@
 萘 nl4cd
 奈 nl4d
 柰 nl4m
+蔫 nm1c
 拈 nm1u
 年 nm21
 粘 nm2m
@@ -3901,6 +3910,7 @@
 戕 qd1p
 腔 qd1r
 跄 qd1z
+蔷 qd2c
 强 qd2g
 墙 qd2t
 强 qd3g
@@ -3941,6 +3951,7 @@
 伎 qi2rv
 祈 qi2s
 祺 qi2sb
+綦 qi2sq
 祇 qi2su
 圻 qi2t
 畦 qi2tg
@@ -4772,6 +4783,7 @@
 殇 uh1dr
 觞 uh1k
 伤 uh1r
+墒 uh1t
 上 uh32
 赏 uh3b
 晌 uh3r
@@ -5144,6 +5156,7 @@
 直 vi2s
 埴 vi2t
 执 vi2u
+摭 vi2ug
 跖 vi2z
 止 vi32
 祁 vi3b
@@ -5340,6 +5353,7 @@
 伫 vu4rb
 祝 vu4s
 注 vu4u
+翥 vu4y
 筑 vu4z
 隹 vv19
 锥 vv1j
@@ -5365,6 +5379,7 @@
 瓦 wa34
 佤 wa3r
 袜 wa4y
+靺 wa4y.g
 哇 wa0k
 瘟 wf1b
 温 wf1u
@@ -5847,6 +5862,7 @@
 茓 xt2c
 噱 xt2k
 学 xt2x
+踅 xt2z
 雪 xt3i
 血 xt42
 谑 xt4y
@@ -6617,6 +6633,7 @@
 痈 ys1b
 庸 ys1g
 佣 ys1r
+墉 ys1t
 拥 ys1u
 饔 ys1uw
 雍 ys1w
@@ -6743,6 +6760,7 @@
 婴 y;1nb
 莺 y;1nc
 鹦 y;1nn
+撄 y;1u
 瑛 y;1w
 赢 y;2b
 荧 y;2h

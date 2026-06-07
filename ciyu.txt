@@ -1,4 +1,5 @@
 病毒 b;du
+冰箱 b;xd
 丶 bad
 乛 bag
 𠃌 bak
@@ -129,6 +130,7 @@
 等待 dgdl
 等级 dgji
 地方 difh
+地府 difu3
 地理 dili3
 第一 diyi
 掸子 dj3zi0
@@ -278,6 +280,7 @@
 攻击 gsji
 供给 gsji3
 工具 gsju
+公开 gskl
 功能 gsng 
 公司 gssi
 共同 gsts
@@ -317,6 +320,7 @@
 好吧 hkb
 好罢 hkba
 胡克希伍 hkxw hukexiw
+还能 hlng
 还是 hlui
 还有 hlyb
 孩子 hlzi
@@ -328,6 +332,7 @@
 环境 hrj;
 互联网 hulmw
 回答 hvda
+话说 hwuo
 化学 hwxt
 华夏 hwxw
 差不多 iabud
@@ -356,6 +361,7 @@
 拆分 ilff1 
 传播 irbo
 传递 irdi
+传话 irhw
 传统 irts
 串通 irts1
 重复 isfu
@@ -364,6 +370,7 @@
 处理 iuli3
 初中 iuvs
 初衷 iuvs1
+处刑 iux;2
 出现 iuxm
 出租车 iuzui
 警纪 j;3ji4 
@@ -437,6 +444,7 @@
 借助 jxvu
 矿泉水 kdqru
 科技 keji
+课堂 keth
 科学 kext
 可以 key
 肯定 kfd;
@@ -451,6 +459,7 @@
 控制 ksvi
 酷狗 kugb
 领导 l;dk
+灵魂 l;hp
 零重码 l;ism
 拉风 lafg
 拉缝 lafg4
@@ -502,6 +511,7 @@
 美丽 mzli
 魅力 mzli4
 美利坚 mzlij
+媒体 mzti
 美少女 mzukn
 美术 mzuu
 没有 mzy
@@ -520,9 +530,11 @@
 奥地利 okdil
 二次元 orciy
 而且 orqx
+苹果 p;go
 平台 p;tl
 蓬勃 pgbo
 朋友 pgyb
+批改 pigl
 批量 pild
 判断 pjdr
 排序 plxu
@@ -772,6 +784,7 @@
 涂蜡的氧化切制铜楼梯 tldt tldyhqvtlt
 添加 tmjw
 填写 tmxx
+团队 trdv
 同步 tsbu
 通过 tsgo
 痛苦 tsku
@@ -802,6 +815,7 @@
 ≥ udydy
 ∃ uee
 社会 uehv
+社交 uejc
 设计 ueji
 射击 ueji1
 涉及 ueji2
@@ -894,6 +908,7 @@
 证明 vgm;
 整体 vgti
 政治 vgvi
+账号 vhhk
 中华民国 vhmg vshwmng
 中华人民共和国 vhrg vhrmghg
 震撼首发 vhuf vfhjubf
@@ -926,6 +941,7 @@
 占时 vjui2r
 战士 vjui4
 战事 vjui4k
+召唤 vkhr
 着重 vovs
 屯蹶否塞 vpjtpis vjps
 这期神了 vqul veqiufl
@@ -934,6 +950,8 @@
 中国 vsg
 重要 vsyk
 逐步 vubu
+祝福 vufu
+嘱咐 vufu4
 注意 vuyi
 文本 wfbf
 文档 wfdh
@@ -970,6 +988,7 @@
 渭城朝雨浥轻尘 wzigvkyuyiq;i wivyyqi
 微积分 wzjif
 为了 wzle
+微软 wzrr
 葳蕤 wzrv
 为什么 wzufm
 微信 wzxn
@@ -1047,8 +1066,9 @@
 一定 yid;
 意大利 yidal
 一点 yidm
-已经 yij
-以及 yiji24
+已经 yij yij;
+意境 yij;4
+以及 yiji
 旖旎 yini3
 意思 yisi0
 艺术 yiuu
