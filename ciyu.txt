@@ -335,12 +335,18 @@
 话说 hwuo
 化学 hwxt
 华夏 hwxw
+ɑ iaa
 差不多 iabud
+æ iae
 查看 iakj
+ʌ ias
 查询 iaxp2
+ð idh
 创新 idxn
 创业 idye
 创造 idzk
+ɜ iee
+ə ies
 城市 igui
 城镇 igvf4
 成为 igwz
@@ -353,26 +359,36 @@
 翅膀 iibh
 彳亍 iii
 魑魅魍魉 iimzwhl imwl
+ɪ iis
 产品 ijpn
 产生 ijug
 超级 ikji
 超模 ikmo
 超市 ikui
+ː ilength
 拆分 ilff1
+ŋ ing
+ɔ ioo
+ɡ iopeng
+ɒ ios
 传播 irbo
 传递 irdi
 传话 irhw
 传统 irts
 串通 irts1
 重复 isfu
+ʃ ish
 充满 ismj
+ˈ istress
 重新 isxn
 处理 iuli3
+ʊ ius
 初中 iuvs
 初衷 iuvs1
 处刑 iux;2
 出现 iuxm
 出租车 iuzui
+ʒ izh
 警纪 j;3ji4
 经典 j;dm3
 经过 j;go
@@ -914,6 +930,7 @@
 中华民国 vhmg vshwmng
 中华人民共和国 vhrg vhrmghg
 震撼首发 vhuf vfhjubf
+⿱ vi.
 旨意 vi3yi4
 直播 vibo
 只不过 vibug
@@ -922,6 +939,7 @@
 指挥 vihv1
 只会 vihv4r
 智慧 vihv4x
+⿳ vii.
 支持 viii
 直接 vijx
 质量 vild
@@ -936,6 +954,7 @@
 之意 viyi4x
 直译 viyi4y
 展开 vjkl
+㇯ vjm.
 这就是 vju
 展示 vjui
 沾湿 vjui1
@@ -944,10 +963,21 @@
 战士 vjui4
 战事 vjui4k
 召唤 vkhr
+⿹ vl.1
+⿽ vl.2
+⿺ vl.3
+⿸ vl.4
+⿵ vl.u
+⿴ vl.w
+⿶ vl.x
+⿼ vl.y
+⿷ vl.z
 着重 vovs
 屯蹶否塞 vpjtpis vjps
 这期神了 vqul veqiufl
+⿰ vr.
 转化 vrhw
+⿲ vrr.
 转向 vrxd
 中国 vsg
 重要 vsyk
@@ -955,6 +985,9 @@
 祝福 vufu
 嘱咐 vufu4
 注意 vuyi
+⿿ vvr.
+⿻ vx.
+⿾ vzy.
 文本 wfbf
 文档 wfdh
 稳当 wfdh0

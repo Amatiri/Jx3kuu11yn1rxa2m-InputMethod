@@ -1995,8 +1995,10 @@
 玑 ji1w
 羁 ji1wg
 齑 ji1wj
+齐 ji1wj.q
 讥 ji1y
 跻 ji1z
+齐 ji1z.q
 笄 ji1zk
 箕 ji1zq
 及 ji24
@@ -5068,6 +5070,7 @@
 哲 ve2k
 折 ve2u
 谪 ve2y
+赭 ve3i
 锗 ve3j
 者 ve3l
 褶 ve3y

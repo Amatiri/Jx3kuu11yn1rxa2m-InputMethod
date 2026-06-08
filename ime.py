@@ -603,7 +603,8 @@ def initial(event):
                 entry_box.delete(0, tk.END)
                 code_char_before_cursor = 0
                 code_char_after_cursor = 0
-                keyboard.press_and_release("left")
+                time.sleep(0.11)
+                keyboard.press_and_release("backspace")
             elif event.name in ["!", "@", "#", "$", "%", "space"]:
   
                 if event.name == "space":
