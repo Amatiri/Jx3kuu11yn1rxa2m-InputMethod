@@ -65,13 +65,20 @@ def process_file(input_file, output_file):
             seen_codes.add(code)
             code_unique_entries.append((hanzi, code))
 
-    # ========== 新增过滤：相同前三码中，同一汉字只保留第一次出现 ==========
-    # 记录 (前三码, 汉字) 是否已经出现过
+    # ========== 过滤：同一汉字同一音区只保留一次（异体字补码例外） ==========
+    # 无补码(不含'.')的条目：用 (前三码, 汉字) 作为唯一键
+    # 有补码(含'.')的条目：用 (汉字, 点前编码) 作为唯一键
+    #   同一汉字指向不同源字的补码（点前编码不同）可共存（如 齐 ji1z.q vs 齐 ji1wj.q）
+    #   同一汉字指向同源字的补码（点前编码相同）只保留第一个（如 齐 ji1z.q vs 齐 ji1z.w）
     seen_prefix_hanzi = set()
     filtered_entries = []
     for hanzi, code in code_unique_entries:
-        prefix = get_abc_code(code)          # 获取前三码
-        key = (prefix, hanzi)
+        if '.' in code:
+            pre_dot = code.split('.')[0]
+            key = (hanzi, pre_dot)
+        else:
+            prefix = get_abc_code(code)
+            key = (prefix, hanzi)
         if key not in seen_prefix_hanzi:
             seen_prefix_hanzi.add(key)
             filtered_entries.append((hanzi, code))
@@ -118,29 +125,63 @@ def process_file(input_file, output_file):
 
 
 def sort_file_by_second_part(input_file, output_file):
-    """按第二部分排序并去重"""
+    """按第二部分排序并去重，合并同词条目"""
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             lines = f.readlines()
-        parsed_lines = []
-        for line_num, line in enumerate(lines, 1):
+
+        # ---------- 初级去重：完全相同的行只保留一次 ----------
+        seen_lines = set()
+        parsed_entries = []
+        for line in lines:
             if not line.strip():
                 continue
             parts = line.split(' ', 1)
             if len(parts) < 2:
                 continue
             first_part, second_part = parts
-            parsed_lines.append((first_part, second_part, line))
-        parsed_lines.sort(key=lambda x: x[1])
-        seen_second_parts = set()
-        unique_lines = []
-        for first, second, line in parsed_lines:
-            if second not in seen_second_parts:
-                seen_second_parts.add(second)
-                unique_lines.append(line)
+            second_part = second_part.rstrip()
+            line_key = f"{first_part} {second_part}"
+            if line_key not in seen_lines:
+                seen_lines.add(line_key)
+                parsed_entries.append((first_part, second_part))
+
+        # ---------- 中级压缩：合并同词多条目的编码 ----------
+        # 将同一词语的所有编码收集到一行，用空格分隔
+        word_codes = {}  # word -> list of unique codes (preserving first-seen order)
+        for word, code_str in parsed_entries:
+            if word not in word_codes:
+                word_codes[word] = []
+            for code in code_str.split():
+                if code not in word_codes[word]:
+                    word_codes[word].append(code)
+
+        # 重建为单行条目
+        merged_entries = []
+        for word, codes in word_codes.items():
+            merged_code_str = ' '.join(codes)
+            merged_entries.append((word, merged_code_str))
+
+        # ---------- 排序 ----------
+        merged_entries.sort(key=lambda x: x[1])
+
+        # ---------- 终级去重：删除已在前面条目中出现过的编码 ----------
+        seen_codes = set()                # 全局已出现编码
+        unique_entries = []
+        for word, code_str in merged_entries:
+            codes = code_str.split()
+            # 仅保留之前从未出现过的编码
+            new_codes = [c for c in codes if c not in seen_codes]
+            if new_codes:                 # 至少保留了一个编码
+                seen_codes.update(new_codes)
+                unique_entries.append((word, ' '.join(new_codes)))
+
+        # ---------- 写入 ----------
         with open(output_file, 'w', encoding='utf-8') as f:
-            f.writelines(unique_lines)
-        return len(unique_lines)
+            for word, code_str in unique_entries:
+                f.write(f"{word} {code_str}\n")
+
+        return len(unique_entries)
     except FileNotFoundError:
         print(f"错误: 找不到输入文件 '{input_file}'")
     except Exception as e:

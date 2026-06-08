@@ -342,8 +342,8 @@
 孛 bz4z
 呗 bz0k
 兵 b;1b
-冫 b;1b;1u.b
 冰 b;1u
+冫 b;1u.b
 氷 b;1u.j
 丙 b;35
 秉 b;36

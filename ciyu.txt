@@ -69,7 +69,7 @@
 编程 bmig2
 编辑 bmji
 边界 bmjx4
-编码 bmma 
+编码 bmma
 彡 bms
 匚 bob
 㔾 boe
@@ -100,10 +100,10 @@
 北京 bzj;
 背景 bzj;3
 辶 bzv
-测试 ceu 
+测试 ceu
 词汇 cihv
-词语 ciyu 
-餐馆 cjgr3 
+词语 ciyu
+餐馆 cjgr3
 操作 ckzo
 菜单 cldj
 剉冰 cob;1
@@ -113,8 +113,8 @@
 ， d.b
 · d.d
 、 d.p
-定义 d;yi 
-打字 da3zi4 
+定义 d;yi
+打字 da3zi4
 达到 dadk
 打开 dakl
 答案 daoj
@@ -172,7 +172,7 @@
 对话 dvhw
 】 dvy
 对应 dvy;4
-对于 dvyu 
+对于 dvyu
 【 dvz
 ？ dwh
 ” dyy
@@ -281,7 +281,7 @@
 供给 gsji3
 工具 gsju
 公开 gskl
-功能 gsng 
+功能 gsng
 公司 gssi
 共同 gsts
 共享 gsxd
@@ -337,17 +337,17 @@
 华夏 hwxw
 差不多 iabud
 查看 iakj
-查询 iaxp2 
+查询 iaxp2
 创新 idxn
 创业 idye
 创造 idzk
 城市 igui
 城镇 igvf4
-成为 igwz 
+成为 igwz
 程序 igxu
 程序员 igxuy
 常规 ihgv
-尝试 ihui4 
+尝试 ihui4
 常用 ihys
 常用字 ihysz
 翅膀 iibh
@@ -358,7 +358,7 @@
 超级 ikji
 超模 ikmo
 超市 ikui
-拆分 ilff1 
+拆分 ilff1
 传播 irbo
 传递 irdi
 传话 irhw
@@ -373,17 +373,17 @@
 处刑 iux;2
 出现 iuxm
 出租车 iuzui
-警纪 j;3ji4 
-经典 j;dm3 
+警纪 j;3ji4
+经典 j;dm3
 经过 j;go
-经济 j;ji 
-经纪 j;ji4s 
+经济 j;ji
+经纪 j;ji4s
 境界 j;jx
 竞争 j;vg
 教科书 jckeu
 交流 jclq
 教育 jcyu
-讲解 jdjx 
+讲解 jdjx
 鞠躬尽瘁 jgjc jugsjnc
 基本 jibf
 机会 jihv
@@ -415,7 +415,7 @@
 进入 jnru
 今天 jntm
 金属 jnuu
-进行 jnx; 
+进行 jnx;
 进一步 jnyib
 均衡 jphg
 纠偏 jqpm
@@ -463,8 +463,8 @@
 零重码 l;ism
 拉风 lafg
 拉缝 lafg4
-了解 lcjx 
-了结 lcjx2 
+了解 lcjx
+了结 lcjx2
 良莠不齐 ldybbuq lybq
 厉害 lihl
 理解 lijx
@@ -499,7 +499,7 @@
 麻酱 majd4
 马上 mauh
 描述 mcuu
-盲打 mhda3 
+盲打 mhda3
 米哈游 mihay
 耄耋 mkdx
 腼腆 mmtm
@@ -521,7 +521,7 @@
 哪些 naxx1
 那样 nayh
 能够 nggb
-你好 nihk 
+你好 nihk
 你说得对 niuodedv
 男娘 njnd
 年龄 nml;
@@ -547,7 +547,7 @@
 培养 pzyh
 清楚 q;iu
 情况 q;kd
-庆祝 q;vu 
+庆祝 q;vu
 罄竹难书 q;vunju qvnu
 巧妙 qcmc
 启动 qids
@@ -576,7 +576,7 @@
 龟兹 qqci2d
 权当 qrdh1
 全能 qrng
-确实 qtui2 
+确实 qtui2
 驱动 quds
 ー r;;
 ば rba
@@ -600,7 +600,7 @@
 づ rdu
 ヅ rduk
 热门 remf
-人类 rflz 
+人类 rflz
 人民币 rfmnb
 忍耐 rfnl
 认真 rfvf
