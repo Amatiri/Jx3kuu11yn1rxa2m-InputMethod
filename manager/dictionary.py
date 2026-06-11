@@ -9,65 +9,6 @@ def ensure_data_file():
             pass
 
 
-def query_phrase(code):
-    """从词库文件 ciyu.txt 中查询短语"""
-    try:
-        with open(CIYU_FILE, 'r', encoding='utf-8') as f:
-            for line in f:
-                parts = line.strip().split(" ")
-                if len(parts) >= 2 and code in parts[1:]:
-                    return "(" + parts[0] + ")"
-    except FileNotFoundError:
-        pass
-    return ""
-
-
-def get_entry_count():
-    """返回词典文件中的词条总数"""
-    ensure_data_file()
-    if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r', encoding='utf-8') as f:
-            return len(f.readlines())
-    return 0
-
-
-def query_by_prefix(prefix, start_idx=0, count=5):
-    """根据编码前缀查询候选词。支持副码a和补码规则"""
-    ensure_data_file()
-    if not os.path.exists(DATA_FILE) or os.path.getsize(DATA_FILE) == 0:
-        return []
-    results = []
-    with open(DATA_FILE, 'r', encoding='utf-8') as f:
-        for line in f:
-            parts = line.strip().split(' ', 1)
-            if len(parts) == 2:
-                word = parts[0]
-                code = parts[1]
-                # 处理特殊规则：前缀长度>=5且副码为a
-                if len(prefix) >= 5 and prefix[4] == 'a':
-                    if len(prefix) == 5 and code == prefix[:4]:
-                        results.append(f"{word}")
-                    elif len(code) >= 5 and code.startswith(prefix[:4]):
-                        if code[4:].startswith(prefix[5:]) and code[4] == ".":
-                            rest = code[len(prefix)-1:]
-                            results.append(f"{word}{rest}")
-                elif code.startswith(prefix):
-                    # 处理补码
-                    if "." in code[:6]:
-                        if '.' in prefix:
-                            rest = code[len(prefix):]
-                            results.append(f"{word}{rest}")
-                        elif (len(code) > 5 and "." == code[5]) or (len(prefix) == 4 and prefix[3].isdigit()):
-                            code_before_dot = code.split('.')[0]
-                            if prefix == code_before_dot:
-                                rest = code[len(prefix):]
-                                results.append(f"{word}{rest}")
-                    else:
-                        rest = code[len(prefix):]
-                        results.append(f"{word}{rest}")
-    return results[start_idx:start_idx + count]
-
-
 def query_by_char(char):
     """根据汉字查询其编码"""
     ensure_data_file()

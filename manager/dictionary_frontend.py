@@ -1,0 +1,172 @@
+"""前端查询模块 - 输入法 ime.py 使用的查询与编码处理函数"""
+import os
+from config import DATA_FILE, CIYU_FILE, CODE_CHARS
+from manager.dictionary import ensure_data_file
+
+
+def query_phrase(code):
+    """从词库文件 ciyu.txt 中查询短语"""
+    try:
+        with open(CIYU_FILE, 'r', encoding='utf-8') as f:
+            for line in f:
+                parts = line.strip().split(" ")
+                if len(parts) >= 2 and code in parts[1:]:
+                    return "(" + parts[0] + ")"
+    except FileNotFoundError:
+        pass
+    return ""
+
+
+def get_entry_count():
+    """返回词典文件中的词条总数"""
+    ensure_data_file()
+    if os.path.exists(DATA_FILE):
+        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+            return len(f.readlines())
+    return 0
+
+
+def query_by_prefix(prefix, start_idx=0, count=5):
+    """根据编码前缀查询候选词。支持副码a和补码规则"""
+    ensure_data_file()
+    if not os.path.exists(DATA_FILE) or os.path.getsize(DATA_FILE) == 0:
+        return []
+    results = []
+    with open(DATA_FILE, 'r', encoding='utf-8') as f:
+        for line in f:
+            parts = line.strip().split(' ', 1)
+            if len(parts) == 2:
+                word = parts[0]
+                code = parts[1]
+                # 处理特殊规则：前缀长度>=5且副码为a
+                if len(prefix) >= 5 and prefix[4] == 'a':
+                    if len(prefix) == 5 and code == prefix[:4]:
+                        results.append(f"{word}")
+                    elif len(code) >= 5 and code.startswith(prefix[:4]):
+                        if code[4:].startswith(prefix[5:]) and code[4] == ".":
+                            rest = code[len(prefix)-1:]
+                            results.append(f"{word}{rest}")
+                elif code.startswith(prefix):
+                    # 处理补码
+                    if "." in code[:6]:
+                        if '.' in prefix:
+                            rest = code[len(prefix):]
+                            results.append(f"{word}{rest}")
+                        elif (len(code) > 5 and "." == code[5]) or (len(prefix) == 4 and prefix[3].isdigit()):
+                            code_before_dot = code.split('.')[0]
+                            if prefix == code_before_dot:
+                                rest = code[len(prefix):]
+                                results.append(f"{word}{rest}")
+                    else:
+                        rest = code[len(prefix):]
+                        results.append(f"{word}{rest}")
+    return results[start_idx:start_idx + count]
+
+
+def process_input(input_text):
+    """从输入文本中提取连续的合法编码字符（CODE_CHARS）"""
+    result = ""
+    start_collecting = False
+    for char in input_text:
+        if not start_collecting and 'a' <= char <= 'z':
+            start_collecting = True
+        if start_collecting and char in CODE_CHARS:
+            result += char
+    return result
+
+
+def split_sequence(original):
+    """
+    对连续编码进行自动分词（插入单引号）。
+    根据多种条件递归分割，使每个部件长度合理。
+    返回用单引号分隔的字符串。
+    """
+    parts = original.split("'")
+    can_split_more = True
+    while can_split_more:
+        can_split_more = False
+        new_parts = []
+        for part in parts:
+            # 判断各种需要分割的条件
+            condition1 = False   # 连续双拼
+            condition2 = False   # 调码定位
+            condition3 = False   # 独体字四码打全
+            condition4 = False   # 合体字五码打全
+            condition5 = False   # 补码打全
+            positions = []       # 用于条件2的插入位置
+            positions3 = []      # 用于条件3的数字位置（在其后插入）
+            if not any(char.isdigit() for char in part) and len(part) > 2:
+                condition1 = True
+            for index, char in enumerate(part):
+                if char.isdigit() and index > 2 and not part[index-1].isdigit():
+                    condition2 = True
+                    positions.append(index)
+                if (char.isdigit() and index > 0 and part[index-1].isdigit()
+                        and index + 1 < len(part)):
+                    if part[index+1] != "." and not part[index+1].isdigit():
+                        condition3 = True
+                        positions3.append(index)
+            if len(part) > 5 and '.' not in part:
+                condition4 = True
+            if '.' in part and len(part.split(".")[1]) > 1:
+                condition5 = True
+
+            if condition1:
+                new_part = "'".join([part[i:i+2] for i in range(0, len(part), 2)])
+                new_parts.extend(new_part.split("'"))
+                can_split_more = True
+            elif condition2:
+                new_part = part
+                for pos in sorted(positions, reverse=True):
+                    new_part = new_part[:pos-2] + "'" + new_part[pos-2:]
+                new_parts.extend(new_part.split("'"))
+                can_split_more = True
+            elif condition3:
+                new_part = part
+                for pos in sorted(positions3, reverse=True):
+                    new_part = new_part[:pos+1] + "'" + new_part[pos+1:]
+                new_parts.extend(new_part.split("'"))
+                can_split_more = True
+            elif condition4:
+                new_part = part[:5] + "'" + part[5:]
+                new_parts.extend(new_part.split("'"))
+                can_split_more = True
+            elif condition5:
+                ff = len(part.split(".")[0]) + 2
+                new_part = part[:ff] + "'" + part[ff:]
+                new_parts.extend(new_part.split("'"))
+                can_split_more = True
+            else:
+                new_parts.append(part)
+        parts = new_parts
+    parts = [part for part in parts if part != '']
+    return "'".join(parts)
+
+
+def query_single_char(split_text, start_idx=0):
+    """
+    查询单字候选，返回用'/'连接的候选字符串（每个候选带后缀）。
+    若没有候选返回空字符串。
+    """
+    candidates = query_by_prefix(split_text, start_idx)
+    if candidates:
+        return "/".join(candidates)
+    else:
+        return ""
+
+
+def query_multi_chars(split_text):
+    """
+    多字输入时，获取每个部件的第一候选的首字，拼接成预览串。
+    若某个部件无候选，返回空字符串。
+    """
+    char_codes = split_text.split("'")
+    first_chars = ''
+    for code in char_codes:
+        candidates = query_by_prefix(code)
+        if candidates:
+            first_char = candidates[0][0]
+            first_chars += first_char
+        else:
+            return ""
+    return first_chars

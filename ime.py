@@ -8,14 +8,7 @@ import win32api
 
 # ==================== 导入模块化组件 ====================
 from config import DATA_FILE, CODE_CHARS, SURROUND_CHARS, SELECTION_SYMBOLS, SYMBOL_TO_INDEX, CIYU_FILE
-from manager.dictionary import ensure_data_file as _ensure_data_file, query_phrase as _query_phrase, get_entry_count as _get_entry_count, query_by_prefix as _query_by_prefix
-
-# ==================== 常量定义（备用兼容） ====================
-# DATA_FILE 在 config 中定义
-# CODE_CHARS 在 config 中定义  
-# SURROUND_CHARS 在 config 中定义
-# SELECTION_SYMBOLS 在 config 中定义
-# SYMBOL_TO_INDEX 在 config 中定义
+from manager.dictionary_frontend import ensure_data_file, query_phrase, get_entry_count, query_by_prefix, process_input, split_sequence, query_single_char, query_multi_chars
 
 # ==================== 全局状态变量 ====================
 current_page = 0                           # 当前候选页码（0起始）
@@ -25,6 +18,9 @@ current_part_index = -1                      # 多字选择时当前部件索引
 current_split_parts = []                     # 多字输入时拆分后的部件列表
 in_part_selection = False                    # 是否处于多字部件选择模式
 last_input_text = ""                         # 上一次输入的文本，用于检测变化重置状态
+selection_updating = False                   # 标记：是否正在由选择操作更新输入框（用于保护 resolved_chars）
+resolved_chars = {}                          # {part_index: "汉字"} 多字模式下已选中的部件
+original_split_count = 0                     # 多字模式下原始拆分的部件总数
 auto_commit_enabled = "1"                    # 自动上字开关（"1"启用）
 phrase_priority = "1"                        # 优先上词开关（"1"启用）
 external_mode = False                        # 外输模式开关（True表示外输）
@@ -35,39 +31,7 @@ key_press_counter = 0           # 按键计数防抖
 code_char_before_cursor = 0     # 光标前的编码字符数
 code_char_after_cursor = 0      # 光标后的编码字符数
 
-# ==================== 词典文件操作 ====================
-
-def ensure_data_file():
-    """确保词典文件存在，若不存在则创建空文件"""
-    return _ensure_data_file()
-
-def query_phrase(code):
-    """从词库文件 ciyu.txt 中查询短语"""
-    return _query_phrase(code)
-
-def get_entry_count():
-    """返回词典文件中的词条总数"""
-    return _get_entry_count()
-
-def query_by_prefix(prefix, start_idx=0, count=5):
-    """
-    根据编码前缀查询候选词。支持副码a和补码规则
-    注：输入法特有的补码处理逻辑，保留本地实现
-    """
-    # 直接调用 manager 模块的实现
-    return _query_by_prefix(prefix, start_idx, count)
-
 # ==================== 输入处理核心函数 ====================
-
-def process_input(input_text):#从输入文本中提取连续的合法编码字符（CODE_CHARS）。
-    result = ""
-    start_collecting = False
-    for char in input_text:
-        if not start_collecting and 'a' <= char <= 'z':
-            start_collecting = True
-        if start_collecting and char in CODE_CHARS:
-            result += char
-    return result
 
 def replace_content(original, processed, do_paste=True, reset_entry=True):
     """
@@ -107,100 +71,6 @@ def replace_content(original, processed, do_paste=True, reset_entry=True):
         entry_box.insert(0, output)
         real_time_var.set(output)
 
-def split_sequence(original):
-    """
-    对连续编码进行自动分词（插入单引号）。
-    根据多种条件递归分割，使每个部件长度合理。
-    返回用单引号分隔的字符串。
-    """
-    parts = original.split("'")
-    can_split_more = True
-    while can_split_more:
-        can_split_more = False
-        new_parts = []
-        for part in parts:
-            # 判断各种需要分割的条件
-            condition1 = False   # 连续双拼
-            condition2 = False   # 调码定位
-            condition3 = False   # 独体字四码打全
-            condition4 = False   # 合体字五码打全
-            condition5 = False   # 补码打全
-            positions = []       # 用于条件2的插入位置
-            positions3 = []      # 用于条件3的数字位置（在其后插入）
-            if not any(char.isdigit() for char in part) and len(part) > 2:
-                condition1 = True
-            for index, char in enumerate(part):
-                if char.isdigit() and index > 2 and not part[index-1].isdigit():
-                    condition2 = True
-                    positions.append(index)
-                if (char.isdigit() and index > 0 and part[index-1].isdigit()
-                        and index + 1 < len(part)):
-                    if part[index+1]!="." and not part[index+1].isdigit():
-                        condition3 = True
-                        positions3.append(index)
-            if len(part) > 5 and '.' not in part:
-                condition4 = True
-            if '.' in part and len(part.split(".")[1]) > 1:
-                condition5 = True
-
-            if condition1:
-                new_part = "'".join([part[i:i+2] for i in range(0, len(part), 2)])
-                new_parts.extend(new_part.split("'"))
-                can_split_more = True
-            elif condition2:
-                new_part = part
-                for pos in sorted(positions, reverse=True):
-                    new_part = new_part[:pos-2] + "'" + new_part[pos-2:]
-                new_parts.extend(new_part.split("'"))
-                can_split_more = True
-            elif condition3:
-                new_part = part
-                for pos in sorted(positions3, reverse=True):
-                    new_part = new_part[:pos+1] + "'" + new_part[pos+1:]
-                new_parts.extend(new_part.split("'"))
-                can_split_more = True
-            elif condition4:
-                new_part = part[:5] + "'" + part[5:]
-                new_parts.extend(new_part.split("'"))
-                can_split_more = True
-            elif condition5:
-                ff = len(part.split(".")[0]) + 2
-                new_part = part[:ff] + "'" + part[ff:]
-                new_parts.extend(new_part.split("'"))
-                can_split_more = True
-            else:
-                new_parts.append(part)
-        parts = new_parts
-    parts = [part for part in parts if part != '']
-    return "'".join(parts)
-
-def query_single_char(split_text, start_idx=0):
-    """
-    查询单字候选，返回用'/'连接的候选字符串（每个候选带后缀）。
-    若没有候选返回空字符串。
-    """
-    candidates = query_by_prefix(split_text, start_idx)
-    if candidates:
-        return "/".join(candidates)
-    else:
-        return ""
-
-def query_multi_chars(split_text):
-    """
-    多字输入时，获取每个部件的第一候选的首字，拼接成预览串。
-    若某个部件无候选，返回空字符串。
-    """
-    char_codes = split_text.split("'")
-    first_chars = ''
-    for code in char_codes:
-        candidates = query_by_prefix(code)
-        if candidates:
-            first_char = candidates[0][0]
-            first_chars += first_char
-        else:
-            return ""
-    return first_chars
-
 def clear_display_if_no_code(input_text):
     """
     如果输入文本中不包含有效编码，则清空下方的显示标签。
@@ -226,22 +96,37 @@ def clear_display_if_no_code(input_text):
 def navigate_parts(direction):
     """
     在多字选择模式中切换当前部件。
+    跳过已解析（resolved_chars 中已有）的部件，只在未解析部件之间跳转。
     direction: "next" 或 "prev"
     """
-    global current_part_index, current_page, in_part_selection, current_phrase
+    global current_part_index, current_page, in_part_selection, current_phrase, resolved_chars
     if current_query_type != "multi_part" or not current_split_parts:
         return
     if not in_part_selection:
         if direction == "next":
             in_part_selection = True
             current_phrase = ""
-            current_part_index = 0
+            # 从第一个未解部件开始
+            for idx in range(len(current_split_parts)):
+                if idx not in resolved_chars:
+                    current_part_index = idx
+                    break
     else:
         current_phrase = ""
+        n = len(current_split_parts)
         if direction == "next":
-            current_part_index = (current_part_index + 1) % len(current_split_parts)
+            # 找下一个未解部件，循环
+            for offset in range(1, n + 1):
+                candidate = (current_part_index + offset) % n
+                if candidate not in resolved_chars:
+                    current_part_index = candidate
+                    break
         elif direction == "prev":
-            current_part_index = (current_part_index - 1) % len(current_split_parts)
+            for offset in range(1, n + 1):
+                candidate = (current_part_index - offset) % n
+                if candidate not in resolved_chars:
+                    current_part_index = candidate
+                    break
     current_page = 0
     update_display()
 
@@ -270,11 +155,12 @@ def navigate_pages(direction):
 def update_display():
     """
     根据当前状态更新下方的三个显示标签：
-      - first_chars_label: 多字预览串（或短语）
+      - first_chars_label: 多字预览串（已解部件显示汉字，未解部件显示首候选首字）或短语
       - current_part_label: 当前部件的候选列表
-      - page_label: 页码信息
+      - page_label: 页码信息（含已选/总数）
     """
     global current_part_index, current_page, current_query_type, current_split_parts, in_part_selection, current_phrase
+    global resolved_chars, original_split_count
     input_text = real_time_var.get()
     processed = process_input(input_text)
     split_text = split_sequence(processed)
@@ -286,7 +172,17 @@ def update_display():
     page_label.config(text='')
 
     if current_query_type == "multi_part":
+        char_codes = split_text.split("'")
+        preview_chars = []
+        for idx, code in enumerate(char_codes):
+            if idx in resolved_chars:
+                preview_chars.append(resolved_chars[idx])
+            else:
+                candidates = query_by_prefix(code)
+                if candidates:
+                    preview_chars.append(candidates[0][0])
         first_chars = query_multi_chars(split_text)
+
         if first_chars:
             if current_phrase and not in_part_selection:
                 # 如果短语存在且不在部件选择模式，显示预览串和短语
@@ -306,7 +202,9 @@ def update_display():
             if candidates:
                 current_phrase = ""
                 current_part_label.config(text=candidates)
-                page_label.config(text=f"字 {current_part_index + 1}/{len(current_split_parts)} 页 {current_page + 1}")
+                selected_count = len(resolved_chars)
+                total_count = original_split_count if original_split_count > 0 else len(current_split_parts)
+                page_label.config(text=f"字 {selected_count + 1}/{total_count} 页 {current_page + 1}")
 
     elif current_query_type == "single":
         candidates = query_single_char(split_text, current_page * 5)
@@ -369,8 +267,12 @@ def handle_selection_keys(event):
     """
     处理候选选择符号 ! @ # $ % 以及短语直接上屏 !（当有短语时）
     返回 "break" 阻止事件继续传播，否则返回 None。
+    
+    多字模式新机制：选择字符时补全剩余编码，而非替换为汉字。
+    直到所有部件都解析完毕（unresolved == 0），才拼接最终汉字串上屏。
     """
-    global current_split_parts, current_phrase
+    global current_split_parts, current_phrase, resolved_chars, original_split_count
+    global current_part_index, selection_updating, in_part_selection
     # 短语直接上屏：当前有短语且按下 !
     if event.char == "!" and current_phrase:
         phrase_content = current_phrase[1:-1]
@@ -385,38 +287,54 @@ def handle_selection_keys(event):
             return
         index = SYMBOL_TO_INDEX.get(event.char, -1)
         if 0 <= index < len(candidates):
-            selected_char = candidates[index][0]  # 取候选的第一个汉字
+            candidate_str = candidates[index]
+            selected_char = candidate_str[0]  # 候选的第一个汉字
+            remaining = candidate_str[1:]       # 剩余编码
             input_text = real_time_var.get()
             if current_query_type == "single":
                 replace_content(input_text, selected_char, do_paste=True, reset_entry=True)
                 reset_input_state()
             elif current_query_type == "multi_part" and current_split_parts and current_part_index >= 0:
-                processed = process_input(input_text)
-                split_text = split_sequence(processed)
-                if "'" in split_text:
-                    parts = split_text.split("'")
-                    if current_part_index < len(parts):
-                        new_parts = parts.copy()
-                        new_parts[current_part_index] = selected_char
-                        new_processed = "".join(new_parts)
-                        is_last_part = current_part_index == len(parts) - 1
-                        if is_last_part:
-                            replace_content(input_text, new_processed, do_paste=True, reset_entry=True)
-                            reset_input_state()
-                        else:
-                            replace_content(input_text, new_processed, do_paste=False, reset_entry=False)
-                            navigate_parts("next")
+                i = current_part_index
+                parts = list(current_split_parts)  # 当前所有编码部件
+                if i >= len(parts):
+                    return "break"
+                resolved_chars[i] = selected_char
+                if original_split_count == 0:
+                    original_split_count = len(parts)
+                prefix = parts[i]
+                parts[i] = prefix + remaining
+                new_code_sequence = "'".join(parts)
+                unresolved = original_split_count - len(resolved_chars)
+                if unresolved == 0:
+                    # 末字：拼接最终汉字串上屏
+                    final_text = "".join(
+                        resolved_chars[j] for j in sorted(resolved_chars.keys())
+                    )
+                    selection_updating = True
+                    replace_content(input_text, final_text, do_paste=True, reset_entry=True)
+                    selection_updating = False
+                    reset_input_state()
+                else:
+                    # 非末字：更新输入框编码，跳到下一个未解部件
+                    selection_updating = True
+                    replace_content(input_text, new_code_sequence, do_paste=False, reset_entry=False)
+                    selection_updating = False
+                    navigate_parts("next")
         return "break"
 
 def reset_input_state():
     """重置所有输入相关的状态变量，并清空显示标签。"""
     global current_page, current_part_index, current_query_type, current_split_parts, in_part_selection, current_phrase
+    global resolved_chars, original_split_count
     current_page = 0
     current_part_index = -1
     current_query_type = ""
     current_split_parts = []
     in_part_selection = False
     current_phrase = ""
+    resolved_chars = {}
+    original_split_count = 0
     first_chars_label.config(text='')
     current_part_label.config(text='')
     page_label.config(text='')
@@ -428,18 +346,20 @@ def main_function(*args):
     """
     global current_page, current_part_index, current_query_type, current_split_parts, last_input_text
     global in_part_selection, current_phrase, auto_commit_enabled
+    global selection_updating, resolved_chars, original_split_count
     input_text = real_time_var.get()
 
     # 处理特殊键（= 和 -）
     processed_text, new_cursor_pos, key_processed = handle_special_keys(input_text)
     if key_processed:
+        selection_updating = True
         entry_box.delete(0, tk.END)
         entry_box.insert(0, processed_text)
+        selection_updating = False
         if new_cursor_pos is not None:
             entry_box.icursor(new_cursor_pos)
         return
 
-    # 如果输入发生变化，重置状态（除了 previous_input 的比较）
     if input_text.strip() != last_input_text:
         current_page = 0
         current_part_index = -1
@@ -447,6 +367,9 @@ def main_function(*args):
         current_split_parts = []
         in_part_selection = False
         current_phrase = ""
+        if not selection_updating:
+            resolved_chars = {}
+            original_split_count = 0
 
     processed = process_input(input_text)
     split_text = split_sequence(processed)
@@ -481,9 +404,8 @@ def main_function(*args):
         else:
             # 多字模式
             current_query_type = "multi_part"
+            current_split_parts = split_text.split("'")
             first_chars = query_multi_chars(split_text)
-            if first_chars:
-                current_split_parts = split_text.split("'")
             update_display()
             output_text = first_chars
 
